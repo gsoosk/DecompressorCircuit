@@ -1,0 +1,79 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Wed Oct 31 20:00:41 2018
+//! **************************************************************************
+
+SCHEMATIC START;
+NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+TIMEGRP clk = BEL "sram_vga_controller/dp/r2/data_out_15" BEL
+        "sram_vga_controller/dp/r2/data_out_14" BEL
+        "sram_vga_controller/dp/r2/data_out_13" BEL
+        "sram_vga_controller/dp/r2/data_out_12" BEL
+        "sram_vga_controller/dp/r2/data_out_11" BEL
+        "sram_vga_controller/dp/r2/data_out_10" BEL
+        "sram_vga_controller/dp/r2/data_out_9" BEL
+        "sram_vga_controller/dp/r2/data_out_8" BEL
+        "sram_vga_controller/dp/r2/data_out_7" BEL
+        "sram_vga_controller/dp/r2/data_out_6" BEL
+        "sram_vga_controller/dp/r2/data_out_5" BEL
+        "sram_vga_controller/dp/r2/data_out_4" BEL
+        "sram_vga_controller/dp/r2/data_out_3" BEL
+        "sram_vga_controller/dp/r2/data_out_2" BEL
+        "sram_vga_controller/dp/r2/data_out_1" BEL
+        "sram_vga_controller/dp/r2/data_out_0" BEL
+        "sram_vga_controller/dp/r1/data_out_15" BEL
+        "sram_vga_controller/dp/r1/data_out_14" BEL
+        "sram_vga_controller/dp/r1/data_out_13" BEL
+        "sram_vga_controller/dp/r1/data_out_12" BEL
+        "sram_vga_controller/dp/r1/data_out_11" BEL
+        "sram_vga_controller/dp/r1/data_out_10" BEL
+        "sram_vga_controller/dp/r1/data_out_9" BEL
+        "sram_vga_controller/dp/r1/data_out_8" BEL
+        "sram_vga_controller/dp/r1/data_out_7" BEL
+        "sram_vga_controller/dp/r1/data_out_6" BEL
+        "sram_vga_controller/dp/r1/data_out_5" BEL
+        "sram_vga_controller/dp/r1/data_out_4" BEL
+        "sram_vga_controller/dp/r1/data_out_3" BEL
+        "sram_vga_controller/dp/r1/data_out_2" BEL
+        "sram_vga_controller/dp/r1/data_out_1" BEL
+        "sram_vga_controller/dp/r1/data_out_0" BEL
+        "sram_vga_controller/dp/r0/data_out_15" BEL
+        "sram_vga_controller/dp/r0/data_out_14" BEL
+        "sram_vga_controller/dp/r0/data_out_13" BEL
+        "sram_vga_controller/dp/r0/data_out_12" BEL
+        "sram_vga_controller/dp/r0/data_out_11" BEL
+        "sram_vga_controller/dp/r0/data_out_10" BEL
+        "sram_vga_controller/dp/r0/data_out_9" BEL
+        "sram_vga_controller/dp/r0/data_out_8" BEL
+        "sram_vga_controller/dp/r0/data_out_7" BEL
+        "sram_vga_controller/dp/r0/data_out_6" BEL
+        "sram_vga_controller/dp/r0/data_out_5" BEL
+        "sram_vga_controller/dp/r0/data_out_4" BEL
+        "sram_vga_controller/dp/r0/data_out_3" BEL
+        "sram_vga_controller/dp/r0/data_out_2" BEL
+        "sram_vga_controller/dp/r0/data_out_1" BEL
+        "sram_vga_controller/dp/r0/data_out_0" BEL
+        "sram_vga_controller/dp/cn/count_done" BEL
+        "sram_vga_controller/dp/cn/r_addr_17" BEL
+        "sram_vga_controller/dp/cn/r_addr_16" BEL
+        "sram_vga_controller/dp/cn/r_addr_15" BEL
+        "sram_vga_controller/dp/cn/r_addr_14" BEL
+        "sram_vga_controller/dp/cn/r_addr_13" BEL
+        "sram_vga_controller/dp/cn/r_addr_12" BEL
+        "sram_vga_controller/dp/cn/r_addr_11" BEL
+        "sram_vga_controller/dp/cn/r_addr_10" BEL
+        "sram_vga_controller/dp/cn/r_addr_9" BEL
+        "sram_vga_controller/dp/cn/r_addr_8" BEL
+        "sram_vga_controller/dp/cn/r_addr_7" BEL
+        "sram_vga_controller/dp/cn/r_addr_6" BEL
+        "sram_vga_controller/dp/cn/r_addr_5" BEL
+        "sram_vga_controller/dp/cn/r_addr_4" BEL
+        "sram_vga_controller/dp/cn/r_addr_3" BEL
+        "sram_vga_controller/dp/cn/r_addr_2" BEL
+        "sram_vga_controller/dp/cn/r_addr_1" BEL
+        "sram_vga_controller/dp/cn/r_addr_0" BEL
+        "sram_vga_controller/c/f1/out" BEL "sram_vga_controller/c/f2/out" BEL
+        "sram_vga_controller/c/f3/out" BEL "clk_BUFGP/BUFG.GCLKMUX" BEL
+        "clk_BUFGP/BUFG";
+TS_clk = PERIOD TIMEGRP "clk" 20 ns HIGH 50%;
+SCHEMATIC END;
+

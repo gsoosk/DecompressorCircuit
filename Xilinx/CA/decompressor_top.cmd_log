@@ -1,0 +1,18 @@
+xst -intstyle ise -ifn "Y:/Desktop/Phase2/CA/decompressor_top.xst" -ofn "Y:/Desktop/Phase2/CA/decompressor_top.syr" 
+xst -intstyle ise -ifn "Y:/Desktop/Phase2/CA/decompressor_top.xst" -ofn "Y:/Desktop/Phase2/CA/decompressor_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s4000-fg676-4 decompressor_top.ngc decompressor_top.ngd  
+map -intstyle ise -p xc3s4000-fg676-4 -cm area -ir off -pr off -c 100 -o decompressor_top_map.ncd decompressor_top.ngd decompressor_top.pcf 
+par -w -intstyle ise -ol high -t 1 decompressor_top_map.ncd decompressor_top.ncd decompressor_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml decompressor_top.twx decompressor_top.ncd -o decompressor_top.twr decompressor_top.pcf 
+xst -intstyle ise -ifn "Y:/Desktop/Phase2/CA/decompressor_top.xst" -ofn "Y:/Desktop/Phase2/CA/decompressor_top.syr" 
+xst -intstyle ise -ifn "Y:/Desktop/Phase2/CA/decompressor_top.xst" -ofn "Y:/Desktop/Phase2/CA/decompressor_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s4000-fg676-4 decompressor_top.ngc decompressor_top.ngd  
+map -intstyle ise -p xc3s4000-fg676-4 -cm area -ir off -pr off -c 100 -o decompressor_top_map.ncd decompressor_top.ngd decompressor_top.pcf 
+par -w -intstyle ise -ol high -t 1 decompressor_top_map.ncd decompressor_top.ncd decompressor_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml decompressor_top.twx decompressor_top.ncd -o decompressor_top.twr decompressor_top.pcf 
+vhdtdtfi -lib work Y:/Desktop/Phase2/CA/decompressor_top.v -lang verilog -prj CA -o decompressor_top.spl -module decompressor_top -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3 decompressor_top.spl Y:/Desktop/Phase2/CA/decompressor_top.sym 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc decompressor_top.ucf -p xc3s4000-fg676-4 decompressor_top.ngc decompressor_top.ngd  
+map -intstyle ise -p xc3s4000-fg676-4 -cm area -ir off -pr off -c 100 -o decompressor_top_map.ncd decompressor_top.ngd decompressor_top.pcf 
+par -w -intstyle ise -ol high -t 1 decompressor_top_map.ncd decompressor_top.ncd decompressor_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml decompressor_top.twx decompressor_top.ncd -o decompressor_top.twr decompressor_top.pcf -ucf decompressor_top.ucf 

@@ -1,0 +1,19 @@
+[Inputs]
+reset
+clk
+start
+=sram_rdata[15:0]=
+[Outputs]
+done
+sram_wr_enable
+vgastart
+=sram_raddr[19:0]=
+=sram_waddr[19:0]=
+=sram_wdata[15:0]=
+=r[7:0]=
+=g[7:0]=
+=b[7:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel decompressor_top
+
