@@ -1,0 +1,166 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# OpenFile //Mac/Home/Desktop/Test/src/hdl/modules/controller.v 
+ls
+# controller.v  datapath.v  multiplexer.v         mux_TB.v           transcript        
+# counter.v     flipflop.v  multiplexer_4_to_1.v  register_16_bit.v                    
+cd ..
+ls
+# decompressor_top.v  module  modules  sram_vga_controller.v                                  
+cd ..
+ls
+# hdl  inc  ucf                                                
+cd ..
+ls
+# sim  src                                                                              
+cd sim
+# reading modelsim.ini
+ls
+# EmulatorModule  model         sim_top.tcl  vsim.dbg  work        
+# file            modelsim.ini  tb           vsim.wlf              
+do sim_top.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Modifying modelsim.ini
+# tb_ca2
+# ../src/hdl
+# ../src/inc
+# ../src/module
+# -all
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Skipping module decompressor_top
+# 
+# Top level modules:
+# 	decompressor_top
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Skipping module sram_vga_controller
+# 
+# Top level modules:
+# 	sram_vga_controller
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# ** Error: (vlog-7) Failed to open design unit file "../src/module/*.v" in read mode.
+# 
+# Invalid argument. (errno = EINVAL)
+# ** Error: C:/altera/13.0sp1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./sim_top.tcl line 20
+# C:/altera/13.0sp1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog 	+acc -incr -source  +define+SIM 	$modules_path/*.v"
+# Loading project Phase2
+# Compile of SRAM_Emulator.v was successful.
+# Compile of VGA_Emulator.v was successful.
+# Compile of tb_ca2.v failed with 1 errors.
+# Compile of sram_vga_controller.v was successful.
+# Compile of decompressor_top.v was successful.
+# Compile of controller.v was successful.
+# Compile of counter.v was successful.
+# Compile of datapath.v failed with 1 errors.
+# Compile of flipflop.v was successful.
+# Compile of multiplexer.v was successful.
+# Compile of multiplexer_4_to_1.v was successful.
+# Compile of mux_TB.v was successful.
+# Compile of register_16_bit.v was successful.
+# 13 compiles, 2 failed with 2 errors. 
+# Compile of SRAM_Emulator.v was successful.
+# Compile of VGA_Emulator.v was successful.
+# Compile of tb_ca2.v failed with 1 errors.
+# Compile of sram_vga_controller.v was successful.
+# Compile of decompressor_top.v was successful.
+# Compile of controller.v was successful.
+# Compile of counter.v was successful.
+# Compile of datapath.v failed with 1 errors.
+# Compile of flipflop.v was successful.
+# Compile of multiplexer.v was successful.
+# Compile of multiplexer_4_to_1.v was successful.
+# Compile of mux_TB.v was successful.
+# Compile of register_16_bit.v was successful.
+# Compile of param.v failed with 3 errors.
+# 14 compiles, 3 failed with 5 errors. 
+ls
+# EmulatorModule  file   modelsim.ini  tb        vsim.wlf        
+# Phase2.mpf      model  sim_top.tcl   vsim.dbg  work            
+do sim_top.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Modifying //Mac/Home/Desktop/Test/sim/Phase2.mpf
+# tb_ca2
+# ../src/hdl
+# ../src/inc
+# ../src/module
+# -all
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module decompressor_top
+# 
+# Top level modules:
+# 	decompressor_top
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module sram_vga_controller
+# 
+# Top level modules:
+# 	sram_vga_controller
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# ** Error: (vlog-7) Failed to open design unit file "../src/module/*.v" in read mode.
+# 
+# Invalid argument. (errno = EINVAL)
+# ** Error: C:/altera/13.0sp1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./sim_top.tcl line 20
+# C:/altera/13.0sp1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog 	+acc -incr -source  +define+SIM 	$modules_path/*.v"
+do sim_top.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Modifying //Mac/Home/Desktop/Test/sim/Phase2.mpf
+# tb_ca2
+# ../src/hdl
+# ../src/inc
+# ../src/modules
+# -all
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Skipping module decompressor_top
+# 
+# Top level modules:
+# 	decompressor_top
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Skipping module sram_vga_controller
+# 
+# Top level modules:
+# 	sram_vga_controller
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# ** Error: (vlog-7) Failed to open design unit file "../src/modules/*.v" in read mode.
+# 
+# Invalid argument. (errno = EINVAL)
+# ** Error: C:/altera/13.0sp1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./sim_top.tcl line 20
+# C:/altera/13.0sp1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog 	+acc -incr -source  +define+SIM 	$modules_path/*.v"
+# Compile of SRAM_Emulator.v was successful.
+# Compile of VGA_Emulator.v was successful.
+# Compile of tb_ca2.v failed with 1 errors.
+# Compile of sram_vga_controller.v was successful.
+# Compile of decompressor_top.v was successful.
+# Compile of controller.v was successful.
+# Compile of counter.v was successful.
+# Compile of datapath.v was successful.
+# Compile of flipflop.v was successful.
+# Compile of multiplexer.v was successful.
+# Compile of multiplexer_4_to_1.v was successful.
+# Compile of mux_TB.v was successful.
+# Compile of register_16_bit.v was successful.
+# Compile of param.v failed with 3 errors.
+# 14 compiles, 2 failed with 4 errors. 
+# Compile of SRAM_Emulator.v failed with 1 errors.
+# Compile of VGA_Emulator.v failed with 1 errors.
+# Compile of tb_ca2.v failed with 1 errors.
+# Compile of sram_vga_controller.v failed with 1 errors.
+# Compile of decompressor_top.v failed with 1 errors.
+# Compile of controller.v failed with 1 errors.
+# Compile of counter.v failed with 1 errors.
+# Compile of datapath.v failed with 1 errors.
+# Compile of flipflop.v failed with 1 errors.
+# Compile of multiplexer.v failed with 1 errors.
+# Compile of multiplexer_4_to_1.v failed with 1 errors.
+# Compile of mux_TB.v failed with 1 errors.
+# Compile of register_16_bit.v failed with 1 errors.
+# Compile of param.v failed with 1 errors.
+# 14 compiles, 14 failed with 14 errors. 
