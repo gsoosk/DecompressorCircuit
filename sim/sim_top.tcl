@@ -14,9 +14,7 @@
 
 #============================ Add verilog files  ===============================
 	
-	vlog 	+acc -incr -source  +define+SIM 	$hdl_path/decompressor_top.v
-	vlog 	+acc -incr -source  +define+SIM 	$hdl_path/sram_vga_controller.v
-	vlog 	+acc -incr -source  +define+SIM 	$hdl_path/yuv_to_rgb_conversion.v
+	vlog 	+acc -incr -source  +define+SIM 	$hdl_path/*.v
 	
 	vlog 	+acc -incr -source  +define+SIM 	EmulatorModule/SRAM_Emulator.v
 	vlog 	+acc -incr -source  +define+SIM 	EmulatorModule/VGA_Emulator.v
