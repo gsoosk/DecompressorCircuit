@@ -56,7 +56,7 @@ module yuv_to_rgb_datapath(clk, rst, ldenY, ldenU, ldenV, selWdata, count_en_wr,
     assign div = divBig[8:0];
 
     wire signed [8:0] filter;
-    assign filter = div > 8'd255 ? 8'd255 : div < 8'd0 ? 8'd0 : div ;
+    assign filter = div[8] == 1'b1 ? 9'd0 : div > 9'd255 ? 9'd255 : div ;
     
     wire [7:0] uFilter;
     assign uFilter = filter;

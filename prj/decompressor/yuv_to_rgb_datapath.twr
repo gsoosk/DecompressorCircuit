@@ -1,0 +1,630 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4
+-n 3 -fastpaths -xml yuv_to_rgb_datapath.twx yuv_to_rgb_datapath.ncd -o
+yuv_to_rgb_datapath.twr yuv_to_rgb_datapath.pcf
+
+Design file:              yuv_to_rgb_datapath.ncd
+Physical constraint file: yuv_to_rgb_datapath.pcf
+Device,package,speed:     xc3s4000,fg676,-4 (PRODUCTION 1.39 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+------------+------------+------------+------------------+--------+
+            |Max Setup to|Max Hold to |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+count_en_rd |    6.307(R)|   -0.591(R)|clk_BUFGP         |   0.000|
+count_en_wr |    3.791(R)|   -0.290(R)|clk_BUFGP         |   0.000|
+height<0>   |   16.862(R)|   -4.510(R)|clk_BUFGP         |   0.000|
+height<1>   |   16.098(R)|   -3.899(R)|clk_BUFGP         |   0.000|
+height<2>   |   16.481(R)|   -4.568(R)|clk_BUFGP         |   0.000|
+height<3>   |   15.943(R)|   -4.138(R)|clk_BUFGP         |   0.000|
+height<4>   |   16.848(R)|   -4.909(R)|clk_BUFGP         |   0.000|
+height<5>   |   16.252(R)|   -4.432(R)|clk_BUFGP         |   0.000|
+height<6>   |   16.877(R)|   -4.953(R)|clk_BUFGP         |   0.000|
+height<7>   |   15.943(R)|   -4.590(R)|clk_BUFGP         |   0.000|
+height<8>   |   16.523(R)|   -5.089(R)|clk_BUFGP         |   0.000|
+height<9>   |   16.250(R)|   -4.871(R)|clk_BUFGP         |   0.000|
+height<10>  |   17.172(R)|   -5.630(R)|clk_BUFGP         |   0.000|
+height<11>  |   16.960(R)|   -5.615(R)|clk_BUFGP         |   0.000|
+height<12>  |   15.460(R)|   -4.859(R)|clk_BUFGP         |   0.000|
+height<13>  |   15.786(R)|   -5.120(R)|clk_BUFGP         |   0.000|
+height<14>  |   16.521(R)|   -5.708(R)|clk_BUFGP         |   0.000|
+height<15>  |   14.410(R)|   -4.847(R)|clk_BUFGP         |   0.000|
+ldB         |    1.370(R)|    0.705(R)|clk_BUFGP         |   0.000|
+ldG         |    2.017(R)|    0.617(R)|clk_BUFGP         |   0.000|
+ldR         |    2.284(R)|    0.001(R)|clk_BUFGP         |   0.000|
+ldenU       |    2.177(R)|    0.330(R)|clk_BUFGP         |   0.000|
+ldenV       |    5.833(R)|   -2.464(R)|clk_BUFGP         |   0.000|
+ldenY       |    3.302(R)|   -0.666(R)|clk_BUFGP         |   0.000|
+r_data<0>   |    0.507(R)|    1.617(R)|clk_BUFGP         |   0.000|
+r_data<1>   |    0.905(R)|    1.410(R)|clk_BUFGP         |   0.000|
+r_data<2>   |    0.524(R)|    1.284(R)|clk_BUFGP         |   0.000|
+r_data<3>   |    0.571(R)|    1.348(R)|clk_BUFGP         |   0.000|
+r_data<4>   |    1.688(R)|    1.770(R)|clk_BUFGP         |   0.000|
+r_data<5>   |    1.462(R)|    1.255(R)|clk_BUFGP         |   0.000|
+r_data<6>   |    1.853(R)|    1.792(R)|clk_BUFGP         |   0.000|
+r_data<7>   |    1.155(R)|    1.822(R)|clk_BUFGP         |   0.000|
+r_data<8>   |    1.259(R)|    1.664(R)|clk_BUFGP         |   0.000|
+r_data<9>   |    1.261(R)|    1.469(R)|clk_BUFGP         |   0.000|
+r_data<10>  |    0.586(R)|    1.231(R)|clk_BUFGP         |   0.000|
+r_data<11>  |    0.956(R)|    1.034(R)|clk_BUFGP         |   0.000|
+r_data<12>  |    3.651(R)|   -0.984(R)|clk_BUFGP         |   0.000|
+r_data<13>  |    1.770(R)|    1.056(R)|clk_BUFGP         |   0.000|
+r_data<14>  |    0.818(R)|    1.247(R)|clk_BUFGP         |   0.000|
+r_data<15>  |    0.441(R)|    1.308(R)|clk_BUFGP         |   0.000|
+rst         |    5.735(R)|    1.706(R)|clk_BUFGP         |   0.000|
+selNum<0>   |   15.538(R)|   -6.839(R)|clk_BUFGP         |   0.000|
+selNum<1>   |   19.976(R)|   -9.737(R)|clk_BUFGP         |   0.000|
+selPixel    |   16.596(R)|   -7.605(R)|clk_BUFGP         |   0.000|
+width<0>    |   16.864(R)|   -4.512(R)|clk_BUFGP         |   0.000|
+width<1>    |   16.859(R)|   -4.508(R)|clk_BUFGP         |   0.000|
+width<2>    |   16.277(R)|   -4.405(R)|clk_BUFGP         |   0.000|
+width<3>    |   16.790(R)|   -4.816(R)|clk_BUFGP         |   0.000|
+width<4>    |   16.016(R)|   -4.243(R)|clk_BUFGP         |   0.000|
+width<5>    |   16.432(R)|   -4.576(R)|clk_BUFGP         |   0.000|
+width<6>    |   16.325(R)|   -4.512(R)|clk_BUFGP         |   0.000|
+width<7>    |   16.434(R)|   -4.983(R)|clk_BUFGP         |   0.000|
+width<8>    |   16.254(R)|   -4.874(R)|clk_BUFGP         |   0.000|
+width<9>    |   16.508(R)|   -5.077(R)|clk_BUFGP         |   0.000|
+width<10>   |   16.354(R)|   -4.975(R)|clk_BUFGP         |   0.000|
+width<11>   |   17.186(R)|   -5.795(R)|clk_BUFGP         |   0.000|
+width<12>   |   15.509(R)|   -4.899(R)|clk_BUFGP         |   0.000|
+width<13>   |   15.460(R)|   -4.859(R)|clk_BUFGP         |   0.000|
+width<14>   |   15.754(R)|   -5.095(R)|clk_BUFGP         |   0.000|
+width<15>   |   14.447(R)|   -4.876(R)|clk_BUFGP         |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock clk to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+r_addr<0>   |   12.993(R)|clk_BUFGP         |   0.000|
+r_addr<1>   |   13.123(R)|clk_BUFGP         |   0.000|
+r_addr<2>   |   12.545(R)|clk_BUFGP         |   0.000|
+r_addr<3>   |   12.638(R)|clk_BUFGP         |   0.000|
+r_addr<4>   |   13.507(R)|clk_BUFGP         |   0.000|
+r_addr<5>   |   13.415(R)|clk_BUFGP         |   0.000|
+r_addr<6>   |   12.668(R)|clk_BUFGP         |   0.000|
+r_addr<7>   |   13.364(R)|clk_BUFGP         |   0.000|
+r_addr<8>   |   13.807(R)|clk_BUFGP         |   0.000|
+r_addr<9>   |   13.383(R)|clk_BUFGP         |   0.000|
+r_addr<10>  |   13.498(R)|clk_BUFGP         |   0.000|
+r_addr<11>  |   13.349(R)|clk_BUFGP         |   0.000|
+r_addr<12>  |   13.917(R)|clk_BUFGP         |   0.000|
+r_addr<13>  |   13.716(R)|clk_BUFGP         |   0.000|
+r_addr<14>  |   13.306(R)|clk_BUFGP         |   0.000|
+r_addr<15>  |   13.845(R)|clk_BUFGP         |   0.000|
+r_addr<16>  |   13.148(R)|clk_BUFGP         |   0.000|
+r_addr<17>  |   13.167(R)|clk_BUFGP         |   0.000|
+rd_done     |    8.698(R)|clk_BUFGP         |   0.000|
+w_addr<0>   |   11.801(R)|clk_BUFGP         |   0.000|
+w_addr<1>   |   10.562(R)|clk_BUFGP         |   0.000|
+w_addr<2>   |   10.698(R)|clk_BUFGP         |   0.000|
+w_addr<3>   |    9.552(R)|clk_BUFGP         |   0.000|
+w_addr<4>   |   11.391(R)|clk_BUFGP         |   0.000|
+w_addr<5>   |   10.506(R)|clk_BUFGP         |   0.000|
+w_addr<6>   |   10.751(R)|clk_BUFGP         |   0.000|
+w_addr<7>   |   10.267(R)|clk_BUFGP         |   0.000|
+w_addr<8>   |   10.025(R)|clk_BUFGP         |   0.000|
+w_addr<9>   |   10.353(R)|clk_BUFGP         |   0.000|
+w_addr<10>  |    9.898(R)|clk_BUFGP         |   0.000|
+w_addr<11>  |   10.310(R)|clk_BUFGP         |   0.000|
+w_addr<12>  |    9.913(R)|clk_BUFGP         |   0.000|
+w_addr<13>  |   10.776(R)|clk_BUFGP         |   0.000|
+w_addr<14>  |   10.631(R)|clk_BUFGP         |   0.000|
+w_addr<15>  |   10.018(R)|clk_BUFGP         |   0.000|
+w_addr<16>  |    9.970(R)|clk_BUFGP         |   0.000|
+w_addr<17>  |    9.939(R)|clk_BUFGP         |   0.000|
+wdata<0>    |   12.266(R)|clk_BUFGP         |   0.000|
+wdata<1>    |   12.690(R)|clk_BUFGP         |   0.000|
+wdata<2>    |   12.941(R)|clk_BUFGP         |   0.000|
+wdata<3>    |   12.537(R)|clk_BUFGP         |   0.000|
+wdata<4>    |   13.115(R)|clk_BUFGP         |   0.000|
+wdata<5>    |   12.765(R)|clk_BUFGP         |   0.000|
+wdata<6>    |   13.047(R)|clk_BUFGP         |   0.000|
+wdata<7>    |   12.997(R)|clk_BUFGP         |   0.000|
+wdata<8>    |   13.002(R)|clk_BUFGP         |   0.000|
+wdata<9>    |   12.508(R)|clk_BUFGP         |   0.000|
+wdata<10>   |   12.786(R)|clk_BUFGP         |   0.000|
+wdata<11>   |   13.433(R)|clk_BUFGP         |   0.000|
+wdata<12>   |   13.891(R)|clk_BUFGP         |   0.000|
+wdata<13>   |   12.895(R)|clk_BUFGP         |   0.000|
+wdata<14>   |   12.936(R)|clk_BUFGP         |   0.000|
+wdata<15>   |   13.060(R)|clk_BUFGP         |   0.000|
+wr_done     |    8.968(R)|clk_BUFGP         |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   16.838|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+height<0>      |r_addr<0>      |   15.796|
+height<0>      |r_addr<1>      |   16.232|
+height<0>      |r_addr<2>      |   16.098|
+height<0>      |r_addr<3>      |   16.484|
+height<0>      |r_addr<4>      |   17.964|
+height<0>      |r_addr<5>      |   18.238|
+height<0>      |r_addr<6>      |   17.708|
+height<0>      |r_addr<7>      |   18.404|
+height<0>      |r_addr<8>      |   18.797|
+height<0>      |r_addr<9>      |   18.373|
+height<0>      |r_addr<10>     |   18.488|
+height<0>      |r_addr<11>     |   18.339|
+height<0>      |r_addr<12>     |   18.977|
+height<0>      |r_addr<13>     |   18.776|
+height<0>      |r_addr<14>     |   18.366|
+height<0>      |r_addr<15>     |   18.905|
+height<0>      |r_addr<16>     |   18.159|
+height<0>      |r_addr<17>     |   18.178|
+height<1>      |r_addr<0>      |   15.032|
+height<1>      |r_addr<1>      |   15.468|
+height<1>      |r_addr<2>      |   15.334|
+height<1>      |r_addr<3>      |   15.720|
+height<1>      |r_addr<4>      |   17.200|
+height<1>      |r_addr<5>      |   17.474|
+height<1>      |r_addr<6>      |   16.944|
+height<1>      |r_addr<7>      |   17.640|
+height<1>      |r_addr<8>      |   18.033|
+height<1>      |r_addr<9>      |   17.609|
+height<1>      |r_addr<10>     |   17.724|
+height<1>      |r_addr<11>     |   17.575|
+height<1>      |r_addr<12>     |   18.213|
+height<1>      |r_addr<13>     |   18.012|
+height<1>      |r_addr<14>     |   17.602|
+height<1>      |r_addr<15>     |   18.141|
+height<1>      |r_addr<16>     |   17.395|
+height<1>      |r_addr<17>     |   17.414|
+height<2>      |r_addr<1>      |   15.851|
+height<2>      |r_addr<2>      |   15.717|
+height<2>      |r_addr<3>      |   16.103|
+height<2>      |r_addr<4>      |   17.583|
+height<2>      |r_addr<5>      |   17.857|
+height<2>      |r_addr<6>      |   17.327|
+height<2>      |r_addr<7>      |   18.023|
+height<2>      |r_addr<8>      |   18.416|
+height<2>      |r_addr<9>      |   17.992|
+height<2>      |r_addr<10>     |   18.107|
+height<2>      |r_addr<11>     |   17.958|
+height<2>      |r_addr<12>     |   18.596|
+height<2>      |r_addr<13>     |   18.395|
+height<2>      |r_addr<14>     |   17.985|
+height<2>      |r_addr<15>     |   18.524|
+height<2>      |r_addr<16>     |   17.778|
+height<2>      |r_addr<17>     |   17.797|
+height<3>      |r_addr<2>      |   14.193|
+height<3>      |r_addr<3>      |   15.565|
+height<3>      |r_addr<4>      |   17.045|
+height<3>      |r_addr<5>      |   17.319|
+height<3>      |r_addr<6>      |   16.789|
+height<3>      |r_addr<7>      |   17.485|
+height<3>      |r_addr<8>      |   17.878|
+height<3>      |r_addr<9>      |   17.454|
+height<3>      |r_addr<10>     |   17.569|
+height<3>      |r_addr<11>     |   17.420|
+height<3>      |r_addr<12>     |   18.058|
+height<3>      |r_addr<13>     |   17.857|
+height<3>      |r_addr<14>     |   17.447|
+height<3>      |r_addr<15>     |   17.986|
+height<3>      |r_addr<16>     |   17.240|
+height<3>      |r_addr<17>     |   17.259|
+height<4>      |r_addr<3>      |   16.470|
+height<4>      |r_addr<4>      |   17.950|
+height<4>      |r_addr<5>      |   18.224|
+height<4>      |r_addr<6>      |   17.694|
+height<4>      |r_addr<7>      |   18.390|
+height<4>      |r_addr<8>      |   18.783|
+height<4>      |r_addr<9>      |   18.359|
+height<4>      |r_addr<10>     |   18.474|
+height<4>      |r_addr<11>     |   18.325|
+height<4>      |r_addr<12>     |   18.963|
+height<4>      |r_addr<13>     |   18.762|
+height<4>      |r_addr<14>     |   18.352|
+height<4>      |r_addr<15>     |   18.891|
+height<4>      |r_addr<16>     |   18.145|
+height<4>      |r_addr<17>     |   18.164|
+height<5>      |r_addr<4>      |   15.823|
+height<5>      |r_addr<5>      |   16.351|
+height<5>      |r_addr<6>      |   15.821|
+height<5>      |r_addr<7>      |   16.517|
+height<5>      |r_addr<8>      |   17.240|
+height<5>      |r_addr<9>      |   16.816|
+height<5>      |r_addr<10>     |   16.931|
+height<5>      |r_addr<11>     |   17.246|
+height<5>      |r_addr<12>     |   18.367|
+height<5>      |r_addr<13>     |   18.166|
+height<5>      |r_addr<14>     |   17.756|
+height<5>      |r_addr<15>     |   18.295|
+height<5>      |r_addr<16>     |   17.549|
+height<5>      |r_addr<17>     |   17.568|
+height<6>      |r_addr<5>      |   16.531|
+height<6>      |r_addr<6>      |   16.445|
+height<6>      |r_addr<7>      |   17.141|
+height<6>      |r_addr<8>      |   17.865|
+height<6>      |r_addr<9>      |   17.441|
+height<6>      |r_addr<10>     |   17.556|
+height<6>      |r_addr<11>     |   17.871|
+height<6>      |r_addr<12>     |   18.992|
+height<6>      |r_addr<13>     |   18.791|
+height<6>      |r_addr<14>     |   18.381|
+height<6>      |r_addr<15>     |   18.920|
+height<6>      |r_addr<16>     |   18.174|
+height<6>      |r_addr<17>     |   18.193|
+height<7>      |r_addr<6>      |   13.855|
+height<7>      |r_addr<7>      |   15.877|
+height<7>      |r_addr<8>      |   16.931|
+height<7>      |r_addr<9>      |   16.507|
+height<7>      |r_addr<10>     |   16.622|
+height<7>      |r_addr<11>     |   16.937|
+height<7>      |r_addr<12>     |   18.058|
+height<7>      |r_addr<13>     |   17.857|
+height<7>      |r_addr<14>     |   17.447|
+height<7>      |r_addr<15>     |   17.986|
+height<7>      |r_addr<16>     |   17.240|
+height<7>      |r_addr<17>     |   17.259|
+height<8>      |r_addr<7>      |   16.457|
+height<8>      |r_addr<8>      |   17.511|
+height<8>      |r_addr<9>      |   17.087|
+height<8>      |r_addr<10>     |   17.202|
+height<8>      |r_addr<11>     |   17.517|
+height<8>      |r_addr<12>     |   18.638|
+height<8>      |r_addr<13>     |   18.437|
+height<8>      |r_addr<14>     |   18.027|
+height<8>      |r_addr<15>     |   18.566|
+height<8>      |r_addr<16>     |   17.820|
+height<8>      |r_addr<17>     |   17.839|
+height<9>      |r_addr<8>      |   16.293|
+height<9>      |r_addr<9>      |   16.489|
+height<9>      |r_addr<10>     |   16.842|
+height<9>      |r_addr<11>     |   17.244|
+height<9>      |r_addr<12>     |   18.365|
+height<9>      |r_addr<13>     |   18.164|
+height<9>      |r_addr<14>     |   17.754|
+height<9>      |r_addr<15>     |   18.293|
+height<9>      |r_addr<16>     |   17.547|
+height<9>      |r_addr<17>     |   17.566|
+height<10>     |r_addr<9>      |   16.350|
+height<10>     |r_addr<10>     |   17.695|
+height<10>     |r_addr<11>     |   18.166|
+height<10>     |r_addr<12>     |   19.287|
+height<10>     |r_addr<13>     |   19.086|
+height<10>     |r_addr<14>     |   18.676|
+height<10>     |r_addr<15>     |   19.215|
+height<10>     |r_addr<16>     |   18.469|
+height<10>     |r_addr<17>     |   18.488|
+height<11>     |r_addr<10>     |   17.483|
+height<11>     |r_addr<11>     |   17.954|
+height<11>     |r_addr<12>     |   19.075|
+height<11>     |r_addr<13>     |   18.874|
+height<11>     |r_addr<14>     |   18.464|
+height<11>     |r_addr<15>     |   19.003|
+height<11>     |r_addr<16>     |   18.257|
+height<11>     |r_addr<17>     |   18.276|
+height<12>     |r_addr<11>     |   15.796|
+height<12>     |r_addr<12>     |   16.959|
+height<12>     |r_addr<13>     |   16.758|
+height<12>     |r_addr<14>     |   16.593|
+height<12>     |r_addr<15>     |   17.132|
+height<12>     |r_addr<16>     |   16.386|
+height<12>     |r_addr<17>     |   16.812|
+height<13>     |r_addr<12>     |   16.287|
+height<13>     |r_addr<13>     |   16.706|
+height<13>     |r_addr<14>     |   16.919|
+height<13>     |r_addr<15>     |   17.458|
+height<13>     |r_addr<16>     |   16.712|
+height<13>     |r_addr<17>     |   17.138|
+height<14>     |r_addr<13>     |   17.403|
+height<14>     |r_addr<14>     |   17.654|
+height<14>     |r_addr<15>     |   18.193|
+height<14>     |r_addr<16>     |   17.447|
+height<14>     |r_addr<17>     |   17.873|
+height<15>     |r_addr<14>     |   15.320|
+height<15>     |r_addr<15>     |   16.479|
+height<15>     |r_addr<16>     |   16.157|
+height<15>     |r_addr<17>     |   16.796|
+selAdd<0>      |r_addr<0>      |   12.824|
+selAdd<0>      |r_addr<1>      |   14.030|
+selAdd<0>      |r_addr<2>      |   13.896|
+selAdd<0>      |r_addr<3>      |   13.989|
+selAdd<0>      |r_addr<4>      |   14.808|
+selAdd<0>      |r_addr<5>      |   15.042|
+selAdd<0>      |r_addr<6>      |   14.512|
+selAdd<0>      |r_addr<7>      |   15.208|
+selAdd<0>      |r_addr<8>      |   15.601|
+selAdd<0>      |r_addr<9>      |   15.177|
+selAdd<0>      |r_addr<10>     |   15.292|
+selAdd<0>      |r_addr<11>     |   15.143|
+selAdd<0>      |r_addr<12>     |   15.645|
+selAdd<0>      |r_addr<13>     |   15.444|
+selAdd<0>      |r_addr<14>     |   15.034|
+selAdd<0>      |r_addr<15>     |   15.573|
+selAdd<0>      |r_addr<16>     |   14.827|
+selAdd<0>      |r_addr<17>     |   14.846|
+selAdd<1>      |r_addr<0>      |   12.435|
+selAdd<1>      |r_addr<1>      |   14.047|
+selAdd<1>      |r_addr<2>      |   13.913|
+selAdd<1>      |r_addr<3>      |   14.006|
+selAdd<1>      |r_addr<4>      |   14.825|
+selAdd<1>      |r_addr<5>      |   14.733|
+selAdd<1>      |r_addr<6>      |   14.107|
+selAdd<1>      |r_addr<7>      |   14.803|
+selAdd<1>      |r_addr<8>      |   15.196|
+selAdd<1>      |r_addr<9>      |   14.772|
+selAdd<1>      |r_addr<10>     |   14.887|
+selAdd<1>      |r_addr<11>     |   14.738|
+selAdd<1>      |r_addr<12>     |   15.240|
+selAdd<1>      |r_addr<13>     |   15.039|
+selAdd<1>      |r_addr<14>     |   14.629|
+selAdd<1>      |r_addr<15>     |   15.168|
+selAdd<1>      |r_addr<16>     |   14.422|
+selAdd<1>      |r_addr<17>     |   14.441|
+selWdata<0>    |wdata<0>       |   12.449|
+selWdata<0>    |wdata<1>       |   12.461|
+selWdata<0>    |wdata<2>       |   12.279|
+selWdata<0>    |wdata<3>       |   12.348|
+selWdata<0>    |wdata<4>       |   12.315|
+selWdata<0>    |wdata<5>       |   12.424|
+selWdata<0>    |wdata<6>       |   12.318|
+selWdata<0>    |wdata<7>       |   12.044|
+selWdata<0>    |wdata<8>       |   12.946|
+selWdata<0>    |wdata<9>       |   12.149|
+selWdata<0>    |wdata<10>      |   12.054|
+selWdata<0>    |wdata<11>      |   13.145|
+selWdata<0>    |wdata<12>      |   12.618|
+selWdata<0>    |wdata<13>      |   12.192|
+selWdata<0>    |wdata<14>      |   12.389|
+selWdata<0>    |wdata<15>      |   12.237|
+selWdata<1>    |wdata<0>       |   11.518|
+selWdata<1>    |wdata<1>       |   11.863|
+selWdata<1>    |wdata<2>       |   11.928|
+selWdata<1>    |wdata<3>       |   11.352|
+selWdata<1>    |wdata<4>       |   12.582|
+selWdata<1>    |wdata<5>       |   12.287|
+selWdata<1>    |wdata<6>       |   12.950|
+selWdata<1>    |wdata<7>       |   12.676|
+selWdata<1>    |wdata<8>       |   12.254|
+selWdata<1>    |wdata<9>       |   11.825|
+selWdata<1>    |wdata<10>      |   11.456|
+selWdata<1>    |wdata<11>      |   12.085|
+selWdata<1>    |wdata<12>      |   12.611|
+selWdata<1>    |wdata<13>      |   12.118|
+selWdata<1>    |wdata<14>      |   12.747|
+selWdata<1>    |wdata<15>      |   12.595|
+width<0>       |r_addr<0>      |   15.798|
+width<0>       |r_addr<1>      |   16.234|
+width<0>       |r_addr<2>      |   16.100|
+width<0>       |r_addr<3>      |   16.486|
+width<0>       |r_addr<4>      |   17.966|
+width<0>       |r_addr<5>      |   18.240|
+width<0>       |r_addr<6>      |   17.710|
+width<0>       |r_addr<7>      |   18.406|
+width<0>       |r_addr<8>      |   18.799|
+width<0>       |r_addr<9>      |   18.375|
+width<0>       |r_addr<10>     |   18.490|
+width<0>       |r_addr<11>     |   18.341|
+width<0>       |r_addr<12>     |   18.979|
+width<0>       |r_addr<13>     |   18.778|
+width<0>       |r_addr<14>     |   18.368|
+width<0>       |r_addr<15>     |   18.907|
+width<0>       |r_addr<16>     |   18.161|
+width<0>       |r_addr<17>     |   18.180|
+width<1>       |r_addr<0>      |   15.793|
+width<1>       |r_addr<1>      |   16.229|
+width<1>       |r_addr<2>      |   16.095|
+width<1>       |r_addr<3>      |   16.481|
+width<1>       |r_addr<4>      |   17.961|
+width<1>       |r_addr<5>      |   18.235|
+width<1>       |r_addr<6>      |   17.705|
+width<1>       |r_addr<7>      |   18.401|
+width<1>       |r_addr<8>      |   18.794|
+width<1>       |r_addr<9>      |   18.370|
+width<1>       |r_addr<10>     |   18.485|
+width<1>       |r_addr<11>     |   18.336|
+width<1>       |r_addr<12>     |   18.974|
+width<1>       |r_addr<13>     |   18.773|
+width<1>       |r_addr<14>     |   18.363|
+width<1>       |r_addr<15>     |   18.902|
+width<1>       |r_addr<16>     |   18.156|
+width<1>       |r_addr<17>     |   18.175|
+width<2>       |r_addr<1>      |   15.647|
+width<2>       |r_addr<2>      |   15.513|
+width<2>       |r_addr<3>      |   15.899|
+width<2>       |r_addr<4>      |   17.379|
+width<2>       |r_addr<5>      |   17.653|
+width<2>       |r_addr<6>      |   17.123|
+width<2>       |r_addr<7>      |   17.819|
+width<2>       |r_addr<8>      |   18.212|
+width<2>       |r_addr<9>      |   17.788|
+width<2>       |r_addr<10>     |   17.903|
+width<2>       |r_addr<11>     |   17.754|
+width<2>       |r_addr<12>     |   18.392|
+width<2>       |r_addr<13>     |   18.191|
+width<2>       |r_addr<14>     |   17.781|
+width<2>       |r_addr<15>     |   18.320|
+width<2>       |r_addr<16>     |   17.574|
+width<2>       |r_addr<17>     |   17.593|
+width<3>       |r_addr<2>      |   15.040|
+width<3>       |r_addr<3>      |   16.412|
+width<3>       |r_addr<4>      |   17.892|
+width<3>       |r_addr<5>      |   18.166|
+width<3>       |r_addr<6>      |   17.636|
+width<3>       |r_addr<7>      |   18.332|
+width<3>       |r_addr<8>      |   18.725|
+width<3>       |r_addr<9>      |   18.301|
+width<3>       |r_addr<10>     |   18.416|
+width<3>       |r_addr<11>     |   18.267|
+width<3>       |r_addr<12>     |   18.905|
+width<3>       |r_addr<13>     |   18.704|
+width<3>       |r_addr<14>     |   18.294|
+width<3>       |r_addr<15>     |   18.833|
+width<3>       |r_addr<16>     |   18.087|
+width<3>       |r_addr<17>     |   18.106|
+width<4>       |r_addr<3>      |   15.638|
+width<4>       |r_addr<4>      |   17.118|
+width<4>       |r_addr<5>      |   17.392|
+width<4>       |r_addr<6>      |   16.862|
+width<4>       |r_addr<7>      |   17.558|
+width<4>       |r_addr<8>      |   17.951|
+width<4>       |r_addr<9>      |   17.527|
+width<4>       |r_addr<10>     |   17.642|
+width<4>       |r_addr<11>     |   17.493|
+width<4>       |r_addr<12>     |   18.131|
+width<4>       |r_addr<13>     |   17.930|
+width<4>       |r_addr<14>     |   17.520|
+width<4>       |r_addr<15>     |   18.059|
+width<4>       |r_addr<16>     |   17.313|
+width<4>       |r_addr<17>     |   17.332|
+width<5>       |r_addr<4>      |   16.003|
+width<5>       |r_addr<5>      |   16.531|
+width<5>       |r_addr<6>      |   16.001|
+width<5>       |r_addr<7>      |   16.697|
+width<5>       |r_addr<8>      |   17.420|
+width<5>       |r_addr<9>      |   16.996|
+width<5>       |r_addr<10>     |   17.111|
+width<5>       |r_addr<11>     |   17.426|
+width<5>       |r_addr<12>     |   18.547|
+width<5>       |r_addr<13>     |   18.346|
+width<5>       |r_addr<14>     |   17.936|
+width<5>       |r_addr<15>     |   18.475|
+width<5>       |r_addr<16>     |   17.729|
+width<5>       |r_addr<17>     |   17.748|
+width<6>       |r_addr<5>      |   15.979|
+width<6>       |r_addr<6>      |   15.893|
+width<6>       |r_addr<7>      |   16.589|
+width<6>       |r_addr<8>      |   17.313|
+width<6>       |r_addr<9>      |   16.889|
+width<6>       |r_addr<10>     |   17.004|
+width<6>       |r_addr<11>     |   17.319|
+width<6>       |r_addr<12>     |   18.440|
+width<6>       |r_addr<13>     |   18.239|
+width<6>       |r_addr<14>     |   17.829|
+width<6>       |r_addr<15>     |   18.368|
+width<6>       |r_addr<16>     |   17.622|
+width<6>       |r_addr<17>     |   17.641|
+width<7>       |r_addr<6>      |   14.346|
+width<7>       |r_addr<7>      |   16.368|
+width<7>       |r_addr<8>      |   17.422|
+width<7>       |r_addr<9>      |   16.998|
+width<7>       |r_addr<10>     |   17.113|
+width<7>       |r_addr<11>     |   17.428|
+width<7>       |r_addr<12>     |   18.549|
+width<7>       |r_addr<13>     |   18.348|
+width<7>       |r_addr<14>     |   17.938|
+width<7>       |r_addr<15>     |   18.477|
+width<7>       |r_addr<16>     |   17.731|
+width<7>       |r_addr<17>     |   17.750|
+width<8>       |r_addr<7>      |   16.188|
+width<8>       |r_addr<8>      |   17.242|
+width<8>       |r_addr<9>      |   16.818|
+width<8>       |r_addr<10>     |   16.933|
+width<8>       |r_addr<11>     |   17.248|
+width<8>       |r_addr<12>     |   18.369|
+width<8>       |r_addr<13>     |   18.168|
+width<8>       |r_addr<14>     |   17.758|
+width<8>       |r_addr<15>     |   18.297|
+width<8>       |r_addr<16>     |   17.551|
+width<8>       |r_addr<17>     |   17.570|
+width<9>       |r_addr<8>      |   16.551|
+width<9>       |r_addr<9>      |   16.747|
+width<9>       |r_addr<10>     |   17.100|
+width<9>       |r_addr<11>     |   17.502|
+width<9>       |r_addr<12>     |   18.623|
+width<9>       |r_addr<13>     |   18.422|
+width<9>       |r_addr<14>     |   18.012|
+width<9>       |r_addr<15>     |   18.551|
+width<9>       |r_addr<16>     |   17.805|
+width<9>       |r_addr<17>     |   17.824|
+width<10>      |r_addr<9>      |   15.532|
+width<10>      |r_addr<10>     |   16.877|
+width<10>      |r_addr<11>     |   17.348|
+width<10>      |r_addr<12>     |   18.469|
+width<10>      |r_addr<13>     |   18.268|
+width<10>      |r_addr<14>     |   17.858|
+width<10>      |r_addr<15>     |   18.397|
+width<10>      |r_addr<16>     |   17.651|
+width<10>      |r_addr<17>     |   17.670|
+width<11>      |r_addr<10>     |   17.709|
+width<11>      |r_addr<11>     |   18.180|
+width<11>      |r_addr<12>     |   19.301|
+width<11>      |r_addr<13>     |   19.100|
+width<11>      |r_addr<14>     |   18.690|
+width<11>      |r_addr<15>     |   19.229|
+width<11>      |r_addr<16>     |   18.483|
+width<11>      |r_addr<17>     |   18.502|
+width<12>      |r_addr<11>     |   15.845|
+width<12>      |r_addr<12>     |   17.008|
+width<12>      |r_addr<13>     |   16.807|
+width<12>      |r_addr<14>     |   16.642|
+width<12>      |r_addr<15>     |   17.181|
+width<12>      |r_addr<16>     |   16.435|
+width<12>      |r_addr<17>     |   16.861|
+width<13>      |r_addr<12>     |   15.961|
+width<13>      |r_addr<13>     |   16.380|
+width<13>      |r_addr<14>     |   16.593|
+width<13>      |r_addr<15>     |   17.132|
+width<13>      |r_addr<16>     |   16.386|
+width<13>      |r_addr<17>     |   16.812|
+width<14>      |r_addr<13>     |   16.636|
+width<14>      |r_addr<14>     |   16.887|
+width<14>      |r_addr<15>     |   17.426|
+width<14>      |r_addr<16>     |   16.680|
+width<14>      |r_addr<17>     |   17.106|
+width<15>      |r_addr<14>     |   15.357|
+width<15>      |r_addr<15>     |   16.516|
+width<15>      |r_addr<16>     |   16.194|
+width<15>      |r_addr<17>     |   16.833|
+---------------+---------------+---------+
+
+
+Analysis completed Tue Nov 20 13:18:00 2018 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 212 MB
+
+
+

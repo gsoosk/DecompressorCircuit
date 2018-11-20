@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="Map" num="110" delta="old" >output buffer &apos;<arg fmt="%s" index="1">b_0_OBUF</arg>&apos; driving design level port &apos;<arg fmt="%s" index="2">b&lt;0&gt;</arg>&apos; is being pushed into module &apos;<arg fmt="%s" index="3">sram_vga_controller</arg>&apos; to enable I/O register usage. The buffer has been renamed as &apos;<arg fmt="%s" index="4">sram_vga_controller/b_0_OBUF</arg>&apos;.
+</msg>
+
+<msg type="info" file="Map" num="110" delta="old" >output buffer &apos;<arg fmt="%s" index="1">b_1_OBUF</arg>&apos; driving design level port &apos;<arg fmt="%s" index="2">b&lt;1&gt;</arg>&apos; is being pushed into module &apos;<arg fmt="%s" index="3">sram_vga_controller</arg>&apos; to enable I/O register usage. The buffer has been renamed as &apos;<arg fmt="%s" index="4">sram_vga_controller/b_1_OBUF</arg>&apos;.
+</msg>
+
+<msg type="info" file="Map" num="110" delta="old" >output buffer &apos;<arg fmt="%s" index="1">b_2_OBUF</arg>&apos; driving design level port &apos;<arg fmt="%s" index="2">b&lt;2&gt;</arg>&apos; is being pushed into module &apos;<arg fmt="%s" index="3">sram_vga_controller</arg>&apos; to enable I/O register usage. The buffer has been renamed as &apos;<arg fmt="%s" index="4">sram_vga_controller/b_2_OBUF</arg>&apos;.
+</msg>
+
+<msg type="info" file="Map" num="110" delta="old" >output buffer &apos;<arg fmt="%s" index="1">b_3_OBUF</arg>&apos; driving design level port &apos;<arg fmt="%s" index="2">b&lt;3&gt;</arg>&apos; is being pushed into module &apos;<arg fmt="%s" index="3">sram_vga_controller</arg>&apos; to enable I/O register usage. The buffer has been renamed as &apos;<arg fmt="%s" index="4">sram_vga_controller/b_3_OBUF</arg>&apos;.
+</msg>
+
+<msg type="info" file="Map" num="110" delta="old" >output buffer &apos;<arg fmt="%s" index="1">b_4_OBUF</arg>&apos; driving design level port &apos;<arg fmt="%s" index="2">b&lt;4&gt;</arg>&apos; is being pushed into module &apos;<arg fmt="%s" index="3">sram_vga_controller</arg>&apos; to enable I/O register usage. The buffer has been renamed as &apos;<arg fmt="%s" index="4">sram_vga_controller/b_4_OBUF</arg>&apos;.
+</msg>
+
+<msg type="info" file="Map" num="110" delta="old" >output buffer &apos;<arg fmt="%s" index="1">b_5_OBUF</arg>&apos; driving design level port &apos;<arg fmt="%s" index="2">b&lt;5&gt;</arg>&apos; is being pushed into module &apos;<arg fmt="%s" index="3">sram_vga_controller</arg>&apos; to enable I/O register usage. The buffer has been renamed as &apos;<arg fmt="%s" index="4">sram_vga_controller/b_5_OBUF</arg>&apos;.
+</msg>
+
+<msg type="info" file="Map" num="110" delta="old" >output buffer &apos;<arg fmt="%s" index="1">b_6_OBUF</arg>&apos; driving design level port &apos;<arg fmt="%s" index="2">b&lt;6&gt;</arg>&apos; is being pushed into module &apos;<arg fmt="%s" index="3">sram_vga_controller</arg>&apos; to enable I/O register usage. The buffer has been renamed as &apos;<arg fmt="%s" index="4">sram_vga_controller/b_6_OBUF</arg>&apos;.
+</msg>
+
+<msg type="info" file="Map" num="110" delta="old" >output buffer &apos;<arg fmt="%s" index="1">b_7_OBUF</arg>&apos; driving design level port &apos;<arg fmt="%s" index="2">b&lt;7&gt;</arg>&apos; is being pushed into module &apos;<arg fmt="%s" index="3">sram_vga_controller</arg>&apos; to enable I/O register usage. The buffer has been renamed as &apos;<arg fmt="%s" index="4">sram_vga_controller/b_7_OBUF</arg>&apos;.
+</msg>
+
+<msg type="info" file="Map" num="110" delta="old" >output buffer &apos;<arg fmt="%s" index="1">g_0_OBUF</arg>&apos; driving design level port &apos;<arg fmt="%s" index="2">g&lt;0&gt;</arg>&apos; is being pushed into module &apos;<arg fmt="%s" index="3">sram_vga_controller</arg>&apos; to enable I/O register usage. The buffer has been renamed as &apos;<arg fmt="%s" index="4">sram_vga_controller/g_0_OBUF</arg>&apos;.
+</msg>
+
+<msg type="info" file="Map" num="110" delta="old" >output buffer &apos;<arg fmt="%s" index="1">g_1_OBUF</arg>&apos; driving design level port &apos;<arg fmt="%s" index="2">g&lt;1&gt;</arg>&apos; is being pushed into module &apos;<arg fmt="%s" index="3">sram_vga_controller</arg>&apos; to enable I/O register usage. The buffer has been renamed as &apos;<arg fmt="%s" index="4">sram_vga_controller/g_1_OBUF</arg>&apos;.
+</msg>
+
+<msg type="info" file="Map" num="110" delta="old" >output buffer &apos;<arg fmt="%s" index="1">g_2_OBUF</arg>&apos; driving design level port &apos;<arg fmt="%s" index="2">g&lt;2&gt;</arg>&apos; is being pushed into module &apos;<arg fmt="%s" index="3">sram_vga_controller</arg>&apos; to enable I/O register usage. The buffer has been renamed as &apos;<arg fmt="%s" index="4">sram_vga_controller/g_2_OBUF</arg>&apos;.
+</msg>
+
+<msg type="info" file="Map" num="110" delta="old" >output buffer &apos;<arg fmt="%s" index="1">g_3_OBUF</arg>&apos; driving design level port &apos;<arg fmt="%s" index="2">g&lt;3&gt;</arg>&apos; is being pushed into module &apos;<arg fmt="%s" index="3">sram_vga_controller</arg>&apos; to enable I/O register usage. The buffer has been renamed as &apos;<arg fmt="%s" index="4">sram_vga_controller/g_3_OBUF</arg>&apos;.
+</msg>
+
+<msg type="info" file="Map" num="110" delta="old" >output buffer &apos;<arg fmt="%s" index="1">g_4_OBUF</arg>&apos; driving design level port &apos;<arg fmt="%s" index="2">g&lt;4&gt;</arg>&apos; is being pushed into module &apos;<arg fmt="%s" index="3">sram_vga_controller</arg>&apos; to enable I/O register usage. The buffer has been renamed as &apos;<arg fmt="%s" index="4">sram_vga_controller/g_4_OBUF</arg>&apos;.
+</msg>
+
+<msg type="info" file="Map" num="110" delta="old" >output buffer &apos;<arg fmt="%s" index="1">g_5_OBUF</arg>&apos; driving design level port &apos;<arg fmt="%s" index="2">g&lt;5&gt;</arg>&apos; is being pushed into module &apos;<arg fmt="%s" index="3">sram_vga_controller</arg>&apos; to enable I/O register usage. The buffer has been renamed as &apos;<arg fmt="%s" index="4">sram_vga_controller/g_5_OBUF</arg>&apos;.
+</msg>
+
+<msg type="info" file="Map" num="110" delta="old" >output buffer &apos;<arg fmt="%s" index="1">g_6_OBUF</arg>&apos; driving design level port &apos;<arg fmt="%s" index="2">g&lt;6&gt;</arg>&apos; is being pushed into module &apos;<arg fmt="%s" index="3">sram_vga_controller</arg>&apos; to enable I/O register usage. The buffer has been renamed as &apos;<arg fmt="%s" index="4">sram_vga_controller/g_6_OBUF</arg>&apos;.
+</msg>
+
+<msg type="info" file="Map" num="110" delta="old" >output buffer &apos;<arg fmt="%s" index="1">g_7_OBUF</arg>&apos; driving design level port &apos;<arg fmt="%s" index="2">g&lt;7&gt;</arg>&apos; is being pushed into module &apos;<arg fmt="%s" index="3">sram_vga_controller</arg>&apos; to enable I/O register usage. The buffer has been renamed as &apos;<arg fmt="%s" index="4">sram_vga_controller/g_7_OBUF</arg>&apos;.
+</msg>
+
+<msg type="info" file="Map" num="110" delta="old" >output buffer &apos;<arg fmt="%s" index="1">r_0_OBUF</arg>&apos; driving design level port &apos;<arg fmt="%s" index="2">r&lt;0&gt;</arg>&apos; is being pushed into module &apos;<arg fmt="%s" index="3">sram_vga_controller</arg>&apos; to enable I/O register usage. The buffer has been renamed as &apos;<arg fmt="%s" index="4">sram_vga_controller/r_0_OBUF</arg>&apos;.
+</msg>
+
+<msg type="info" file="Map" num="110" delta="old" >output buffer &apos;<arg fmt="%s" index="1">r_1_OBUF</arg>&apos; driving design level port &apos;<arg fmt="%s" index="2">r&lt;1&gt;</arg>&apos; is being pushed into module &apos;<arg fmt="%s" index="3">sram_vga_controller</arg>&apos; to enable I/O register usage. The buffer has been renamed as &apos;<arg fmt="%s" index="4">sram_vga_controller/r_1_OBUF</arg>&apos;.
+</msg>
+
+<msg type="info" file="Map" num="110" delta="old" >output buffer &apos;<arg fmt="%s" index="1">r_2_OBUF</arg>&apos; driving design level port &apos;<arg fmt="%s" index="2">r&lt;2&gt;</arg>&apos; is being pushed into module &apos;<arg fmt="%s" index="3">sram_vga_controller</arg>&apos; to enable I/O register usage. The buffer has been renamed as &apos;<arg fmt="%s" index="4">sram_vga_controller/r_2_OBUF</arg>&apos;.
+</msg>
+
+<msg type="info" file="Map" num="110" delta="old" >output buffer &apos;<arg fmt="%s" index="1">r_3_OBUF</arg>&apos; driving design level port &apos;<arg fmt="%s" index="2">r&lt;3&gt;</arg>&apos; is being pushed into module &apos;<arg fmt="%s" index="3">sram_vga_controller</arg>&apos; to enable I/O register usage. The buffer has been renamed as &apos;<arg fmt="%s" index="4">sram_vga_controller/r_3_OBUF</arg>&apos;.
+</msg>
+
+<msg type="info" file="Map" num="110" delta="old" >output buffer &apos;<arg fmt="%s" index="1">r_4_OBUF</arg>&apos; driving design level port &apos;<arg fmt="%s" index="2">r&lt;4&gt;</arg>&apos; is being pushed into module &apos;<arg fmt="%s" index="3">sram_vga_controller</arg>&apos; to enable I/O register usage. The buffer has been renamed as &apos;<arg fmt="%s" index="4">sram_vga_controller/r_4_OBUF</arg>&apos;.
+</msg>
+
+<msg type="info" file="Map" num="110" delta="old" >output buffer &apos;<arg fmt="%s" index="1">r_5_OBUF</arg>&apos; driving design level port &apos;<arg fmt="%s" index="2">r&lt;5&gt;</arg>&apos; is being pushed into module &apos;<arg fmt="%s" index="3">sram_vga_controller</arg>&apos; to enable I/O register usage. The buffer has been renamed as &apos;<arg fmt="%s" index="4">sram_vga_controller/r_5_OBUF</arg>&apos;.
+</msg>
+
+<msg type="info" file="Map" num="110" delta="old" >output buffer &apos;<arg fmt="%s" index="1">r_6_OBUF</arg>&apos; driving design level port &apos;<arg fmt="%s" index="2">r&lt;6&gt;</arg>&apos; is being pushed into module &apos;<arg fmt="%s" index="3">sram_vga_controller</arg>&apos; to enable I/O register usage. The buffer has been renamed as &apos;<arg fmt="%s" index="4">sram_vga_controller/r_6_OBUF</arg>&apos;.
+</msg>
+
+<msg type="info" file="Map" num="110" delta="old" >output buffer &apos;<arg fmt="%s" index="1">r_7_OBUF</arg>&apos; driving design level port &apos;<arg fmt="%s" index="2">r&lt;7&gt;</arg>&apos; is being pushed into module &apos;<arg fmt="%s" index="3">sram_vga_controller</arg>&apos; to enable I/O register usage. The buffer has been renamed as &apos;<arg fmt="%s" index="4">sram_vga_controller/r_7_OBUF</arg>&apos;.
+</msg>
+
+<msg type="info" file="Map" num="110" delta="old" >output buffer &apos;<arg fmt="%s" index="1">vgastart_OBUF</arg>&apos; driving design level port &apos;<arg fmt="%s" index="2">vgastart</arg>&apos; is being pushed into module &apos;<arg fmt="%s" index="3">sram_vga_controller</arg>&apos; to enable I/O register usage. The buffer has been renamed as &apos;<arg fmt="%s" index="4">sram_vga_controller/vgastart_OBUF</arg>&apos;.
+</msg>
+
+<msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">yuv_to_rgb_conversion/dp/rd_done</arg> has no load.
+</msg>
+
+<msg type="info" file="MapLib" num="562" delta="old" >No environment variables are currently set.
+</msg>
+
+<msg type="info" file="LIT" num="244" delta="old" >All of the single ended outputs in this design are using slew rate limited output drivers. The delay on speed critical single ended outputs can be dramatically reduced by designating them as fast outputs.
+</msg>
+
+</messages>
+

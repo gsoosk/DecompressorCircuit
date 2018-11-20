@@ -1,0 +1,41 @@
+Release 14.7 ngdbuild P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
+-intstyle ise -dd _ngo -nt timestamp -uc
+Y:/Desktop/DecompressorCircuit/src/ucf/decompressor_top.ucf -p xc3s4000-fg676-4
+decompressor_top.ngc decompressor_top.ngd
+
+Reading NGO file
+"Y:/Desktop/DecompressorCircuit/prj/decompressor/decompressor_top.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file
+"Y:/Desktop/DecompressorCircuit/src/ucf/decompressor_top.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+Done...
+
+Checking expanded design ...
+WARNING:NgdBuild:452 - logical net 'yuv_to_rgb_conversion/dp/rd_done' has no
+   driver
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   1
+
+Total memory usage is 172344 kilobytes
+
+Writing NGD file "decompressor_top.ngd" ...
+Total REAL time to NGDBUILD completion:  3 sec
+Total CPU time to NGDBUILD completion:   3 sec
+
+Writing NGDBUILD log file "decompressor_top.bld"...

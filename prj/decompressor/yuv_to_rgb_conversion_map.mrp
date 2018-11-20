@@ -1,0 +1,312 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Mapping Report File for Design 'yuv_to_rgb_conversion'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc3s4000-fg676-4 -cm area -detail -ir off
+-pr off -c 100 -o yuv_to_rgb_conversion_map.ncd yuv_to_rgb_conversion.ngd
+yuv_to_rgb_conversion.pcf 
+Target Device  : xc3s4000
+Target Package : fg676
+Target Speed   : -4
+Mapper Version : spartan3 -- $Revision: 1.55 $
+Mapped Date    : Tue Nov 20 13:33:02 2018
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    0
+Logic Utilization:
+  Number of Slice Flip Flops:           122 out of  55,296    1%
+  Number of 4 input LUTs:               183 out of  55,296    1%
+Logic Distribution:
+  Number of occupied Slices:            166 out of  27,648    1%
+    Number of Slices containing only related logic:     166 out of     166 100%
+    Number of Slices containing unrelated logic:          0 out of     166   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:         235 out of  55,296    1%
+    Number used as logic:               183
+    Number used as a route-thru:         52
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                 73 out of     489   14%
+  Number of MULT18X18s:                   3 out of      96    3%
+  Number of BUFGMUXs:                     1 out of       8   12%
+
+Average Fanout of Non-Clock Nets:                2.23
+
+Peak Memory Usage:  309 MB
+Total REAL time to MAP completion:  2 secs 
+Total CPU time to MAP completion:   1 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network dp/rd_done has no load.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   6 block(s) optimized away
+   1 signal(s) removed
+  39 Block(s) redundant
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "dp/rd_done" is sourceless and has been removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		dp/XST_GND
+VCC 		dp/XST_VCC
+GND 		dp/read_counter/XST_GND
+VCC 		dp/read_counter/XST_VCC
+GND 		dp/write_counter/XST_GND
+VCC 		dp/write_counter/XST_VCC
+
+Redundant Block(s):
+TYPE 		BLOCK
+LOCALBUF 		dp/Msub_y_min_sub0000_xor<5>1_SW0/LUT2_L_BUF
+LOCALBUF 		dp/y_min<8>1_SW0/LUT4_L_BUF
+LOCALBUF 		dp/y_min<7>_SW0/LUT4_L_BUF
+LOCALBUF 		dp/Msub_y_min_sub0000_xor<6>1_SW0/LUT3_L_BUF
+LUT1 		dp/Madd_r_addr_cy<14>_rt
+LUT1 		dp/read_counter/Madd_r_addr_addsub0000_cy<1>_rt
+LUT1 		dp/read_counter/Madd_r_addr_addsub0000_cy<2>_rt
+LUT1 		dp/read_counter/Madd_r_addr_addsub0000_cy<3>_rt
+LUT1 		dp/read_counter/Madd_r_addr_addsub0000_cy<4>_rt
+LUT1 		dp/read_counter/Madd_r_addr_addsub0000_cy<5>_rt
+LUT1 		dp/read_counter/Madd_r_addr_addsub0000_cy<6>_rt
+LUT1 		dp/read_counter/Madd_r_addr_addsub0000_cy<7>_rt
+LUT1 		dp/read_counter/Madd_r_addr_addsub0000_cy<8>_rt
+LUT1 		dp/read_counter/Madd_r_addr_addsub0000_cy<9>_rt
+LUT1 		dp/read_counter/Madd_r_addr_addsub0000_cy<10>_rt
+LUT1 		dp/read_counter/Madd_r_addr_addsub0000_cy<11>_rt
+LUT1 		dp/read_counter/Madd_r_addr_addsub0000_cy<12>_rt
+LUT1 		dp/read_counter/Madd_r_addr_addsub0000_cy<13>_rt
+LUT1 		dp/read_counter/Madd_r_addr_addsub0000_cy<14>_rt
+LUT1 		dp/read_counter/Madd_r_addr_addsub0000_cy<15>_rt
+LUT1 		dp/read_counter/Madd_r_addr_addsub0000_cy<16>_rt
+LUT1 		dp/read_counter/Madd_r_addr_addsub0000_xor<17>_rt
+LUT1 		dp/write_counter/Madd_r_addr_addsub0000_cy<1>_rt
+LUT1 		dp/write_counter/Madd_r_addr_addsub0000_cy<2>_rt
+LUT1 		dp/write_counter/Madd_r_addr_addsub0000_cy<3>_rt
+LUT1 		dp/write_counter/Madd_r_addr_addsub0000_cy<4>_rt
+LUT1 		dp/write_counter/Madd_r_addr_addsub0000_cy<5>_rt
+LUT1 		dp/write_counter/Madd_r_addr_addsub0000_cy<6>_rt
+LUT1 		dp/write_counter/Madd_r_addr_addsub0000_cy<7>_rt
+LUT1 		dp/write_counter/Madd_r_addr_addsub0000_cy<8>_rt
+LUT1 		dp/write_counter/Madd_r_addr_addsub0000_cy<9>_rt
+LUT1 		dp/write_counter/Madd_r_addr_addsub0000_cy<10>_rt
+LUT1 		dp/write_counter/Madd_r_addr_addsub0000_cy<11>_rt
+LUT1 		dp/write_counter/Madd_r_addr_addsub0000_cy<12>_rt
+LUT1 		dp/write_counter/Madd_r_addr_addsub0000_cy<13>_rt
+LUT1 		dp/write_counter/Madd_r_addr_addsub0000_cy<14>_rt
+LUT1 		dp/write_counter/Madd_r_addr_addsub0000_cy<15>_rt
+LUT1 		dp/write_counter/Madd_r_addr_addsub0000_cy<16>_rt
+LUT1 		dp/write_counter/Madd_r_addr_addsub0000_xor<17>_rt
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| clk                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| done                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| raddr<0>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| raddr<1>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| raddr<2>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| raddr<3>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| raddr<4>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| raddr<5>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| raddr<6>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| raddr<7>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| raddr<8>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| raddr<9>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| raddr<10>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| raddr<11>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| raddr<12>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| raddr<13>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| raddr<14>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| raddr<15>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| raddr<16>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| raddr<17>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| rdata<0>                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| rdata<1>                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| rdata<2>                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| rdata<3>                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| rdata<4>                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| rdata<5>                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| rdata<6>                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| rdata<7>                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| rdata<8>                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| rdata<9>                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| rdata<10>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| rdata<11>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| rdata<12>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| rdata<13>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| rdata<14>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| rdata<15>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| reset                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| start                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| waddr<0>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| waddr<1>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| waddr<2>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| waddr<3>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| waddr<4>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| waddr<5>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| waddr<6>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| waddr<7>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| waddr<8>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| waddr<9>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| waddr<10>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| waddr<11>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| waddr<12>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| waddr<13>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| waddr<14>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| waddr<15>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| waddr<16>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| waddr<17>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| wdata<0>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| wdata<1>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| wdata<2>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| wdata<3>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| wdata<4>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| wdata<5>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| wdata<6>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| wdata<7>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| wdata<8>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| wdata<9>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| wdata<10>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| wdata<11>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| wdata<12>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| wdata<13>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| wdata<14>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| wdata<15>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| wr_enable                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+This design was not run using timing mode.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+BUFGMUX "clk_BUFGP/BUFG":
+DISABLE_ATTR:LOW
+
+
+
+
+Section 12 - Control Set Information
+------------------------------------
+No control set information for this architecture.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Module                 | Partition | Slices        | Slice Reg     | LUTs          | LUTRAM        | BRAM      | MULT18X18 | BUFG  | DCM   | Full Hierarchical Name                       |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| yuv_to_rgb_conversion/ |           | 0/166         | 0/122         | 0/235         | 0/0           | 0/0       | 0/3       | 1/1   | 0/0   | yuv_to_rgb_conversion                        |
+| +c                     |           | 11/11         | 13/13         | 9/9           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | yuv_to_rgb_conversion/c                      |
+| +dp                    |           | 70/155        | 0/109         | 134/226       | 0/0           | 0/0       | 3/3       | 0/0   | 0/0   | yuv_to_rgb_conversion/dp                     |
+| ++b_reg                |           | 4/4           | 8/8           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | yuv_to_rgb_conversion/dp/b_reg               |
+| ++g_reg                |           | 4/4           | 8/8           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | yuv_to_rgb_conversion/dp/g_reg               |
+| ++r_reg                |           | 4/4           | 8/8           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | yuv_to_rgb_conversion/dp/r_reg               |
+| ++read_counter         |           | 24/24         | 18/18         | 46/46         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | yuv_to_rgb_conversion/dp/read_counter        |
+| ++u_reg                |           | 8/8           | 16/16         | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | yuv_to_rgb_conversion/dp/u_reg               |
+| ++v_reg                |           | 8/8           | 16/16         | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | yuv_to_rgb_conversion/dp/v_reg               |
+| ++write_counter        |           | 25/25         | 19/19         | 46/46         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | yuv_to_rgb_conversion/dp/write_counter       |
+| ++y_reg                |           | 8/8           | 16/16         | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | yuv_to_rgb_conversion/dp/y_reg               |
+| +yuv_to_rgb_conversion |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | yuv_to_rgb_conversion/yuv_to_rgb_conversion  |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Slices can be packed with basic elements from multiple hierarchies.
+  Therefore, a slice will be counted in every hierarchical module
+  that each of its packed basic elements belong to.
+** For each column, there are two numbers reported <A>/<B>.
+   <A> is the number of elements that belong to that specific hierarchical module.
+   <B> is the total number of elements from that hierarchical module and any lower level
+   hierarchical modules below.
+*** The LUTRAM column counts all LUTs used as memory including RAM, ROM, and shift registers.

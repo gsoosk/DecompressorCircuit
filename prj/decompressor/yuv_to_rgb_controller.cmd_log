@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "Y:/Desktop/DecompressorCircuit/prj/decompressor/yuv_to_rgb_controller.xst" -ofn "Y:/Desktop/DecompressorCircuit/prj/decompressor/yuv_to_rgb_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s4000-fg676-4 yuv_to_rgb_controller.ngc yuv_to_rgb_controller.ngd  
+map -intstyle ise -p xc3s4000-fg676-4 -cm area -detail -ir off -pr off -c 100 -o yuv_to_rgb_controller_map.ncd yuv_to_rgb_controller.ngd yuv_to_rgb_controller.pcf 
+par -w -intstyle ise -ol high -t 1 yuv_to_rgb_controller_map.ncd yuv_to_rgb_controller.ncd yuv_to_rgb_controller.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml yuv_to_rgb_controller.twx yuv_to_rgb_controller.ncd -o yuv_to_rgb_controller.twr yuv_to_rgb_controller.pcf 

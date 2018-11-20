@@ -1,0 +1,455 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Mapping Report File for Design 'decompressor_top'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc3s4000-fg676-4 -cm area -detail -ir off
+-pr off -c 100 -o decompressor_top_map.ncd decompressor_top.ngd
+decompressor_top.pcf 
+Target Device  : xc3s4000
+Target Package : fg676
+Target Speed   : -4
+Mapper Version : spartan3 -- $Revision: 1.55 $
+Mapped Date    : Tue Nov 20 16:23:04 2018
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    0
+Logic Utilization:
+  Number of Slice Flip Flops:           238 out of  55,296    1%
+  Number of 4 input LUTs:               290 out of  55,296    1%
+Logic Distribution:
+  Number of occupied Slices:            265 out of  27,648    1%
+    Number of Slices containing only related logic:     265 out of     265 100%
+    Number of Slices containing unrelated logic:          0 out of     265   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:         373 out of  55,296    1%
+    Number used as logic:               290
+    Number used as a route-thru:         83
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                102 out of     489   20%
+  Number of MULT18X18s:                   3 out of      96    3%
+  Number of BUFGMUXs:                     1 out of       8   12%
+
+Average Fanout of Non-Clock Nets:                2.43
+
+Peak Memory Usage:  313 MB
+Total REAL time to MAP completion:  2 secs 
+Total CPU time to MAP completion:   1 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+
+Section 3 - Informational
+-------------------------
+INFO:Map:110 - output buffer 'b_0_OBUF' driving design level port 'b<0>' is
+   being pushed into module 'sram_vga_controller' to enable I/O register usage.
+   The buffer has been renamed as 'sram_vga_controller/b_0_OBUF'.
+INFO:Map:110 - output buffer 'b_1_OBUF' driving design level port 'b<1>' is
+   being pushed into module 'sram_vga_controller' to enable I/O register usage.
+   The buffer has been renamed as 'sram_vga_controller/b_1_OBUF'.
+INFO:Map:110 - output buffer 'b_2_OBUF' driving design level port 'b<2>' is
+   being pushed into module 'sram_vga_controller' to enable I/O register usage.
+   The buffer has been renamed as 'sram_vga_controller/b_2_OBUF'.
+INFO:Map:110 - output buffer 'b_3_OBUF' driving design level port 'b<3>' is
+   being pushed into module 'sram_vga_controller' to enable I/O register usage.
+   The buffer has been renamed as 'sram_vga_controller/b_3_OBUF'.
+INFO:Map:110 - output buffer 'b_4_OBUF' driving design level port 'b<4>' is
+   being pushed into module 'sram_vga_controller' to enable I/O register usage.
+   The buffer has been renamed as 'sram_vga_controller/b_4_OBUF'.
+INFO:Map:110 - output buffer 'b_5_OBUF' driving design level port 'b<5>' is
+   being pushed into module 'sram_vga_controller' to enable I/O register usage.
+   The buffer has been renamed as 'sram_vga_controller/b_5_OBUF'.
+INFO:Map:110 - output buffer 'b_6_OBUF' driving design level port 'b<6>' is
+   being pushed into module 'sram_vga_controller' to enable I/O register usage.
+   The buffer has been renamed as 'sram_vga_controller/b_6_OBUF'.
+INFO:Map:110 - output buffer 'b_7_OBUF' driving design level port 'b<7>' is
+   being pushed into module 'sram_vga_controller' to enable I/O register usage.
+   The buffer has been renamed as 'sram_vga_controller/b_7_OBUF'.
+INFO:Map:110 - output buffer 'g_0_OBUF' driving design level port 'g<0>' is
+   being pushed into module 'sram_vga_controller' to enable I/O register usage.
+   The buffer has been renamed as 'sram_vga_controller/g_0_OBUF'.
+INFO:Map:110 - output buffer 'g_1_OBUF' driving design level port 'g<1>' is
+   being pushed into module 'sram_vga_controller' to enable I/O register usage.
+   The buffer has been renamed as 'sram_vga_controller/g_1_OBUF'.
+INFO:Map:110 - output buffer 'g_2_OBUF' driving design level port 'g<2>' is
+   being pushed into module 'sram_vga_controller' to enable I/O register usage.
+   The buffer has been renamed as 'sram_vga_controller/g_2_OBUF'.
+INFO:Map:110 - output buffer 'g_3_OBUF' driving design level port 'g<3>' is
+   being pushed into module 'sram_vga_controller' to enable I/O register usage.
+   The buffer has been renamed as 'sram_vga_controller/g_3_OBUF'.
+INFO:Map:110 - output buffer 'g_4_OBUF' driving design level port 'g<4>' is
+   being pushed into module 'sram_vga_controller' to enable I/O register usage.
+   The buffer has been renamed as 'sram_vga_controller/g_4_OBUF'.
+INFO:Map:110 - output buffer 'g_5_OBUF' driving design level port 'g<5>' is
+   being pushed into module 'sram_vga_controller' to enable I/O register usage.
+   The buffer has been renamed as 'sram_vga_controller/g_5_OBUF'.
+INFO:Map:110 - output buffer 'g_6_OBUF' driving design level port 'g<6>' is
+   being pushed into module 'sram_vga_controller' to enable I/O register usage.
+   The buffer has been renamed as 'sram_vga_controller/g_6_OBUF'.
+INFO:Map:110 - output buffer 'g_7_OBUF' driving design level port 'g<7>' is
+   being pushed into module 'sram_vga_controller' to enable I/O register usage.
+   The buffer has been renamed as 'sram_vga_controller/g_7_OBUF'.
+INFO:Map:110 - output buffer 'r_0_OBUF' driving design level port 'r<0>' is
+   being pushed into module 'sram_vga_controller' to enable I/O register usage.
+   The buffer has been renamed as 'sram_vga_controller/r_0_OBUF'.
+INFO:Map:110 - output buffer 'r_1_OBUF' driving design level port 'r<1>' is
+   being pushed into module 'sram_vga_controller' to enable I/O register usage.
+   The buffer has been renamed as 'sram_vga_controller/r_1_OBUF'.
+INFO:Map:110 - output buffer 'r_2_OBUF' driving design level port 'r<2>' is
+   being pushed into module 'sram_vga_controller' to enable I/O register usage.
+   The buffer has been renamed as 'sram_vga_controller/r_2_OBUF'.
+INFO:Map:110 - output buffer 'r_3_OBUF' driving design level port 'r<3>' is
+   being pushed into module 'sram_vga_controller' to enable I/O register usage.
+   The buffer has been renamed as 'sram_vga_controller/r_3_OBUF'.
+INFO:Map:110 - output buffer 'r_4_OBUF' driving design level port 'r<4>' is
+   being pushed into module 'sram_vga_controller' to enable I/O register usage.
+   The buffer has been renamed as 'sram_vga_controller/r_4_OBUF'.
+INFO:Map:110 - output buffer 'r_5_OBUF' driving design level port 'r<5>' is
+   being pushed into module 'sram_vga_controller' to enable I/O register usage.
+   The buffer has been renamed as 'sram_vga_controller/r_5_OBUF'.
+INFO:Map:110 - output buffer 'r_6_OBUF' driving design level port 'r<6>' is
+   being pushed into module 'sram_vga_controller' to enable I/O register usage.
+   The buffer has been renamed as 'sram_vga_controller/r_6_OBUF'.
+INFO:Map:110 - output buffer 'r_7_OBUF' driving design level port 'r<7>' is
+   being pushed into module 'sram_vga_controller' to enable I/O register usage.
+   The buffer has been renamed as 'sram_vga_controller/r_7_OBUF'.
+INFO:Map:110 - output buffer 'vgastart_OBUF' driving design level port
+   'vgastart' is being pushed into module 'sram_vga_controller' to enable I/O
+   register usage. The buffer has been renamed as
+   'sram_vga_controller/vgastart_OBUF'.
+INFO:LIT:243 - Logical network yuv_to_rgb_conversion/dp/rd_done has no load.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+  10 block(s) optimized away
+   1 signal(s) removed
+  70 Block(s) redundant
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "yuv_to_rgb_conversion/dp/rd_done" is sourceless and has been
+removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+GND 		sram_vga_controller/XST_GND
+VCC 		sram_vga_controller/XST_VCC
+GND 		yuv_to_rgb_conversion/dp/XST_GND
+VCC 		yuv_to_rgb_conversion/dp/XST_VCC
+GND 		yuv_to_rgb_conversion/dp/read_counter/XST_GND
+VCC 		yuv_to_rgb_conversion/dp/read_counter/XST_VCC
+GND 		yuv_to_rgb_conversion/dp/write_counter/XST_GND
+VCC 		yuv_to_rgb_conversion/dp/write_counter/XST_VCC
+
+Redundant Block(s):
+TYPE 		BLOCK
+LUT1 		sram_vga_controller/Mcount_cnt_cy<1>_rt
+LUT1 		sram_vga_controller/Mcount_cnt_cy<2>_rt
+LUT1 		sram_vga_controller/Mcount_cnt_cy<3>_rt
+LUT1 		sram_vga_controller/Mcount_cnt_cy<4>_rt
+LUT1 		sram_vga_controller/Mcount_cnt_cy<5>_rt
+LUT1 		sram_vga_controller/Mcount_cnt_cy<6>_rt
+LUT1 		sram_vga_controller/Mcount_cnt_cy<7>_rt
+LUT1 		sram_vga_controller/Mcount_cnt_cy<8>_rt
+LUT1 		sram_vga_controller/Mcount_cnt_cy<9>_rt
+LUT1 		sram_vga_controller/Mcount_cnt_cy<10>_rt
+LUT1 		sram_vga_controller/Mcount_cnt_cy<11>_rt
+LUT1 		sram_vga_controller/Mcount_cnt_cy<12>_rt
+LUT1 		sram_vga_controller/Mcount_cnt_cy<13>_rt
+LUT1 		sram_vga_controller/Mcount_cnt_cy<14>_rt
+LUT1 		sram_vga_controller/Mcount_cnt_cy<15>_rt
+LUT1 		sram_vga_controller/Mcount_cnt_cy<16>_rt
+LUT1 		sram_vga_controller/Mcount_cnt_cy<17>_rt
+LUT1 		sram_vga_controller/Mcount_cnt_cy<18>_rt
+LUT1 		sram_vga_controller/Mcount_cnt_cy<19>_rt
+LUT1 		sram_vga_controller/Mcount_cnt_cy<20>_rt
+LUT1 		sram_vga_controller/Mcount_cnt_cy<21>_rt
+LUT1 		sram_vga_controller/Mcount_cnt_cy<22>_rt
+LUT1 		sram_vga_controller/Mcount_cnt_cy<23>_rt
+LUT1 		sram_vga_controller/Mcount_cnt_cy<24>_rt
+LUT1 		sram_vga_controller/Mcount_cnt_cy<25>_rt
+LUT1 		sram_vga_controller/Mcount_cnt_cy<26>_rt
+LUT1 		sram_vga_controller/Mcount_cnt_cy<27>_rt
+LUT1 		sram_vga_controller/Mcount_cnt_cy<28>_rt
+LUT1 		sram_vga_controller/Mcount_cnt_cy<29>_rt
+LUT1 		sram_vga_controller/Mcount_cnt_cy<30>_rt
+LUT1 		sram_vga_controller/Mcount_cnt_xor<31>_rt
+LOCALBUF 		yuv_to_rgb_conversion/dp/Msub_y_min_sub0000_xor<5>1_SW0/LUT2_L_BUF
+LOCALBUF 		yuv_to_rgb_conversion/dp/y_min<8>1_SW0/LUT4_L_BUF
+LOCALBUF 		yuv_to_rgb_conversion/dp/y_min<7>_SW0/LUT4_L_BUF
+LOCALBUF 		yuv_to_rgb_conversion/dp/Msub_y_min_sub0000_xor<6>1_SW0/LUT3_L_BUF
+LUT1 		yuv_to_rgb_conversion/dp/Madd_r_addr_cy<14>_rt
+LUT1 		yuv_to_rgb_conversion/dp/read_counter/Madd_r_addr_addsub0000_cy<1>_rt
+LUT1 		yuv_to_rgb_conversion/dp/read_counter/Madd_r_addr_addsub0000_cy<2>_rt
+LUT1 		yuv_to_rgb_conversion/dp/read_counter/Madd_r_addr_addsub0000_cy<3>_rt
+LUT1 		yuv_to_rgb_conversion/dp/read_counter/Madd_r_addr_addsub0000_cy<4>_rt
+LUT1 		yuv_to_rgb_conversion/dp/read_counter/Madd_r_addr_addsub0000_cy<5>_rt
+LUT1 		yuv_to_rgb_conversion/dp/read_counter/Madd_r_addr_addsub0000_cy<6>_rt
+LUT1 		yuv_to_rgb_conversion/dp/read_counter/Madd_r_addr_addsub0000_cy<7>_rt
+LUT1 		yuv_to_rgb_conversion/dp/read_counter/Madd_r_addr_addsub0000_cy<8>_rt
+LUT1 		yuv_to_rgb_conversion/dp/read_counter/Madd_r_addr_addsub0000_cy<9>_rt
+LUT1 		yuv_to_rgb_conversion/dp/read_counter/Madd_r_addr_addsub0000_cy<10>_rt
+LUT1 		yuv_to_rgb_conversion/dp/read_counter/Madd_r_addr_addsub0000_cy<11>_rt
+LUT1 		yuv_to_rgb_conversion/dp/read_counter/Madd_r_addr_addsub0000_cy<12>_rt
+LUT1 		yuv_to_rgb_conversion/dp/read_counter/Madd_r_addr_addsub0000_cy<13>_rt
+LUT1 		yuv_to_rgb_conversion/dp/read_counter/Madd_r_addr_addsub0000_cy<14>_rt
+LUT1 		yuv_to_rgb_conversion/dp/read_counter/Madd_r_addr_addsub0000_cy<15>_rt
+LUT1 		yuv_to_rgb_conversion/dp/read_counter/Madd_r_addr_addsub0000_cy<16>_rt
+LUT1 		yuv_to_rgb_conversion/dp/read_counter/Madd_r_addr_addsub0000_xor<17>_rt
+LUT1 		yuv_to_rgb_conversion/dp/write_counter/Madd_r_addr_addsub0000_cy<1>_rt
+LUT1 		yuv_to_rgb_conversion/dp/write_counter/Madd_r_addr_addsub0000_cy<2>_rt
+LUT1 		yuv_to_rgb_conversion/dp/write_counter/Madd_r_addr_addsub0000_cy<3>_rt
+LUT1 		yuv_to_rgb_conversion/dp/write_counter/Madd_r_addr_addsub0000_cy<4>_rt
+LUT1 		yuv_to_rgb_conversion/dp/write_counter/Madd_r_addr_addsub0000_cy<5>_rt
+LUT1 		yuv_to_rgb_conversion/dp/write_counter/Madd_r_addr_addsub0000_cy<6>_rt
+LUT1 		yuv_to_rgb_conversion/dp/write_counter/Madd_r_addr_addsub0000_cy<7>_rt
+LUT1 		yuv_to_rgb_conversion/dp/write_counter/Madd_r_addr_addsub0000_cy<8>_rt
+LUT1 		yuv_to_rgb_conversion/dp/write_counter/Madd_r_addr_addsub0000_cy<9>_rt
+LUT1 		yuv_to_rgb_conversion/dp/write_counter/Madd_r_addr_addsub0000_cy<10>_rt
+LUT1 		yuv_to_rgb_conversion/dp/write_counter/Madd_r_addr_addsub0000_cy<11>_rt
+LUT1 		yuv_to_rgb_conversion/dp/write_counter/Madd_r_addr_addsub0000_cy<12>_rt
+LUT1 		yuv_to_rgb_conversion/dp/write_counter/Madd_r_addr_addsub0000_cy<13>_rt
+LUT1 		yuv_to_rgb_conversion/dp/write_counter/Madd_r_addr_addsub0000_cy<14>_rt
+LUT1 		yuv_to_rgb_conversion/dp/write_counter/Madd_r_addr_addsub0000_cy<15>_rt
+LUT1 		yuv_to_rgb_conversion/dp/write_counter/Madd_r_addr_addsub0000_cy<16>_rt
+LUT1 		yuv_to_rgb_conversion/dp/write_counter/Madd_r_addr_addsub0000_xor<17>_rt
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| b<0>                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| b<1>                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| b<2>                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| b<3>                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| b<4>                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| b<5>                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| b<6>                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| b<7>                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| clk                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| done                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| g<0>                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| g<1>                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| g<2>                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| g<3>                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| g<4>                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| g<5>                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| g<6>                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| g<7>                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| r<0>                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| r<1>                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| r<2>                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| r<3>                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| r<4>                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| r<5>                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| r<6>                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| r<7>                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| reset                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sram_raddr<0>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_raddr<1>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_raddr<2>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_raddr<3>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_raddr<4>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_raddr<5>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_raddr<6>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_raddr<7>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_raddr<8>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_raddr<9>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_raddr<10>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_raddr<11>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_raddr<12>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_raddr<13>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_raddr<14>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_raddr<15>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_raddr<16>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_raddr<17>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_raddr<18>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_raddr<19>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_rdata<0>                      | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sram_rdata<1>                      | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sram_rdata<2>                      | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sram_rdata<3>                      | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sram_rdata<4>                      | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sram_rdata<5>                      | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sram_rdata<6>                      | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sram_rdata<7>                      | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sram_rdata<8>                      | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sram_rdata<9>                      | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sram_rdata<10>                     | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sram_rdata<11>                     | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sram_rdata<12>                     | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sram_rdata<13>                     | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sram_rdata<14>                     | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sram_rdata<15>                     | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sram_waddr<0>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_waddr<1>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_waddr<2>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_waddr<3>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_waddr<4>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_waddr<5>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_waddr<6>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_waddr<7>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_waddr<8>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_waddr<9>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_waddr<10>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_waddr<11>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_waddr<12>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_waddr<13>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_waddr<14>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_waddr<15>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_waddr<16>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_waddr<17>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_waddr<18>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_waddr<19>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_wdata<0>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_wdata<1>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_wdata<2>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_wdata<3>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_wdata<4>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_wdata<5>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_wdata<6>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_wdata<7>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_wdata<8>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_wdata<9>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_wdata<10>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_wdata<11>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_wdata<12>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_wdata<13>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_wdata<14>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_wdata<15>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sram_wr_enable                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| start                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| vgastart                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+This design was not run using timing mode.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+BUFGMUX "clk_BUFGP/BUFG":
+DISABLE_ATTR:LOW
+
+
+
+
+Section 12 - Control Set Information
+------------------------------------
+No control set information for this architecture.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Module                 | Partition | Slices        | Slice Reg     | LUTs          | LUTRAM        | BRAM      | MULT18X18 | BUFG  | DCM   | Full Hierarchical Name                                   |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| decompressor_top/      |           | 31/265        | 3/238         | 57/373        | 0/0           | 0/0       | 0/3       | 1/1   | 0/0   | decompressor_top                                         |
+| +decompressor_top      |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | decompressor_top/decompressor_top                        |
+| +sram_vga_controller   |           | 69/69         | 113/113       | 81/81         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | decompressor_top/sram_vga_controller                     |
+| +yuv_to_rgb_conversion |           | 0/165         | 0/122         | 0/235         | 0/0           | 0/0       | 0/3       | 0/0   | 0/0   | decompressor_top/yuv_to_rgb_conversion                   |
+| ++c                    |           | 11/11         | 13/13         | 9/9           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | decompressor_top/yuv_to_rgb_conversion/c                 |
+| ++dp                   |           | 69/154        | 0/109         | 134/226       | 0/0           | 0/0       | 3/3       | 0/0   | 0/0   | decompressor_top/yuv_to_rgb_conversion/dp                |
+| +++b_reg               |           | 4/4           | 8/8           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | decompressor_top/yuv_to_rgb_conversion/dp/b_reg          |
+| +++g_reg               |           | 4/4           | 8/8           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | decompressor_top/yuv_to_rgb_conversion/dp/g_reg          |
+| +++r_reg               |           | 4/4           | 8/8           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | decompressor_top/yuv_to_rgb_conversion/dp/r_reg          |
+| +++read_counter        |           | 24/24         | 18/18         | 46/46         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | decompressor_top/yuv_to_rgb_conversion/dp/read_counter   |
+| +++u_reg               |           | 8/8           | 16/16         | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | decompressor_top/yuv_to_rgb_conversion/dp/u_reg          |
+| +++v_reg               |           | 8/8           | 16/16         | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | decompressor_top/yuv_to_rgb_conversion/dp/v_reg          |
+| +++write_counter       |           | 25/25         | 19/19         | 46/46         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | decompressor_top/yuv_to_rgb_conversion/dp/write_counter  |
+| +++y_reg               |           | 8/8           | 16/16         | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | decompressor_top/yuv_to_rgb_conversion/dp/y_reg          |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Slices can be packed with basic elements from multiple hierarchies.
+  Therefore, a slice will be counted in every hierarchical module
+  that each of its packed basic elements belong to.
+** For each column, there are two numbers reported <A>/<B>.
+   <A> is the number of elements that belong to that specific hierarchical module.
+   <B> is the total number of elements from that hierarchical module and any lower level
+   hierarchical modules below.
+*** The LUTRAM column counts all LUTs used as memory including RAM, ROM, and shift registers.

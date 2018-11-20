@@ -1,0 +1,8 @@
+MO decompressor_top NULL ../../src/hdl/decompressor_top.v vlg68/decompressor__top.bin 1542718369
+MO yuv_to_rgb_datapath NULL ../../src/hdl/yuv_to_rgb_datapath.v vlg0A/yuv__to__rgb__datapath.bin 1542718369
+MO yuv_to_rgb_controller NULL ../../src/hdl/yuv_to_rgb_controller.v vlg7F/yuv__to__rgb__controller.bin 1542718369
+MO register_8_bit NULL ../../src/hdl/register_8_bit.v vlg4A/register__8__bit.bin 1542718369
+MO sram_vga_controller NULL ../../src/hdl/sram_vga_controller.v vlg13/sram__vga__controller.bin 1542718369
+MO counter_18bit NULL ../../src/hdl/counter_18bit.v vlg47/counter__18bit.bin 1542718369
+MO register_16_bit NULL ../../src/hdl/register_16_bit.v vlg7D/register__16__bit.bin 1542718369
+MO yuv_to_rgb_conversion NULL ../../src/hdl/yuv_to_rgb_conversion.v vlg01/yuv__to__rgb__conversion.bin 1542718369

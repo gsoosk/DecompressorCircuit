@@ -1,0 +1,531 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Reading design: yuv_to_rgb_datapath.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "yuv_to_rgb_datapath.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "yuv_to_rgb_datapath"
+Output Format                      : NGC
+Target Device                      : xc3s4000-4-fg676
+
+---- Source Options
+Top Module Name                    : yuv_to_rgb_datapath
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : Yes
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "../../src/hdl/register_8_bit.v" in library work
+Compiling verilog file "../../src/hdl/register_16_bit.v" in library work
+Module <register_8_bit> compiled
+Compiling verilog file "../../src/hdl/counter_18bit.v" in library work
+Module <register_16_bit> compiled
+Compiling verilog file "../../src/hdl/yuv_to_rgb_datapath.v" in library work
+Module <counter_18bit> compiled
+Module <yuv_to_rgb_datapath> compiled
+No errors in compilation
+Analysis of file <"yuv_to_rgb_datapath.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <yuv_to_rgb_datapath> in library <work>.
+
+Analyzing hierarchy for module <counter_18bit> in library <work>.
+
+Analyzing hierarchy for module <register_16_bit> in library <work>.
+
+Analyzing hierarchy for module <register_8_bit> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <yuv_to_rgb_datapath>.
+Module <yuv_to_rgb_datapath> is correct for synthesis.
+ 
+Analyzing module <counter_18bit> in library <work>.
+Module <counter_18bit> is correct for synthesis.
+ 
+Analyzing module <register_16_bit> in library <work>.
+Module <register_16_bit> is correct for synthesis.
+ 
+Analyzing module <register_8_bit> in library <work>.
+Module <register_8_bit> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <counter_18bit>.
+    Related source file is "../../src/hdl/counter_18bit.v".
+    Found 18-bit register for signal <r_addr>.
+    Found 1-bit register for signal <count_done>.
+    Found 18-bit comparator equal for signal <count_done$cmp_eq0000> created at line 19.
+    Found 18-bit adder for signal <r_addr$addsub0000> created at line 22.
+    Found 18-bit comparator not equal for signal <r_addr$cmp_ne0000> created at line 19.
+    Summary:
+	inferred  19 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+Unit <counter_18bit> synthesized.
+
+
+Synthesizing Unit <register_16_bit>.
+    Related source file is "../../src/hdl/register_16_bit.v".
+    Found 16-bit register for signal <data_out>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <register_16_bit> synthesized.
+
+
+Synthesizing Unit <register_8_bit>.
+    Related source file is "../../src/hdl/register_8_bit.v".
+    Found 8-bit register for signal <data_out>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <register_8_bit> synthesized.
+
+
+Synthesizing Unit <yuv_to_rgb_datapath>.
+    Related source file is "../../src/hdl/yuv_to_rgb_datapath.v".
+WARNING:Xst:646 - Signal <to_div<15:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <filter<8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <divBig<25:9>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:643 - "../../src/hdl/yuv_to_rgb_datapath.v" line 16: The result of a 32x2-bit multiplication is partially used. Only the 18 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "../../src/hdl/yuv_to_rgb_datapath.v" line 46: The result of a 26x18-bit multiplication is partially used. Only the 26 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "../../src/hdl/yuv_to_rgb_datapath.v" line 47: The result of a 26x18-bit multiplication is partially used. Only the 26 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "../../src/hdl/yuv_to_rgb_datapath.v" line 48: The result of a 26x18-bit multiplication is partially used. Only the 26 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+    Found 18-bit adder for signal <r_addr>.
+    Found 10-bit comparator greater for signal <filter$cmp_gt0000> created at line 59.
+    Found 16x16-bit multiplier for signal <rlimit$mult0001> created at line 17.
+    Found 32x2-bit multiplier for signal <start_addr$mult0000> created at line 15.
+    Found 26-bit adder for signal <to_div>.
+    Found 26-bit adder for signal <to_div$addsub0000> created at line 51.
+    Found 10-bit subtractor for signal <u_min$sub0000> created at line 42.
+    Found 26x18-bit multiplier for signal <u_num$mult0001> created at line 47.
+    Found 10-bit subtractor for signal <v_min$sub0000> created at line 43.
+    Found 26x18-bit multiplier for signal <v_num$mult0001> created at line 48.
+    Found 32x2-bit multiplier for signal <wlimit$mult0001> created at line 16.
+    Found 10-bit subtractor for signal <y_min$sub0000> created at line 41.
+    Found 26x18-bit multiplier for signal <y_num$mult0001> created at line 46.
+    Summary:
+	inferred   6 Adder/Subtractor(s).
+	inferred   6 Multiplier(s).
+	inferred   1 Comparator(s).
+Unit <yuv_to_rgb_datapath> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 6
+ 16x16-bit multiplier                                  : 1
+ 26x18-bit multiplier                                  : 3
+ 32x2-bit multiplier                                   : 2
+# Adders/Subtractors                                   : 8
+ 10-bit subtractor                                     : 3
+ 18-bit adder                                          : 3
+ 26-bit adder                                          : 2
+# Registers                                            : 10
+ 1-bit register                                        : 2
+ 16-bit register                                       : 3
+ 18-bit register                                       : 2
+ 8-bit register                                        : 3
+# Comparators                                          : 5
+ 10-bit comparator greater                             : 1
+ 18-bit comparator equal                               : 2
+ 18-bit comparator not equal                           : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 6
+ 10x18-bit multiplier                                  : 2
+ 16x16-bit multiplier                                  : 1
+ 26x18-bit multiplier                                  : 1
+ 32x2-bit multiplier                                   : 2
+# Adders/Subtractors                                   : 8
+ 10-bit subtractor                                     : 3
+ 18-bit adder                                          : 3
+ 25-bit adder                                          : 2
+# Registers                                            : 110
+ Flip-Flops                                            : 110
+# Comparators                                          : 5
+ 10-bit comparator greater                             : 1
+ 18-bit comparator equal                               : 2
+ 18-bit comparator not equal                           : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <yuv_to_rgb_datapath> ...
+
+Optimizing unit <counter_18bit> ...
+
+Optimizing unit <register_16_bit> ...
+
+Optimizing unit <register_8_bit> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block yuv_to_rgb_datapath, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 110
+ Flip-Flops                                            : 110
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : yuv_to_rgb_datapath.ngr
+Top Level Output File Name         : yuv_to_rgb_datapath
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : Yes
+
+Design Statistics
+# IOs                              : 119
+
+Cell Usage :
+# BELS                             : 568
+#      GND                         : 3
+#      INV                         : 3
+#      LUT1                        : 34
+#      LUT2                        : 113
+#      LUT2_L                      : 1
+#      LUT3                        : 60
+#      LUT4                        : 58
+#      MUXCY                       : 150
+#      MUXF5                       : 20
+#      VCC                         : 3
+#      XORCY                       : 123
+# FlipFlops/Latches                : 110
+#      FDE                         : 108
+#      FDSE                        : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 118
+#      IBUF                        : 64
+#      OBUF                        : 54
+# MULTs                            : 4
+#      MULT18X18                   : 4
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s4000fg676-4 
+
+ Number of Slices:                      196  out of  27648     0%  
+ Number of Slice Flip Flops:            110  out of  55296     0%  
+ Number of 4 input LUTs:                269  out of  55296     0%  
+ Number of IOs:                         119
+ Number of bonded IOBs:                 119  out of    489    24%  
+ Number of MULT18X18s:                    4  out of     96     4%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 110   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 16.153ns (Maximum Frequency: 61.908MHz)
+   Minimum input arrival time before clock: 16.960ns
+   Maximum output required time after clock: 11.390ns
+   Maximum combinational path delay: 16.775ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 16.153ns (frequency: 61.908MHz)
+  Total number of paths / destination ports: 2153250 / 98
+-------------------------------------------------------------------------
+Delay:               16.153ns (Levels of Logic = 11)
+  Source:            y_reg/data_out_13 (FF)
+  Destination:       b_reg/data_out_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: y_reg/data_out_13 to b_reg/data_out_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              4   0.720   1.256  data_out_13 (data_out_13)
+     end scope: 'y_reg'
+     LUT2_L:I0->LO         1   0.551   0.126  Msub_y_min_sub0000_xor<5>1_SW0 (N32)
+     LUT4:I3->O            1   0.551   0.801  Msub_y_min_sub0000_xor<5>1 (y_min<5>)
+     MULT18X18:A5->P22     1   4.214   0.996  Mmult_y_num_mult0001 (y_num<22>)
+     LUT2:I1->O            1   0.551   0.000  Madd_to_div_addsub0000_Madd_lut<22> (Madd_to_div_addsub0000_Madd_lut<22>)
+     MUXCY:S->O            1   0.500   0.000  Madd_to_div_addsub0000_Madd_cy<22> (Madd_to_div_addsub0000_Madd_cy<22>)
+     XORCY:CI->O           1   0.904   0.996  Madd_to_div_addsub0000_Madd_xor<23> (to_div_addsub0000<23>)
+     LUT2:I1->O            1   0.551   0.000  Madd_to_div_Madd_lut<23> (Madd_to_div_Madd_lut<23>)
+     MUXCY:S->O            0   0.500   0.000  Madd_to_div_Madd_cy<23> (Madd_to_div_Madd_cy<23>)
+     XORCY:CI->O           8   0.904   1.278  Madd_to_div_Madd_xor<24> (to_div<24>)
+     LUT2:I1->O            3   0.551   0.000  filter<7>1 (filter<7>)
+     begin scope: 'b_reg'
+     FDE:D                     0.203          data_out_7
+    ----------------------------------------
+    Total                     16.153ns (10.700ns logic, 5.453ns route)
+                                       (66.2% logic, 33.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 1144635 / 220
+-------------------------------------------------------------------------
+Offset:              16.960ns (Levels of Logic = 11)
+  Source:            selPixel (PAD)
+  Destination:       b_reg/data_out_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: selPixel to b_reg/data_out_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            25   0.821   2.152  selPixel_IBUF (selPixel_IBUF)
+     LUT3:I0->O           11   0.551   1.144  u_min<7>1 (u_min<7>)
+     MULT18X18:A7->P22     1   4.214   1.140  Mmult_u_num_mult0001 (u_num<22>)
+     LUT2:I0->O            1   0.551   0.000  Madd_to_div_addsub0000_Madd_lut<22> (Madd_to_div_addsub0000_Madd_lut<22>)
+     MUXCY:S->O            1   0.500   0.000  Madd_to_div_addsub0000_Madd_cy<22> (Madd_to_div_addsub0000_Madd_cy<22>)
+     XORCY:CI->O           1   0.904   0.996  Madd_to_div_addsub0000_Madd_xor<23> (to_div_addsub0000<23>)
+     LUT2:I1->O            1   0.551   0.000  Madd_to_div_Madd_lut<23> (Madd_to_div_Madd_lut<23>)
+     MUXCY:S->O            0   0.500   0.000  Madd_to_div_Madd_cy<23> (Madd_to_div_Madd_cy<23>)
+     XORCY:CI->O           8   0.904   1.278  Madd_to_div_Madd_xor<24> (to_div<24>)
+     LUT2:I1->O            3   0.551   0.000  filter<7>1 (filter<7>)
+     begin scope: 'b_reg'
+     FDE:D                     0.203          data_out_7
+    ----------------------------------------
+    Total                     16.960ns (10.250ns logic, 6.710ns route)
+                                       (60.4% logic, 39.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 393 / 54
+-------------------------------------------------------------------------
+Offset:              11.390ns (Levels of Logic = 21)
+  Source:            read_counter/r_addr_0 (FF)
+  Destination:       r_addr<17> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: read_counter/r_addr_0 to r_addr<17>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              3   0.720   1.246  r_addr_0 (r_addr_0)
+     end scope: 'read_counter'
+     LUT4:I0->O            1   0.551   0.000  Madd_r_addr_lut<0> (Madd_r_addr_lut<0>)
+     MUXCY:S->O            1   0.500   0.000  Madd_r_addr_cy<0> (Madd_r_addr_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_r_addr_cy<1> (Madd_r_addr_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_r_addr_cy<2> (Madd_r_addr_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_r_addr_cy<3> (Madd_r_addr_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_r_addr_cy<4> (Madd_r_addr_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_r_addr_cy<5> (Madd_r_addr_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_r_addr_cy<6> (Madd_r_addr_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_r_addr_cy<7> (Madd_r_addr_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_r_addr_cy<8> (Madd_r_addr_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_r_addr_cy<9> (Madd_r_addr_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_r_addr_cy<10> (Madd_r_addr_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_r_addr_cy<11> (Madd_r_addr_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_r_addr_cy<12> (Madd_r_addr_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_r_addr_cy<13> (Madd_r_addr_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_r_addr_cy<14> (Madd_r_addr_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_r_addr_cy<15> (Madd_r_addr_cy<15>)
+     MUXCY:CI->O           0   0.064   0.000  Madd_r_addr_cy<16> (Madd_r_addr_cy<16>)
+     XORCY:CI->O           1   0.904   0.801  Madd_r_addr_xor<17> (r_addr_17_OBUF)
+     OBUF:I->O                 5.644          r_addr_17_OBUF (r_addr<17>)
+    ----------------------------------------
+    Total                     11.390ns (9.343ns logic, 2.047ns route)
+                                       (82.0% logic, 18.0% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 5212 / 34
+-------------------------------------------------------------------------
+Delay:               16.775ns (Levels of Logic = 8)
+  Source:            width<15> (PAD)
+  Destination:       r_addr<17> (PAD)
+
+  Data Path: width<15> to r_addr<17>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.821   0.801  width_15_IBUF (width_15_IBUF)
+     MULT18X18:A15->P16    7   3.737   1.261  Mmult_rlimit_mult0001 (rlimit<15>)
+     LUT4:I1->O            1   0.551   1.140  r_addr_mux0000<2>1 (r_addr_mux0000<2>)
+     LUT2:I0->O            1   0.551   0.000  Madd_r_addr_lut<15> (Madd_r_addr_lut<15>)
+     MUXCY:S->O            1   0.500   0.000  Madd_r_addr_cy<15> (Madd_r_addr_cy<15>)
+     MUXCY:CI->O           0   0.064   0.000  Madd_r_addr_cy<16> (Madd_r_addr_cy<16>)
+     XORCY:CI->O           1   0.904   0.801  Madd_r_addr_xor<17> (r_addr_17_OBUF)
+     OBUF:I->O                 5.644          r_addr_17_OBUF (r_addr<17>)
+    ----------------------------------------
+    Total                     16.775ns (12.772ns logic, 4.003ns route)
+                                       (76.1% logic, 23.9% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.50 secs
+ 
+--> 
+
+Total memory usage is 292240 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    7 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

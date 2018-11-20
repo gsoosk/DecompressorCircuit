@@ -1,0 +1,10 @@
+xst -intstyle ise -ifn "Y:/Desktop/DecompressorCircuit/prj/decompressor/yuv_to_rgb_conversion.xst" -ofn "Y:/Desktop/DecompressorCircuit/prj/decompressor/yuv_to_rgb_conversion.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s4000-fg676-4 yuv_to_rgb_conversion.ngc yuv_to_rgb_conversion.ngd  
+map -intstyle ise -p xc3s4000-fg676-4 -cm area -detail -ir off -pr off -c 100 -o yuv_to_rgb_conversion_map.ncd yuv_to_rgb_conversion.ngd yuv_to_rgb_conversion.pcf 
+par -w -intstyle ise -ol high -t 1 yuv_to_rgb_conversion_map.ncd yuv_to_rgb_conversion.ncd yuv_to_rgb_conversion.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml yuv_to_rgb_conversion.twx yuv_to_rgb_conversion.ncd -o yuv_to_rgb_conversion.twr yuv_to_rgb_conversion.pcf 
+xst -intstyle ise -ifn "Y:/Desktop/DecompressorCircuit/prj/decompressor/yuv_to_rgb_conversion.xst" -ofn "Y:/Desktop/DecompressorCircuit/prj/decompressor/yuv_to_rgb_conversion.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s4000-fg676-4 yuv_to_rgb_conversion.ngc yuv_to_rgb_conversion.ngd  
+map -intstyle ise -p xc3s4000-fg676-4 -cm area -detail -ir off -pr off -c 100 -o yuv_to_rgb_conversion_map.ncd yuv_to_rgb_conversion.ngd yuv_to_rgb_conversion.pcf 
+par -w -intstyle ise -ol high -t 1 yuv_to_rgb_conversion_map.ncd yuv_to_rgb_conversion.ncd yuv_to_rgb_conversion.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml yuv_to_rgb_conversion.twx yuv_to_rgb_conversion.ncd -o yuv_to_rgb_conversion.twr yuv_to_rgb_conversion.pcf 

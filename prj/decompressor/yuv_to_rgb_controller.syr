@@ -1,0 +1,384 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.55 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.55 secs
+ 
+--> Reading design: yuv_to_rgb_controller.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "yuv_to_rgb_controller.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "yuv_to_rgb_controller"
+Output Format                      : NGC
+Target Device                      : xc3s4000-4-fg676
+
+---- Source Options
+Top Module Name                    : yuv_to_rgb_controller
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : Yes
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "../../src/hdl/yuv_to_rgb_controller.v" in library work
+Module <yuv_to_rgb_controller> compiled
+No errors in compilation
+Analysis of file <"yuv_to_rgb_controller.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <yuv_to_rgb_controller> in library <work> with parameters.
+	CALC_B = "0111"
+	CALC_B2 = "1010"
+	CALC_G = "0110"
+	CALC_G2 = "1001"
+	CALC_R = "0101"
+	CALC_R2 = "1000"
+	DONE = "1100"
+	IDLE = "0000"
+	LOAD_U = "0011"
+	LOAD_V = "0100"
+	LOAD_Y = "0010"
+	START = "0001"
+	WRITE_BG = "1011"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <yuv_to_rgb_controller>.
+	CALC_B = 4'b0111
+	CALC_B2 = 4'b1010
+	CALC_G = 4'b0110
+	CALC_G2 = 4'b1001
+	CALC_R = 4'b0101
+	CALC_R2 = 4'b1000
+	DONE = 4'b1100
+	IDLE = 4'b0000
+	LOAD_U = 4'b0011
+	LOAD_V = 4'b0100
+	LOAD_Y = 4'b0010
+	START = 4'b0001
+	WRITE_BG = 4'b1011
+Module <yuv_to_rgb_controller> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <yuv_to_rgb_controller>.
+    Related source file is "../../src/hdl/yuv_to_rgb_controller.v".
+WARNING:Xst:2474 - Clock and clock enable of register <ps> are driven by the same logic. The clock enable is removed.
+    Using one-hot encoding for signal <ps>.
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <ps> of Case statement line 52 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <ps> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Found 13-bit register for signal <ps>.
+Unit <yuv_to_rgb_controller> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 1
+ 13-bit register                                       : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 13
+ Flip-Flops                                            : 13
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <yuv_to_rgb_controller> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block yuv_to_rgb_controller, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 13
+ Flip-Flops                                            : 13
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : yuv_to_rgb_controller.ngr
+Top Level Output File Name         : yuv_to_rgb_controller
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : Yes
+
+Design Statistics
+# IOs                              : 21
+
+Cell Usage :
+# BELS                             : 9
+#      LUT2                        : 5
+#      LUT3                        : 4
+# FlipFlops/Latches                : 13
+#      FDC                         : 12
+#      FDP                         : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 20
+#      IBUF                        : 3
+#      OBUF                        : 17
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s4000fg676-4 
+
+ Number of Slices:                        7  out of  27648     0%  
+ Number of Slice Flip Flops:             13  out of  55296     0%  
+ Number of 4 input LUTs:                  9  out of  55296     0%  
+ Number of IOs:                          21
+ Number of bonded IOBs:                  21  out of    489     4%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 13    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+rst                                | IBUF                   | 13    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 2.586ns (Maximum Frequency: 386.698MHz)
+   Minimum input arrival time before clock: 2.791ns
+   Maximum output required time after clock: 9.048ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 2.586ns (frequency: 386.698MHz)
+  Total number of paths / destination ports: 15 / 13
+-------------------------------------------------------------------------
+Delay:               2.586ns (Levels of Logic = 1)
+  Source:            ps_11 (FF)
+  Destination:       ps_12 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: ps_11 to ps_12
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              4   0.720   1.112  ps_11 (ps_11)
+     LUT2:I1->O            1   0.551   0.000  ns<12>1 (ns<12>)
+     FDC:D                     0.203          ps_12
+    ----------------------------------------
+    Total                      2.586ns (1.474ns logic, 1.112ns route)
+                                       (57.0% logic, 43.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              2.791ns (Levels of Logic = 2)
+  Source:            wr_done (PAD)
+  Destination:       ps_12 (FF)
+  Destination Clock: clk rising
+
+  Data Path: wr_done to ps_12
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   0.821   1.216  wr_done_IBUF (wr_done_IBUF)
+     LUT2:I0->O            1   0.551   0.000  ns<12>1 (ns<12>)
+     FDC:D                     0.203          ps_12
+    ----------------------------------------
+    Total                      2.791ns (1.575ns logic, 1.216ns route)
+                                       (56.4% logic, 43.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 28 / 17
+-------------------------------------------------------------------------
+Offset:              9.048ns (Levels of Logic = 2)
+  Source:            ps_11 (FF)
+  Destination:       count_en_wr (PAD)
+  Source Clock:      clk rising
+
+  Data Path: ps_11 to count_en_wr
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              4   0.720   1.256  ps_11 (ps_11)
+     LUT3:I0->O            2   0.551   0.877  count_en_wr1 (count_en_wr_OBUF)
+     OBUF:I->O                 5.644          count_en_wr_OBUF (count_en_wr)
+    ----------------------------------------
+    Total                      9.048ns (6.915ns logic, 2.133ns route)
+                                       (76.4% logic, 23.6% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.99 secs
+ 
+--> 
+
+Total memory usage is 284048 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

@@ -1,0 +1,4 @@
+verilog work "../../src/hdl/register_8_bit.v"
+verilog work "../../src/hdl/register_16_bit.v"
+verilog work "../../src/hdl/counter_18bit.v"
+verilog work "../../src/hdl/yuv_to_rgb_datapath.v"

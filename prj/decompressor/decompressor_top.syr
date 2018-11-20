@@ -1,0 +1,679 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: decompressor_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "decompressor_top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "decompressor_top"
+Output Format                      : NGC
+Target Device                      : xc3s4000-4-fg676
+
+---- Source Options
+Top Module Name                    : decompressor_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : Yes
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "../../src/hdl/register_8_bit.v" in library work
+Compiling verilog file "../../src/hdl/register_16_bit.v" in library work
+Module <register_8_bit> compiled
+Compiling verilog file "../../src/hdl/counter_18bit.v" in library work
+Module <register_16_bit> compiled
+Compiling verilog file "../../src/hdl/yuv_to_rgb_datapath.v" in library work
+Module <counter_18bit> compiled
+Compiling verilog file "../../src/hdl/yuv_to_rgb_controller.v" in library work
+Module <yuv_to_rgb_datapath> compiled
+Compiling verilog file "../../src/hdl/yuv_to_rgb_conversion.v" in library work
+Module <yuv_to_rgb_controller> compiled
+Compiling verilog file "../../src/hdl/sram_vga_controller.v" in library work
+Module <yuv_to_rgb_conversion> compiled
+Compiling verilog file "../../src/hdl/decompressor_top.v" in library work
+Module <sram_vga_controller> compiled
+Module <decompressor_top> compiled
+No errors in compilation
+Analysis of file <"decompressor_top.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <decompressor_top> in library <work> with parameters.
+	ADDR_ORDER_PIXEL = "00000000000000011100001000000000"
+	ADDR_REORDER_PIXEL = "00000000000000000000000000000000"
+	AW = "00000000000000000000000000010100"
+	DW = "00000000000000000000000000010000"
+	IMAGE_HEIGHT = "00000000000000000000000011110000"
+	IMAGE_WIDTH = "00000000000000000000000101000000"
+	SEL_REORDER = "00000000000000000000000000000001"
+	SEL_SRAM_VGA = "00000000000000000000000000000000"
+	STATE_REORDER = "00000000000000000000000000000001"
+	STATE_SRAM_VGA = "00000000000000000000000000000000"
+
+Analyzing hierarchy for module <yuv_to_rgb_conversion> in library <work> with parameters.
+	ADDR_ORDER_PIXEL = "00000000000000011100001000000000"
+	ADDR_REORDER_PIXEL = "00000000000000000000000000000000"
+	AW = "00000000000000000000000000010010"
+	DW = "00000000000000000000000000010000"
+	H = "00000000000000000000000011110000"
+	W = "00000000000000000000000101000000"
+
+Analyzing hierarchy for module <sram_vga_controller> in library <work> with parameters.
+	AW = "00000000000000000000000000010100"
+	DW = "00000000000000000000000000010000"
+	H = "00000000000000000000000011110000"
+	IMAGE_HEIGHT = "00000000000000000000000011110000"
+	IMAGE_WIDTH = "00000000000000000000000101000000"
+	START_ADDR = "00000000000000011100001000000000"
+	W = "00000000000000000000000101000000"
+
+Analyzing hierarchy for module <yuv_to_rgb_datapath> in library <work>.
+
+Analyzing hierarchy for module <yuv_to_rgb_controller> in library <work> with parameters.
+	CALC_B = "0111"
+	CALC_B2 = "1010"
+	CALC_G = "0110"
+	CALC_G2 = "1001"
+	CALC_R = "0101"
+	CALC_R2 = "1000"
+	DONE = "1100"
+	IDLE = "0000"
+	LOAD_U = "0011"
+	LOAD_V = "0100"
+	LOAD_Y = "0010"
+	START = "0001"
+	WRITE_BG = "1011"
+
+Analyzing hierarchy for module <counter_18bit> in library <work>.
+
+Analyzing hierarchy for module <register_16_bit> in library <work>.
+
+Analyzing hierarchy for module <register_8_bit> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <decompressor_top>.
+	ADDR_ORDER_PIXEL = 32'sb00000000000000011100001000000000
+	ADDR_REORDER_PIXEL = 32'sb00000000000000000000000000000000
+	AW = 32'sb00000000000000000000000000010100
+	DW = 32'sb00000000000000000000000000010000
+	IMAGE_HEIGHT = 32'sb00000000000000000000000011110000
+	IMAGE_WIDTH = 32'sb00000000000000000000000101000000
+	SEL_REORDER = 32'sb00000000000000000000000000000001
+	SEL_SRAM_VGA = 32'sb00000000000000000000000000000000
+	STATE_REORDER = 32'sb00000000000000000000000000000001
+	STATE_SRAM_VGA = 32'sb00000000000000000000000000000000
+Module <decompressor_top> is correct for synthesis.
+ 
+Analyzing module <yuv_to_rgb_conversion> in library <work>.
+	ADDR_ORDER_PIXEL = 32'sb00000000000000011100001000000000
+	ADDR_REORDER_PIXEL = 32'sb00000000000000000000000000000000
+	AW = 32'sb00000000000000000000000000010010
+	DW = 32'sb00000000000000000000000000010000
+	H = 32'sb00000000000000000000000011110000
+	W = 32'sb00000000000000000000000101000000
+Module <yuv_to_rgb_conversion> is correct for synthesis.
+ 
+Analyzing module <yuv_to_rgb_datapath> in library <work>.
+Module <yuv_to_rgb_datapath> is correct for synthesis.
+ 
+Analyzing module <counter_18bit> in library <work>.
+Module <counter_18bit> is correct for synthesis.
+ 
+Analyzing module <register_16_bit> in library <work>.
+Module <register_16_bit> is correct for synthesis.
+ 
+Analyzing module <register_8_bit> in library <work>.
+Module <register_8_bit> is correct for synthesis.
+ 
+Analyzing module <yuv_to_rgb_controller> in library <work>.
+	CALC_B = 4'b0111
+	CALC_B2 = 4'b1010
+	CALC_G = 4'b0110
+	CALC_G2 = 4'b1001
+	CALC_R = 4'b0101
+	CALC_R2 = 4'b1000
+	DONE = 4'b1100
+	IDLE = 4'b0000
+	LOAD_U = 4'b0011
+	LOAD_V = 4'b0100
+	LOAD_Y = 4'b0010
+	START = 4'b0001
+	WRITE_BG = 4'b1011
+Module <yuv_to_rgb_controller> is correct for synthesis.
+ 
+Analyzing module <sram_vga_controller> in library <work>.
+	AW = 32'sb00000000000000000000000000010100
+	DW = 32'sb00000000000000000000000000010000
+	H = 32'sb00000000000000000000000011110000
+	IMAGE_HEIGHT = 32'sb00000000000000000000000011110000
+	IMAGE_WIDTH = 32'sb00000000000000000000000101000000
+	START_ADDR = 32'sb00000000000000011100001000000000
+	W = 32'sb00000000000000000000000101000000
+Module <sram_vga_controller> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <sram_vga_controller>.
+    Related source file is "../../src/hdl/sram_vga_controller.v".
+    Found 1-bit register for signal <vgastart>.
+    Found 32-bit up counter for signal <cnt>.
+    Found 16-bit register for signal <rdata0>.
+    Found 16-bit register for signal <rdata1>.
+    Found 16-bit register for signal <rdata2>.
+    Found 24-bit register for signal <rgb>.
+    Found 24-bit 4-to-1 multiplexer for signal <rgb$mux0000> created at line 76.
+    Found 8-bit register for signal <s>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  81 D-type flip-flop(s).
+	inferred  24 Multiplexer(s).
+Unit <sram_vga_controller> synthesized.
+
+
+Synthesizing Unit <yuv_to_rgb_controller>.
+    Related source file is "../../src/hdl/yuv_to_rgb_controller.v".
+WARNING:Xst:2474 - Clock and clock enable of register <ps> are driven by the same logic. The clock enable is removed.
+    Using one-hot encoding for signal <ps>.
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <ps> of Case statement line 52 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <ps> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Found 13-bit register for signal <ps>.
+Unit <yuv_to_rgb_controller> synthesized.
+
+
+Synthesizing Unit <counter_18bit>.
+    Related source file is "../../src/hdl/counter_18bit.v".
+    Found 18-bit register for signal <r_addr>.
+    Found 1-bit register for signal <count_done>.
+    Found 18-bit comparator equal for signal <count_done$cmp_eq0000> created at line 19.
+    Found 18-bit adder for signal <r_addr$addsub0000> created at line 22.
+    Found 18-bit comparator not equal for signal <r_addr$cmp_ne0000> created at line 19.
+    Summary:
+	inferred  19 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+Unit <counter_18bit> synthesized.
+
+
+Synthesizing Unit <register_16_bit>.
+    Related source file is "../../src/hdl/register_16_bit.v".
+    Found 16-bit register for signal <data_out>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <register_16_bit> synthesized.
+
+
+Synthesizing Unit <register_8_bit>.
+    Related source file is "../../src/hdl/register_8_bit.v".
+    Found 8-bit register for signal <data_out>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <register_8_bit> synthesized.
+
+
+Synthesizing Unit <yuv_to_rgb_datapath>.
+    Related source file is "../../src/hdl/yuv_to_rgb_datapath.v".
+WARNING:Xst:646 - Signal <to_div<15:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <filter<8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <divBig<25:9>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:643 - "../../src/hdl/yuv_to_rgb_datapath.v" line 46: The result of a 26x18-bit multiplication is partially used. Only the 26 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "../../src/hdl/yuv_to_rgb_datapath.v" line 47: The result of a 26x18-bit multiplication is partially used. Only the 26 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "../../src/hdl/yuv_to_rgb_datapath.v" line 48: The result of a 26x18-bit multiplication is partially used. Only the 26 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+    Found 18-bit adder for signal <r_addr>.
+    Found 10-bit comparator greater for signal <filter$cmp_gt0000> created at line 59.
+    Found 26-bit adder for signal <to_div>.
+    Found 26-bit adder for signal <to_div$addsub0000> created at line 51.
+    Found 10-bit subtractor for signal <u_min$sub0000> created at line 42.
+    Found 26x18-bit multiplier for signal <u_num$mult0001> created at line 47.
+    Found 10-bit subtractor for signal <v_min$sub0000> created at line 43.
+    Found 26x18-bit multiplier for signal <v_num$mult0001> created at line 48.
+    Found 10-bit subtractor for signal <y_min$sub0000> created at line 41.
+    Found 26x18-bit multiplier for signal <y_num$mult0001> created at line 46.
+    Summary:
+	inferred   6 Adder/Subtractor(s).
+	inferred   3 Multiplier(s).
+	inferred   1 Comparator(s).
+Unit <yuv_to_rgb_datapath> synthesized.
+
+
+Synthesizing Unit <yuv_to_rgb_conversion>.
+    Related source file is "../../src/hdl/yuv_to_rgb_conversion.v".
+WARNING:Xst:646 - Signal <rd_done> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <yuv_to_rgb_conversion> synthesized.
+
+
+Synthesizing Unit <decompressor_top>.
+    Related source file is "../../src/hdl/decompressor_top.v".
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <sram_sel> of Case statement line 97 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <sram_sel> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Using one-hot encoding for signal <sram_sel>.
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <sram_sel> of Case statement line 97 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <sram_sel> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <sram_sel> of Case statement line 97 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <sram_sel> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <sram_sel> of Case statement line 97 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <sram_sel> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Using one-hot encoding for signal <state>.
+    Found 1-bit register for signal <sram_vga_start>.
+    Found 2-bit register for signal <state>.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+Unit <decompressor_top> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 3
+ 26x18-bit multiplier                                  : 3
+# Adders/Subtractors                                   : 8
+ 10-bit subtractor                                     : 3
+ 18-bit adder                                          : 3
+ 26-bit adder                                          : 2
+# Counters                                             : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 19
+ 1-bit register                                        : 4
+ 13-bit register                                       : 1
+ 16-bit register                                       : 6
+ 18-bit register                                       : 2
+ 2-bit register                                        : 1
+ 24-bit register                                       : 1
+ 8-bit register                                        : 4
+# Comparators                                          : 5
+ 10-bit comparator greater                             : 1
+ 18-bit comparator equal                               : 2
+ 18-bit comparator not equal                           : 2
+# Multiplexers                                         : 1
+ 24-bit 4-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 3
+ 10x18-bit multiplier                                  : 2
+ 26x18-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 8
+ 10-bit subtractor                                     : 3
+ 18-bit adder                                          : 3
+ 25-bit adder                                          : 2
+# Counters                                             : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 207
+ Flip-Flops                                            : 207
+# Comparators                                          : 5
+ 10-bit comparator greater                             : 1
+ 18-bit comparator equal                               : 2
+ 18-bit comparator not equal                           : 2
+# Multiplexers                                         : 1
+ 24-bit 4-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <decompressor_top> ...
+
+Optimizing unit <sram_vga_controller> ...
+
+Optimizing unit <counter_18bit> ...
+
+Optimizing unit <register_16_bit> ...
+
+Optimizing unit <register_8_bit> ...
+
+Optimizing unit <yuv_to_rgb_controller> ...
+
+Optimizing unit <yuv_to_rgb_datapath> ...
+
+Optimizing unit <yuv_to_rgb_conversion> ...
+WARNING:Xst:2677 - Node <count_done> of sequential type is unconnected in block <read_counter>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block decompressor_top, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 238
+ Flip-Flops                                            : 238
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : decompressor_top.ngr
+Top Level Output File Name         : decompressor_top
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : Yes
+
+Design Statistics
+# IOs                              : 102
+
+Cell Usage :
+# BELS                             : 640
+#      GND                         : 5
+#      INV                         : 4
+#      LUT1                        : 66
+#      LUT2                        : 116
+#      LUT2_L                      : 1
+#      LUT3                        : 88
+#      LUT3_L                      : 1
+#      LUT4                        : 78
+#      LUT4_L                      : 2
+#      MUXCY                       : 147
+#      MUXF5                       : 16
+#      VCC                         : 5
+#      XORCY                       : 111
+# FlipFlops/Latches                : 238
+#      FD                          : 20
+#      FDC                         : 12
+#      FDE                         : 156
+#      FDP                         : 1
+#      FDR                         : 8
+#      FDRE                        : 29
+#      FDS                         : 6
+#      FDSE                        : 6
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 101
+#      IBUF                        : 18
+#      OBUF                        : 83
+# MULTs                            : 3
+#      MULT18X18                   : 3
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s4000fg676-4 
+
+ Number of Slices:                      276  out of  27648     0%  
+ Number of Slice Flip Flops:            238  out of  55296     0%  
+ Number of 4 input LUTs:                356  out of  55296     0%  
+ Number of IOs:                         102
+ Number of bonded IOBs:                 102  out of    489    20%  
+ Number of MULT18X18s:                    3  out of     96     3%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 238   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+reset                              | IBUF                   | 13    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 18.343ns (Maximum Frequency: 54.517MHz)
+   Minimum input arrival time before clock: 6.420ns
+   Maximum output required time after clock: 12.954ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 18.343ns (frequency: 54.517MHz)
+  Total number of paths / destination ports: 4557548 / 367
+-------------------------------------------------------------------------
+Delay:               18.343ns (Levels of Logic = 12)
+  Source:            yuv_to_rgb_conversion/c/ps_7 (FF)
+  Destination:       yuv_to_rgb_conversion/dp/b_reg/data_out_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: yuv_to_rgb_conversion/c/ps_7 to yuv_to_rgb_conversion/dp/b_reg/data_out_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              4   0.720   1.256  ps_7 (ps_7)
+     LUT3:I0->O           25   0.551   1.839  selPixel1 (selPixel)
+     end scope: 'c'
+     begin scope: 'dp'
+     LUT4:I3->O           10   0.551   1.134  y_min<8>1 (y_min<8>)
+     MULT18X18:A8->P22     1   4.214   1.140  Mmult_y_num_mult0001 (y_num<22>)
+     LUT2:I0->O            1   0.551   0.000  Madd_to_div_addsub0000_Madd_lut<22> (Madd_to_div_addsub0000_Madd_lut<22>)
+     MUXCY:S->O            1   0.500   0.000  Madd_to_div_addsub0000_Madd_cy<22> (Madd_to_div_addsub0000_Madd_cy<22>)
+     XORCY:CI->O           1   0.904   0.996  Madd_to_div_addsub0000_Madd_xor<23> (to_div_addsub0000<23>)
+     LUT2:I1->O            1   0.551   0.000  Madd_to_div_Madd_lut<23> (Madd_to_div_Madd_lut<23>)
+     MUXCY:S->O            0   0.500   0.000  Madd_to_div_Madd_cy<23> (Madd_to_div_Madd_cy<23>)
+     XORCY:CI->O           8   0.904   1.278  Madd_to_div_Madd_xor<24> (to_div<24>)
+     LUT2:I1->O            3   0.551   0.000  filter<7>1 (filter<7>)
+     begin scope: 'b_reg'
+     FDE:D                     0.203          data_out_7
+    ----------------------------------------
+    Total                     18.343ns (10.700ns logic, 7.643ns route)
+                                       (58.3% logic, 41.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 178 / 178
+-------------------------------------------------------------------------
+Offset:              6.420ns (Levels of Logic = 3)
+  Source:            reset (PAD)
+  Destination:       sram_vga_controller/cnt_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: reset to sram_vga_controller/cnt_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            28   0.821   2.169  reset_IBUF (reset_IBUF)
+     begin scope: 'sram_vga_controller'
+     LUT2:I0->O           32   0.551   1.853  cnt_or00001 (cnt_or0000)
+     FDRE:R                    1.026          cnt_0
+    ----------------------------------------
+    Total                      6.420ns (2.398ns logic, 4.022ns route)
+                                       (37.4% logic, 62.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 405 / 81
+-------------------------------------------------------------------------
+Offset:              12.954ns (Levels of Logic = 12)
+  Source:            yuv_to_rgb_conversion/c/ps_3 (FF)
+  Destination:       sram_raddr<17> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: yuv_to_rgb_conversion/c/ps_3 to sram_raddr<17>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             24   0.720   2.136  ps_3 (ps_3)
+     end scope: 'c'
+     begin scope: 'dp'
+     LUT2:I0->O            1   0.551   0.000  Madd_r_addr_lut<11> (Madd_r_addr_lut<11>)
+     MUXCY:S->O            1   0.500   0.000  Madd_r_addr_cy<11> (Madd_r_addr_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_r_addr_cy<12> (Madd_r_addr_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_r_addr_cy<13> (Madd_r_addr_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_r_addr_cy<14> (Madd_r_addr_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_r_addr_cy<15> (Madd_r_addr_cy<15>)
+     MUXCY:CI->O           0   0.064   0.000  Madd_r_addr_cy<16> (Madd_r_addr_cy<16>)
+     XORCY:CI->O           1   0.904   0.827  Madd_r_addr_xor<17> (r_addr<17>)
+     end scope: 'dp'
+     end scope: 'yuv_to_rgb_conversion'
+     LUT4:I3->O            1   0.551   0.801  sram_raddr<17>1 (sram_raddr_17_OBUF)
+     OBUF:I->O                 5.644          sram_raddr_17_OBUF (sram_raddr<17>)
+    ----------------------------------------
+    Total                     12.954ns (9.190ns logic, 3.764ns route)
+                                       (70.9% logic, 29.1% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.86 secs
+ 
+--> 
+
+Total memory usage is 296016 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   11 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+

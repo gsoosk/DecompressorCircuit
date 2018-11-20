@@ -1,0 +1,749 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4
+-n 3 -fastpaths -xml decompressor_top.twx decompressor_top.ncd -o
+decompressor_top.twr decompressor_top.pcf
+
+Design file:              decompressor_top.ncd
+Physical constraint file: decompressor_top.pcf
+Device,package,speed:     xc3s4000,fg676,-4 (PRODUCTION 1.39 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: TS_clk = PERIOD TIMEGRP "clk" 20 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 4557548 paths analyzed, 566 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  19.719ns.
+--------------------------------------------------------------------------------
+
+Paths for end point yuv_to_rgb_conversion/dp/g_reg/data_out_4 (SLICE_X138Y158.BY), 192472 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.281ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               yuv_to_rgb_conversion/dp/y_reg/data_out_4 (FF)
+  Destination:          yuv_to_rgb_conversion/dp/g_reg/data_out_4 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.719ns (Levels of Logic = 10)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: yuv_to_rgb_conversion/dp/y_reg/data_out_4 to yuv_to_rgb_conversion/dp/g_reg/data_out_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X128Y158.YQ    Tcko                  0.720   yuv_to_rgb_conversion/dp/y_out<5>
+                                                       yuv_to_rgb_conversion/dp/y_reg/data_out_4
+    SLICE_X130Y159.F2    net (fanout=5)        1.910   yuv_to_rgb_conversion/dp/y_out<4>
+    SLICE_X130Y159.X     Tilo                  0.608   yuv_to_rgb_conversion/dp/N39
+                                                       yuv_to_rgb_conversion/dp/Msub_y_min_sub0000_xor<6>1_SW1
+    SLICE_X130Y158.F1    net (fanout=1)        0.587   yuv_to_rgb_conversion/dp/N39
+    SLICE_X130Y158.X     Tilo                  0.608   yuv_to_rgb_conversion/dp/y_min<6>
+                                                       yuv_to_rgb_conversion/dp/Msub_y_min_sub0000_xor<6>1
+    MULT18X18_X3Y19.A6   net (fanout=1)        1.372   yuv_to_rgb_conversion/dp/y_min<6>
+    MULT18X18_X3Y19.P16  Tmult                 3.737   yuv_to_rgb_conversion/dp/Mmult_y_num_mult0001
+                                                       yuv_to_rgb_conversion/dp/Mmult_y_num_mult0001
+    SLICE_X132Y158.F1    net (fanout=1)        1.961   yuv_to_rgb_conversion/dp/y_num<16>
+    SLICE_X132Y158.COUT  Topcyf                1.084   yuv_to_rgb_conversion/dp/to_div_addsub0000<16>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_lut<16>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<16>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<17>
+    SLICE_X132Y159.CIN   net (fanout=1)        0.000   yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<17>
+    SLICE_X132Y159.X     Tcinx                 0.904   yuv_to_rgb_conversion/dp/to_div_addsub0000<18>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_xor<18>
+    SLICE_X133Y159.F2    net (fanout=1)        0.568   yuv_to_rgb_conversion/dp/to_div_addsub0000<18>
+    SLICE_X133Y159.COUT  Topcyf                1.027   yuv_to_rgb_conversion/dp/to_div<18>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_lut<18>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<18>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<19>
+    SLICE_X133Y160.CIN   net (fanout=1)        0.000   yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<19>
+    SLICE_X133Y160.COUT  Tbyp                  0.128   yuv_to_rgb_conversion/dp/to_div<20>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<20>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<21>
+    SLICE_X133Y161.CIN   net (fanout=1)        0.000   yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<21>
+    SLICE_X133Y161.COUT  Tbyp                  0.128   yuv_to_rgb_conversion/dp/to_div<22>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<22>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<23>
+    SLICE_X133Y162.CIN   net (fanout=1)        0.000   yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<23>
+    SLICE_X133Y162.X     Tcinx                 0.904   yuv_to_rgb_conversion/dp/to_div<24>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_xor<24>
+    SLICE_X135Y160.G1    net (fanout=8)        1.368   yuv_to_rgb_conversion/dp/to_div<24>
+    SLICE_X135Y160.Y     Tilo                  0.551   yuv_to_rgb_conversion/dp/filter<5>
+                                                       yuv_to_rgb_conversion/dp/filter<4>1
+    SLICE_X138Y158.BY    net (fanout=3)        1.293   yuv_to_rgb_conversion/dp/filter<4>
+    SLICE_X138Y158.CLK   Tdick                 0.261   yuv_to_rgb_conversion/dp/g_out<5>
+                                                       yuv_to_rgb_conversion/dp/g_reg/data_out_4
+    -------------------------------------------------  ---------------------------
+    Total                                     19.719ns (10.660ns logic, 9.059ns route)
+                                                       (54.1% logic, 45.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.297ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               yuv_to_rgb_conversion/dp/y_reg/data_out_4 (FF)
+  Destination:          yuv_to_rgb_conversion/dp/g_reg/data_out_4 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.703ns (Levels of Logic = 10)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: yuv_to_rgb_conversion/dp/y_reg/data_out_4 to yuv_to_rgb_conversion/dp/g_reg/data_out_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X128Y158.YQ    Tcko                  0.720   yuv_to_rgb_conversion/dp/y_out<5>
+                                                       yuv_to_rgb_conversion/dp/y_reg/data_out_4
+    SLICE_X130Y159.F2    net (fanout=5)        1.910   yuv_to_rgb_conversion/dp/y_out<4>
+    SLICE_X130Y159.X     Tilo                  0.608   yuv_to_rgb_conversion/dp/N39
+                                                       yuv_to_rgb_conversion/dp/Msub_y_min_sub0000_xor<6>1_SW1
+    SLICE_X130Y158.F1    net (fanout=1)        0.587   yuv_to_rgb_conversion/dp/N39
+    SLICE_X130Y158.X     Tilo                  0.608   yuv_to_rgb_conversion/dp/y_min<6>
+                                                       yuv_to_rgb_conversion/dp/Msub_y_min_sub0000_xor<6>1
+    MULT18X18_X3Y19.A6   net (fanout=1)        1.372   yuv_to_rgb_conversion/dp/y_min<6>
+    MULT18X18_X3Y19.P16  Tmult                 3.737   yuv_to_rgb_conversion/dp/Mmult_y_num_mult0001
+                                                       yuv_to_rgb_conversion/dp/Mmult_y_num_mult0001
+    SLICE_X132Y158.F1    net (fanout=1)        1.961   yuv_to_rgb_conversion/dp/y_num<16>
+    SLICE_X132Y158.COUT  Topcyf                1.084   yuv_to_rgb_conversion/dp/to_div_addsub0000<16>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_lut<16>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<16>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<17>
+    SLICE_X132Y159.CIN   net (fanout=1)        0.000   yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<17>
+    SLICE_X132Y159.COUT  Tbyp                  0.120   yuv_to_rgb_conversion/dp/to_div_addsub0000<18>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<18>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<19>
+    SLICE_X132Y160.CIN   net (fanout=1)        0.000   yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<19>
+    SLICE_X132Y160.COUT  Tbyp                  0.120   yuv_to_rgb_conversion/dp/to_div_addsub0000<20>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<20>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<21>
+    SLICE_X132Y161.CIN   net (fanout=1)        0.000   yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<21>
+    SLICE_X132Y161.X     Tcinx                 0.904   yuv_to_rgb_conversion/dp/to_div_addsub0000<22>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_xor<22>
+    SLICE_X133Y161.F2    net (fanout=1)        0.568   yuv_to_rgb_conversion/dp/to_div_addsub0000<22>
+    SLICE_X133Y161.COUT  Topcyf                1.027   yuv_to_rgb_conversion/dp/to_div<22>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_lut<22>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<22>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<23>
+    SLICE_X133Y162.CIN   net (fanout=1)        0.000   yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<23>
+    SLICE_X133Y162.X     Tcinx                 0.904   yuv_to_rgb_conversion/dp/to_div<24>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_xor<24>
+    SLICE_X135Y160.G1    net (fanout=8)        1.368   yuv_to_rgb_conversion/dp/to_div<24>
+    SLICE_X135Y160.Y     Tilo                  0.551   yuv_to_rgb_conversion/dp/filter<5>
+                                                       yuv_to_rgb_conversion/dp/filter<4>1
+    SLICE_X138Y158.BY    net (fanout=3)        1.293   yuv_to_rgb_conversion/dp/filter<4>
+    SLICE_X138Y158.CLK   Tdick                 0.261   yuv_to_rgb_conversion/dp/g_out<5>
+                                                       yuv_to_rgb_conversion/dp/g_reg/data_out_4
+    -------------------------------------------------  ---------------------------
+    Total                                     19.703ns (10.644ns logic, 9.059ns route)
+                                                       (54.0% logic, 46.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.305ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               yuv_to_rgb_conversion/dp/y_reg/data_out_4 (FF)
+  Destination:          yuv_to_rgb_conversion/dp/g_reg/data_out_4 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.695ns (Levels of Logic = 10)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: yuv_to_rgb_conversion/dp/y_reg/data_out_4 to yuv_to_rgb_conversion/dp/g_reg/data_out_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X128Y158.YQ    Tcko                  0.720   yuv_to_rgb_conversion/dp/y_out<5>
+                                                       yuv_to_rgb_conversion/dp/y_reg/data_out_4
+    SLICE_X130Y159.F2    net (fanout=5)        1.910   yuv_to_rgb_conversion/dp/y_out<4>
+    SLICE_X130Y159.X     Tilo                  0.608   yuv_to_rgb_conversion/dp/N39
+                                                       yuv_to_rgb_conversion/dp/Msub_y_min_sub0000_xor<6>1_SW1
+    SLICE_X130Y158.F1    net (fanout=1)        0.587   yuv_to_rgb_conversion/dp/N39
+    SLICE_X130Y158.X     Tilo                  0.608   yuv_to_rgb_conversion/dp/y_min<6>
+                                                       yuv_to_rgb_conversion/dp/Msub_y_min_sub0000_xor<6>1
+    MULT18X18_X3Y19.A6   net (fanout=1)        1.372   yuv_to_rgb_conversion/dp/y_min<6>
+    MULT18X18_X3Y19.P16  Tmult                 3.737   yuv_to_rgb_conversion/dp/Mmult_y_num_mult0001
+                                                       yuv_to_rgb_conversion/dp/Mmult_y_num_mult0001
+    SLICE_X132Y158.F1    net (fanout=1)        1.961   yuv_to_rgb_conversion/dp/y_num<16>
+    SLICE_X132Y158.COUT  Topcyf                1.084   yuv_to_rgb_conversion/dp/to_div_addsub0000<16>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_lut<16>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<16>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<17>
+    SLICE_X132Y159.CIN   net (fanout=1)        0.000   yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<17>
+    SLICE_X132Y159.COUT  Tbyp                  0.120   yuv_to_rgb_conversion/dp/to_div_addsub0000<18>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<18>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<19>
+    SLICE_X132Y160.CIN   net (fanout=1)        0.000   yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<19>
+    SLICE_X132Y160.X     Tcinx                 0.904   yuv_to_rgb_conversion/dp/to_div_addsub0000<20>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_xor<20>
+    SLICE_X133Y160.F1    net (fanout=1)        0.552   yuv_to_rgb_conversion/dp/to_div_addsub0000<20>
+    SLICE_X133Y160.COUT  Topcyf                1.027   yuv_to_rgb_conversion/dp/to_div<20>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_lut<20>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<20>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<21>
+    SLICE_X133Y161.CIN   net (fanout=1)        0.000   yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<21>
+    SLICE_X133Y161.COUT  Tbyp                  0.128   yuv_to_rgb_conversion/dp/to_div<22>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<22>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<23>
+    SLICE_X133Y162.CIN   net (fanout=1)        0.000   yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<23>
+    SLICE_X133Y162.X     Tcinx                 0.904   yuv_to_rgb_conversion/dp/to_div<24>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_xor<24>
+    SLICE_X135Y160.G1    net (fanout=8)        1.368   yuv_to_rgb_conversion/dp/to_div<24>
+    SLICE_X135Y160.Y     Tilo                  0.551   yuv_to_rgb_conversion/dp/filter<5>
+                                                       yuv_to_rgb_conversion/dp/filter<4>1
+    SLICE_X138Y158.BY    net (fanout=3)        1.293   yuv_to_rgb_conversion/dp/filter<4>
+    SLICE_X138Y158.CLK   Tdick                 0.261   yuv_to_rgb_conversion/dp/g_out<5>
+                                                       yuv_to_rgb_conversion/dp/g_reg/data_out_4
+    -------------------------------------------------  ---------------------------
+    Total                                     19.695ns (10.652ns logic, 9.043ns route)
+                                                       (54.1% logic, 45.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point yuv_to_rgb_conversion/dp/b_reg/data_out_4 (SLICE_X139Y159.BY), 192472 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.579ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               yuv_to_rgb_conversion/dp/y_reg/data_out_4 (FF)
+  Destination:          yuv_to_rgb_conversion/dp/b_reg/data_out_4 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.421ns (Levels of Logic = 10)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: yuv_to_rgb_conversion/dp/y_reg/data_out_4 to yuv_to_rgb_conversion/dp/b_reg/data_out_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X128Y158.YQ    Tcko                  0.720   yuv_to_rgb_conversion/dp/y_out<5>
+                                                       yuv_to_rgb_conversion/dp/y_reg/data_out_4
+    SLICE_X130Y159.F2    net (fanout=5)        1.910   yuv_to_rgb_conversion/dp/y_out<4>
+    SLICE_X130Y159.X     Tilo                  0.608   yuv_to_rgb_conversion/dp/N39
+                                                       yuv_to_rgb_conversion/dp/Msub_y_min_sub0000_xor<6>1_SW1
+    SLICE_X130Y158.F1    net (fanout=1)        0.587   yuv_to_rgb_conversion/dp/N39
+    SLICE_X130Y158.X     Tilo                  0.608   yuv_to_rgb_conversion/dp/y_min<6>
+                                                       yuv_to_rgb_conversion/dp/Msub_y_min_sub0000_xor<6>1
+    MULT18X18_X3Y19.A6   net (fanout=1)        1.372   yuv_to_rgb_conversion/dp/y_min<6>
+    MULT18X18_X3Y19.P16  Tmult                 3.737   yuv_to_rgb_conversion/dp/Mmult_y_num_mult0001
+                                                       yuv_to_rgb_conversion/dp/Mmult_y_num_mult0001
+    SLICE_X132Y158.F1    net (fanout=1)        1.961   yuv_to_rgb_conversion/dp/y_num<16>
+    SLICE_X132Y158.COUT  Topcyf                1.084   yuv_to_rgb_conversion/dp/to_div_addsub0000<16>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_lut<16>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<16>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<17>
+    SLICE_X132Y159.CIN   net (fanout=1)        0.000   yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<17>
+    SLICE_X132Y159.X     Tcinx                 0.904   yuv_to_rgb_conversion/dp/to_div_addsub0000<18>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_xor<18>
+    SLICE_X133Y159.F2    net (fanout=1)        0.568   yuv_to_rgb_conversion/dp/to_div_addsub0000<18>
+    SLICE_X133Y159.COUT  Topcyf                1.027   yuv_to_rgb_conversion/dp/to_div<18>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_lut<18>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<18>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<19>
+    SLICE_X133Y160.CIN   net (fanout=1)        0.000   yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<19>
+    SLICE_X133Y160.COUT  Tbyp                  0.128   yuv_to_rgb_conversion/dp/to_div<20>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<20>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<21>
+    SLICE_X133Y161.CIN   net (fanout=1)        0.000   yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<21>
+    SLICE_X133Y161.COUT  Tbyp                  0.128   yuv_to_rgb_conversion/dp/to_div<22>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<22>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<23>
+    SLICE_X133Y162.CIN   net (fanout=1)        0.000   yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<23>
+    SLICE_X133Y162.X     Tcinx                 0.904   yuv_to_rgb_conversion/dp/to_div<24>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_xor<24>
+    SLICE_X135Y160.G1    net (fanout=8)        1.368   yuv_to_rgb_conversion/dp/to_div<24>
+    SLICE_X135Y160.Y     Tilo                  0.551   yuv_to_rgb_conversion/dp/filter<5>
+                                                       yuv_to_rgb_conversion/dp/filter<4>1
+    SLICE_X139Y159.BY    net (fanout=3)        0.995   yuv_to_rgb_conversion/dp/filter<4>
+    SLICE_X139Y159.CLK   Tdick                 0.261   yuv_to_rgb_conversion/dp/b_out<5>
+                                                       yuv_to_rgb_conversion/dp/b_reg/data_out_4
+    -------------------------------------------------  ---------------------------
+    Total                                     19.421ns (10.660ns logic, 8.761ns route)
+                                                       (54.9% logic, 45.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.595ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               yuv_to_rgb_conversion/dp/y_reg/data_out_4 (FF)
+  Destination:          yuv_to_rgb_conversion/dp/b_reg/data_out_4 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.405ns (Levels of Logic = 10)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: yuv_to_rgb_conversion/dp/y_reg/data_out_4 to yuv_to_rgb_conversion/dp/b_reg/data_out_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X128Y158.YQ    Tcko                  0.720   yuv_to_rgb_conversion/dp/y_out<5>
+                                                       yuv_to_rgb_conversion/dp/y_reg/data_out_4
+    SLICE_X130Y159.F2    net (fanout=5)        1.910   yuv_to_rgb_conversion/dp/y_out<4>
+    SLICE_X130Y159.X     Tilo                  0.608   yuv_to_rgb_conversion/dp/N39
+                                                       yuv_to_rgb_conversion/dp/Msub_y_min_sub0000_xor<6>1_SW1
+    SLICE_X130Y158.F1    net (fanout=1)        0.587   yuv_to_rgb_conversion/dp/N39
+    SLICE_X130Y158.X     Tilo                  0.608   yuv_to_rgb_conversion/dp/y_min<6>
+                                                       yuv_to_rgb_conversion/dp/Msub_y_min_sub0000_xor<6>1
+    MULT18X18_X3Y19.A6   net (fanout=1)        1.372   yuv_to_rgb_conversion/dp/y_min<6>
+    MULT18X18_X3Y19.P16  Tmult                 3.737   yuv_to_rgb_conversion/dp/Mmult_y_num_mult0001
+                                                       yuv_to_rgb_conversion/dp/Mmult_y_num_mult0001
+    SLICE_X132Y158.F1    net (fanout=1)        1.961   yuv_to_rgb_conversion/dp/y_num<16>
+    SLICE_X132Y158.COUT  Topcyf                1.084   yuv_to_rgb_conversion/dp/to_div_addsub0000<16>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_lut<16>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<16>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<17>
+    SLICE_X132Y159.CIN   net (fanout=1)        0.000   yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<17>
+    SLICE_X132Y159.COUT  Tbyp                  0.120   yuv_to_rgb_conversion/dp/to_div_addsub0000<18>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<18>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<19>
+    SLICE_X132Y160.CIN   net (fanout=1)        0.000   yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<19>
+    SLICE_X132Y160.COUT  Tbyp                  0.120   yuv_to_rgb_conversion/dp/to_div_addsub0000<20>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<20>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<21>
+    SLICE_X132Y161.CIN   net (fanout=1)        0.000   yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<21>
+    SLICE_X132Y161.X     Tcinx                 0.904   yuv_to_rgb_conversion/dp/to_div_addsub0000<22>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_xor<22>
+    SLICE_X133Y161.F2    net (fanout=1)        0.568   yuv_to_rgb_conversion/dp/to_div_addsub0000<22>
+    SLICE_X133Y161.COUT  Topcyf                1.027   yuv_to_rgb_conversion/dp/to_div<22>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_lut<22>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<22>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<23>
+    SLICE_X133Y162.CIN   net (fanout=1)        0.000   yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<23>
+    SLICE_X133Y162.X     Tcinx                 0.904   yuv_to_rgb_conversion/dp/to_div<24>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_xor<24>
+    SLICE_X135Y160.G1    net (fanout=8)        1.368   yuv_to_rgb_conversion/dp/to_div<24>
+    SLICE_X135Y160.Y     Tilo                  0.551   yuv_to_rgb_conversion/dp/filter<5>
+                                                       yuv_to_rgb_conversion/dp/filter<4>1
+    SLICE_X139Y159.BY    net (fanout=3)        0.995   yuv_to_rgb_conversion/dp/filter<4>
+    SLICE_X139Y159.CLK   Tdick                 0.261   yuv_to_rgb_conversion/dp/b_out<5>
+                                                       yuv_to_rgb_conversion/dp/b_reg/data_out_4
+    -------------------------------------------------  ---------------------------
+    Total                                     19.405ns (10.644ns logic, 8.761ns route)
+                                                       (54.9% logic, 45.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.603ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               yuv_to_rgb_conversion/dp/y_reg/data_out_4 (FF)
+  Destination:          yuv_to_rgb_conversion/dp/b_reg/data_out_4 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.397ns (Levels of Logic = 10)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: yuv_to_rgb_conversion/dp/y_reg/data_out_4 to yuv_to_rgb_conversion/dp/b_reg/data_out_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X128Y158.YQ    Tcko                  0.720   yuv_to_rgb_conversion/dp/y_out<5>
+                                                       yuv_to_rgb_conversion/dp/y_reg/data_out_4
+    SLICE_X130Y159.F2    net (fanout=5)        1.910   yuv_to_rgb_conversion/dp/y_out<4>
+    SLICE_X130Y159.X     Tilo                  0.608   yuv_to_rgb_conversion/dp/N39
+                                                       yuv_to_rgb_conversion/dp/Msub_y_min_sub0000_xor<6>1_SW1
+    SLICE_X130Y158.F1    net (fanout=1)        0.587   yuv_to_rgb_conversion/dp/N39
+    SLICE_X130Y158.X     Tilo                  0.608   yuv_to_rgb_conversion/dp/y_min<6>
+                                                       yuv_to_rgb_conversion/dp/Msub_y_min_sub0000_xor<6>1
+    MULT18X18_X3Y19.A6   net (fanout=1)        1.372   yuv_to_rgb_conversion/dp/y_min<6>
+    MULT18X18_X3Y19.P16  Tmult                 3.737   yuv_to_rgb_conversion/dp/Mmult_y_num_mult0001
+                                                       yuv_to_rgb_conversion/dp/Mmult_y_num_mult0001
+    SLICE_X132Y158.F1    net (fanout=1)        1.961   yuv_to_rgb_conversion/dp/y_num<16>
+    SLICE_X132Y158.COUT  Topcyf                1.084   yuv_to_rgb_conversion/dp/to_div_addsub0000<16>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_lut<16>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<16>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<17>
+    SLICE_X132Y159.CIN   net (fanout=1)        0.000   yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<17>
+    SLICE_X132Y159.COUT  Tbyp                  0.120   yuv_to_rgb_conversion/dp/to_div_addsub0000<18>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<18>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<19>
+    SLICE_X132Y160.CIN   net (fanout=1)        0.000   yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<19>
+    SLICE_X132Y160.X     Tcinx                 0.904   yuv_to_rgb_conversion/dp/to_div_addsub0000<20>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_xor<20>
+    SLICE_X133Y160.F1    net (fanout=1)        0.552   yuv_to_rgb_conversion/dp/to_div_addsub0000<20>
+    SLICE_X133Y160.COUT  Topcyf                1.027   yuv_to_rgb_conversion/dp/to_div<20>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_lut<20>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<20>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<21>
+    SLICE_X133Y161.CIN   net (fanout=1)        0.000   yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<21>
+    SLICE_X133Y161.COUT  Tbyp                  0.128   yuv_to_rgb_conversion/dp/to_div<22>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<22>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<23>
+    SLICE_X133Y162.CIN   net (fanout=1)        0.000   yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<23>
+    SLICE_X133Y162.X     Tcinx                 0.904   yuv_to_rgb_conversion/dp/to_div<24>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_xor<24>
+    SLICE_X135Y160.G1    net (fanout=8)        1.368   yuv_to_rgb_conversion/dp/to_div<24>
+    SLICE_X135Y160.Y     Tilo                  0.551   yuv_to_rgb_conversion/dp/filter<5>
+                                                       yuv_to_rgb_conversion/dp/filter<4>1
+    SLICE_X139Y159.BY    net (fanout=3)        0.995   yuv_to_rgb_conversion/dp/filter<4>
+    SLICE_X139Y159.CLK   Tdick                 0.261   yuv_to_rgb_conversion/dp/b_out<5>
+                                                       yuv_to_rgb_conversion/dp/b_reg/data_out_4
+    -------------------------------------------------  ---------------------------
+    Total                                     19.397ns (10.652ns logic, 8.745ns route)
+                                                       (54.9% logic, 45.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point yuv_to_rgb_conversion/dp/r_reg/data_out_4 (SLICE_X139Y158.BY), 192472 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.579ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               yuv_to_rgb_conversion/dp/y_reg/data_out_4 (FF)
+  Destination:          yuv_to_rgb_conversion/dp/r_reg/data_out_4 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.421ns (Levels of Logic = 10)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: yuv_to_rgb_conversion/dp/y_reg/data_out_4 to yuv_to_rgb_conversion/dp/r_reg/data_out_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X128Y158.YQ    Tcko                  0.720   yuv_to_rgb_conversion/dp/y_out<5>
+                                                       yuv_to_rgb_conversion/dp/y_reg/data_out_4
+    SLICE_X130Y159.F2    net (fanout=5)        1.910   yuv_to_rgb_conversion/dp/y_out<4>
+    SLICE_X130Y159.X     Tilo                  0.608   yuv_to_rgb_conversion/dp/N39
+                                                       yuv_to_rgb_conversion/dp/Msub_y_min_sub0000_xor<6>1_SW1
+    SLICE_X130Y158.F1    net (fanout=1)        0.587   yuv_to_rgb_conversion/dp/N39
+    SLICE_X130Y158.X     Tilo                  0.608   yuv_to_rgb_conversion/dp/y_min<6>
+                                                       yuv_to_rgb_conversion/dp/Msub_y_min_sub0000_xor<6>1
+    MULT18X18_X3Y19.A6   net (fanout=1)        1.372   yuv_to_rgb_conversion/dp/y_min<6>
+    MULT18X18_X3Y19.P16  Tmult                 3.737   yuv_to_rgb_conversion/dp/Mmult_y_num_mult0001
+                                                       yuv_to_rgb_conversion/dp/Mmult_y_num_mult0001
+    SLICE_X132Y158.F1    net (fanout=1)        1.961   yuv_to_rgb_conversion/dp/y_num<16>
+    SLICE_X132Y158.COUT  Topcyf                1.084   yuv_to_rgb_conversion/dp/to_div_addsub0000<16>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_lut<16>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<16>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<17>
+    SLICE_X132Y159.CIN   net (fanout=1)        0.000   yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<17>
+    SLICE_X132Y159.X     Tcinx                 0.904   yuv_to_rgb_conversion/dp/to_div_addsub0000<18>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_xor<18>
+    SLICE_X133Y159.F2    net (fanout=1)        0.568   yuv_to_rgb_conversion/dp/to_div_addsub0000<18>
+    SLICE_X133Y159.COUT  Topcyf                1.027   yuv_to_rgb_conversion/dp/to_div<18>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_lut<18>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<18>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<19>
+    SLICE_X133Y160.CIN   net (fanout=1)        0.000   yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<19>
+    SLICE_X133Y160.COUT  Tbyp                  0.128   yuv_to_rgb_conversion/dp/to_div<20>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<20>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<21>
+    SLICE_X133Y161.CIN   net (fanout=1)        0.000   yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<21>
+    SLICE_X133Y161.COUT  Tbyp                  0.128   yuv_to_rgb_conversion/dp/to_div<22>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<22>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<23>
+    SLICE_X133Y162.CIN   net (fanout=1)        0.000   yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<23>
+    SLICE_X133Y162.X     Tcinx                 0.904   yuv_to_rgb_conversion/dp/to_div<24>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_xor<24>
+    SLICE_X135Y160.G1    net (fanout=8)        1.368   yuv_to_rgb_conversion/dp/to_div<24>
+    SLICE_X135Y160.Y     Tilo                  0.551   yuv_to_rgb_conversion/dp/filter<5>
+                                                       yuv_to_rgb_conversion/dp/filter<4>1
+    SLICE_X139Y158.BY    net (fanout=3)        0.995   yuv_to_rgb_conversion/dp/filter<4>
+    SLICE_X139Y158.CLK   Tdick                 0.261   yuv_to_rgb_conversion/dp/r_out<5>
+                                                       yuv_to_rgb_conversion/dp/r_reg/data_out_4
+    -------------------------------------------------  ---------------------------
+    Total                                     19.421ns (10.660ns logic, 8.761ns route)
+                                                       (54.9% logic, 45.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.595ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               yuv_to_rgb_conversion/dp/y_reg/data_out_4 (FF)
+  Destination:          yuv_to_rgb_conversion/dp/r_reg/data_out_4 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.405ns (Levels of Logic = 10)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: yuv_to_rgb_conversion/dp/y_reg/data_out_4 to yuv_to_rgb_conversion/dp/r_reg/data_out_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X128Y158.YQ    Tcko                  0.720   yuv_to_rgb_conversion/dp/y_out<5>
+                                                       yuv_to_rgb_conversion/dp/y_reg/data_out_4
+    SLICE_X130Y159.F2    net (fanout=5)        1.910   yuv_to_rgb_conversion/dp/y_out<4>
+    SLICE_X130Y159.X     Tilo                  0.608   yuv_to_rgb_conversion/dp/N39
+                                                       yuv_to_rgb_conversion/dp/Msub_y_min_sub0000_xor<6>1_SW1
+    SLICE_X130Y158.F1    net (fanout=1)        0.587   yuv_to_rgb_conversion/dp/N39
+    SLICE_X130Y158.X     Tilo                  0.608   yuv_to_rgb_conversion/dp/y_min<6>
+                                                       yuv_to_rgb_conversion/dp/Msub_y_min_sub0000_xor<6>1
+    MULT18X18_X3Y19.A6   net (fanout=1)        1.372   yuv_to_rgb_conversion/dp/y_min<6>
+    MULT18X18_X3Y19.P16  Tmult                 3.737   yuv_to_rgb_conversion/dp/Mmult_y_num_mult0001
+                                                       yuv_to_rgb_conversion/dp/Mmult_y_num_mult0001
+    SLICE_X132Y158.F1    net (fanout=1)        1.961   yuv_to_rgb_conversion/dp/y_num<16>
+    SLICE_X132Y158.COUT  Topcyf                1.084   yuv_to_rgb_conversion/dp/to_div_addsub0000<16>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_lut<16>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<16>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<17>
+    SLICE_X132Y159.CIN   net (fanout=1)        0.000   yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<17>
+    SLICE_X132Y159.COUT  Tbyp                  0.120   yuv_to_rgb_conversion/dp/to_div_addsub0000<18>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<18>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<19>
+    SLICE_X132Y160.CIN   net (fanout=1)        0.000   yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<19>
+    SLICE_X132Y160.COUT  Tbyp                  0.120   yuv_to_rgb_conversion/dp/to_div_addsub0000<20>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<20>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<21>
+    SLICE_X132Y161.CIN   net (fanout=1)        0.000   yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<21>
+    SLICE_X132Y161.X     Tcinx                 0.904   yuv_to_rgb_conversion/dp/to_div_addsub0000<22>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_xor<22>
+    SLICE_X133Y161.F2    net (fanout=1)        0.568   yuv_to_rgb_conversion/dp/to_div_addsub0000<22>
+    SLICE_X133Y161.COUT  Topcyf                1.027   yuv_to_rgb_conversion/dp/to_div<22>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_lut<22>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<22>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<23>
+    SLICE_X133Y162.CIN   net (fanout=1)        0.000   yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<23>
+    SLICE_X133Y162.X     Tcinx                 0.904   yuv_to_rgb_conversion/dp/to_div<24>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_xor<24>
+    SLICE_X135Y160.G1    net (fanout=8)        1.368   yuv_to_rgb_conversion/dp/to_div<24>
+    SLICE_X135Y160.Y     Tilo                  0.551   yuv_to_rgb_conversion/dp/filter<5>
+                                                       yuv_to_rgb_conversion/dp/filter<4>1
+    SLICE_X139Y158.BY    net (fanout=3)        0.995   yuv_to_rgb_conversion/dp/filter<4>
+    SLICE_X139Y158.CLK   Tdick                 0.261   yuv_to_rgb_conversion/dp/r_out<5>
+                                                       yuv_to_rgb_conversion/dp/r_reg/data_out_4
+    -------------------------------------------------  ---------------------------
+    Total                                     19.405ns (10.644ns logic, 8.761ns route)
+                                                       (54.9% logic, 45.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.603ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               yuv_to_rgb_conversion/dp/y_reg/data_out_4 (FF)
+  Destination:          yuv_to_rgb_conversion/dp/r_reg/data_out_4 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.397ns (Levels of Logic = 10)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: yuv_to_rgb_conversion/dp/y_reg/data_out_4 to yuv_to_rgb_conversion/dp/r_reg/data_out_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X128Y158.YQ    Tcko                  0.720   yuv_to_rgb_conversion/dp/y_out<5>
+                                                       yuv_to_rgb_conversion/dp/y_reg/data_out_4
+    SLICE_X130Y159.F2    net (fanout=5)        1.910   yuv_to_rgb_conversion/dp/y_out<4>
+    SLICE_X130Y159.X     Tilo                  0.608   yuv_to_rgb_conversion/dp/N39
+                                                       yuv_to_rgb_conversion/dp/Msub_y_min_sub0000_xor<6>1_SW1
+    SLICE_X130Y158.F1    net (fanout=1)        0.587   yuv_to_rgb_conversion/dp/N39
+    SLICE_X130Y158.X     Tilo                  0.608   yuv_to_rgb_conversion/dp/y_min<6>
+                                                       yuv_to_rgb_conversion/dp/Msub_y_min_sub0000_xor<6>1
+    MULT18X18_X3Y19.A6   net (fanout=1)        1.372   yuv_to_rgb_conversion/dp/y_min<6>
+    MULT18X18_X3Y19.P16  Tmult                 3.737   yuv_to_rgb_conversion/dp/Mmult_y_num_mult0001
+                                                       yuv_to_rgb_conversion/dp/Mmult_y_num_mult0001
+    SLICE_X132Y158.F1    net (fanout=1)        1.961   yuv_to_rgb_conversion/dp/y_num<16>
+    SLICE_X132Y158.COUT  Topcyf                1.084   yuv_to_rgb_conversion/dp/to_div_addsub0000<16>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_lut<16>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<16>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<17>
+    SLICE_X132Y159.CIN   net (fanout=1)        0.000   yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<17>
+    SLICE_X132Y159.COUT  Tbyp                  0.120   yuv_to_rgb_conversion/dp/to_div_addsub0000<18>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<18>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<19>
+    SLICE_X132Y160.CIN   net (fanout=1)        0.000   yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_cy<19>
+    SLICE_X132Y160.X     Tcinx                 0.904   yuv_to_rgb_conversion/dp/to_div_addsub0000<20>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_addsub0000_Madd_xor<20>
+    SLICE_X133Y160.F1    net (fanout=1)        0.552   yuv_to_rgb_conversion/dp/to_div_addsub0000<20>
+    SLICE_X133Y160.COUT  Topcyf                1.027   yuv_to_rgb_conversion/dp/to_div<20>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_lut<20>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<20>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<21>
+    SLICE_X133Y161.CIN   net (fanout=1)        0.000   yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<21>
+    SLICE_X133Y161.COUT  Tbyp                  0.128   yuv_to_rgb_conversion/dp/to_div<22>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<22>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<23>
+    SLICE_X133Y162.CIN   net (fanout=1)        0.000   yuv_to_rgb_conversion/dp/Madd_to_div_Madd_cy<23>
+    SLICE_X133Y162.X     Tcinx                 0.904   yuv_to_rgb_conversion/dp/to_div<24>
+                                                       yuv_to_rgb_conversion/dp/Madd_to_div_Madd_xor<24>
+    SLICE_X135Y160.G1    net (fanout=8)        1.368   yuv_to_rgb_conversion/dp/to_div<24>
+    SLICE_X135Y160.Y     Tilo                  0.551   yuv_to_rgb_conversion/dp/filter<5>
+                                                       yuv_to_rgb_conversion/dp/filter<4>1
+    SLICE_X139Y158.BY    net (fanout=3)        0.995   yuv_to_rgb_conversion/dp/filter<4>
+    SLICE_X139Y158.CLK   Tdick                 0.261   yuv_to_rgb_conversion/dp/r_out<5>
+                                                       yuv_to_rgb_conversion/dp/r_reg/data_out_4
+    -------------------------------------------------  ---------------------------
+    Total                                     19.397ns (10.652ns logic, 8.745ns route)
+                                                       (54.9% logic, 45.1% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_clk = PERIOD TIMEGRP "clk" 20 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point sram_vga_controller/s_3 (SLICE_X119Y188.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.827ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               sram_vga_controller/s_2 (FF)
+  Destination:          sram_vga_controller/s_3 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.827ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 20.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: sram_vga_controller/s_2 to sram_vga_controller/s_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X119Y188.YQ    Tcko                  0.576   sram_vga_controller/s<3>
+                                                       sram_vga_controller/s_2
+    SLICE_X119Y188.BX    net (fanout=2)        0.534   sram_vga_controller/s<2>
+    SLICE_X119Y188.CLK   Tckdi       (-Th)     0.283   sram_vga_controller/s<3>
+                                                       sram_vga_controller/s_3
+    -------------------------------------------------  ---------------------------
+    Total                                      0.827ns (0.293ns logic, 0.534ns route)
+                                                       (35.4% logic, 64.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point yuv_to_rgb_conversion/c/ps_6 (SLICE_X128Y159.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.827ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               yuv_to_rgb_conversion/c/ps_5 (FF)
+  Destination:          yuv_to_rgb_conversion/c/ps_6 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.827ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 20.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: yuv_to_rgb_conversion/c/ps_5 to yuv_to_rgb_conversion/c/ps_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X128Y159.YQ    Tcko                  0.576   yuv_to_rgb_conversion/c/ps<6>
+                                                       yuv_to_rgb_conversion/c/ps_5
+    SLICE_X128Y159.BX    net (fanout=3)        0.534   yuv_to_rgb_conversion/c/ps<5>
+    SLICE_X128Y159.CLK   Tckdi       (-Th)     0.283   yuv_to_rgb_conversion/c/ps<6>
+                                                       yuv_to_rgb_conversion/c/ps_6
+    -------------------------------------------------  ---------------------------
+    Total                                      0.827ns (0.293ns logic, 0.534ns route)
+                                                       (35.4% logic, 64.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point yuv_to_rgb_conversion/c/ps_8 (SLICE_X131Y157.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.845ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               yuv_to_rgb_conversion/c/ps_7 (FF)
+  Destination:          yuv_to_rgb_conversion/c/ps_8 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.845ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 20.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: yuv_to_rgb_conversion/c/ps_7 to yuv_to_rgb_conversion/c/ps_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X131Y157.YQ    Tcko                  0.576   yuv_to_rgb_conversion/c/ps<8>
+                                                       yuv_to_rgb_conversion/c/ps_7
+    SLICE_X131Y157.BX    net (fanout=4)        0.552   yuv_to_rgb_conversion/c/ps<7>
+    SLICE_X131Y157.CLK   Tckdi       (-Th)     0.283   yuv_to_rgb_conversion/c/ps<8>
+                                                       yuv_to_rgb_conversion/c/ps_8
+    -------------------------------------------------  ---------------------------
+    Total                                      0.845ns (0.293ns logic, 0.552ns route)
+                                                       (34.7% logic, 65.3% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_clk = PERIOD TIMEGRP "clk" 20 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 18.274ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 20.000ns
+  Low pulse: 10.000ns
+  Low pulse limit: 0.863ns (Trpw)
+  Physical resource: yuv_to_rgb_conversion/c/ps<1>/SR
+  Logical resource: yuv_to_rgb_conversion/c/ps_1/SR
+  Location pin: SLICE_X131Y174.SR
+  Clock network: reset_IBUF
+--------------------------------------------------------------------------------
+Slack: 18.274ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 0.863ns (Trpw)
+  Physical resource: yuv_to_rgb_conversion/c/ps<1>/SR
+  Logical resource: yuv_to_rgb_conversion/c/ps_1/SR
+  Location pin: SLICE_X131Y174.SR
+  Clock network: reset_IBUF
+--------------------------------------------------------------------------------
+Slack: 18.274ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 20.000ns
+  Low pulse: 10.000ns
+  Low pulse limit: 0.863ns (Trpw)
+  Physical resource: yuv_to_rgb_conversion/c/ps<1>/SR
+  Logical resource: yuv_to_rgb_conversion/c/ps_0/SR
+  Location pin: SLICE_X131Y174.SR
+  Clock network: reset_IBUF
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   19.719|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 4557548 paths, 0 nets, and 1067 connections
+
+Design statistics:
+   Minimum period:  19.719ns{1}   (Maximum frequency:  50.713MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Tue Nov 20 16:23:26 2018 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 214 MB
+
+
+

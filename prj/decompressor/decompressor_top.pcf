@@ -1,0 +1,185 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Nov 20 16:23:06 2018
+//! **************************************************************************
+
+SCHEMATIC START;
+NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+TIMEGRP clk = BEL "state_0" BEL "state_1" BEL "sram_vga_start" BEL
+        "sram_vga_controller/rdata0_0" BEL "sram_vga_controller/rdata0_1" BEL
+        "sram_vga_controller/rdata0_2" BEL "sram_vga_controller/rdata0_3" BEL
+        "sram_vga_controller/rdata0_4" BEL "sram_vga_controller/rdata0_5" BEL
+        "sram_vga_controller/rdata0_6" BEL "sram_vga_controller/rdata0_7" BEL
+        "sram_vga_controller/rdata0_8" BEL "sram_vga_controller/rdata0_9" BEL
+        "sram_vga_controller/rdata0_10" BEL "sram_vga_controller/rdata0_11"
+        BEL "sram_vga_controller/rdata0_12" BEL
+        "sram_vga_controller/rdata0_13" BEL "sram_vga_controller/rdata0_14"
+        BEL "sram_vga_controller/rdata0_15" BEL "sram_vga_controller/rdata1_0"
+        BEL "sram_vga_controller/rdata1_1" BEL "sram_vga_controller/rdata1_2"
+        BEL "sram_vga_controller/rdata1_3" BEL "sram_vga_controller/rdata1_4"
+        BEL "sram_vga_controller/rdata1_5" BEL "sram_vga_controller/rdata1_6"
+        BEL "sram_vga_controller/rdata1_7" BEL "sram_vga_controller/rdata1_8"
+        BEL "sram_vga_controller/rdata1_9" BEL "sram_vga_controller/rdata1_10"
+        BEL "sram_vga_controller/rdata1_11" BEL
+        "sram_vga_controller/rdata1_12" BEL "sram_vga_controller/rdata1_13"
+        BEL "sram_vga_controller/rdata1_14" BEL
+        "sram_vga_controller/rdata1_15" BEL "sram_vga_controller/rdata2_0" BEL
+        "sram_vga_controller/rdata2_1" BEL "sram_vga_controller/rdata2_2" BEL
+        "sram_vga_controller/rdata2_3" BEL "sram_vga_controller/rdata2_4" BEL
+        "sram_vga_controller/rdata2_5" BEL "sram_vga_controller/rdata2_6" BEL
+        "sram_vga_controller/rdata2_7" BEL "sram_vga_controller/rdata2_8" BEL
+        "sram_vga_controller/rdata2_9" BEL "sram_vga_controller/rdata2_10" BEL
+        "sram_vga_controller/rdata2_11" BEL "sram_vga_controller/rdata2_12"
+        BEL "sram_vga_controller/rdata2_13" BEL
+        "sram_vga_controller/rdata2_14" BEL "sram_vga_controller/rdata2_15"
+        BEL "sram_vga_controller/vgastart" BEL "sram_vga_controller/rgb_0" BEL
+        "sram_vga_controller/rgb_1" BEL "sram_vga_controller/rgb_2" BEL
+        "sram_vga_controller/rgb_3" BEL "sram_vga_controller/rgb_9" BEL
+        "sram_vga_controller/rgb_10" BEL "sram_vga_controller/rgb_11" BEL
+        "sram_vga_controller/rgb_12" BEL "sram_vga_controller/rgb_13" BEL
+        "sram_vga_controller/rgb_14" BEL "sram_vga_controller/rgb_15" BEL
+        "sram_vga_controller/rgb_16" BEL "sram_vga_controller/rgb_17" BEL
+        "sram_vga_controller/rgb_18" BEL "sram_vga_controller/rgb_19" BEL
+        "sram_vga_controller/rgb_20" BEL "sram_vga_controller/rgb_21" BEL
+        "sram_vga_controller/rgb_22" BEL "sram_vga_controller/rgb_23" BEL
+        "sram_vga_controller/cnt_0" BEL "sram_vga_controller/cnt_1" BEL
+        "sram_vga_controller/cnt_2" BEL "sram_vga_controller/cnt_3" BEL
+        "sram_vga_controller/cnt_4" BEL "sram_vga_controller/cnt_5" BEL
+        "sram_vga_controller/cnt_6" BEL "sram_vga_controller/cnt_7" BEL
+        "sram_vga_controller/cnt_8" BEL "sram_vga_controller/cnt_9" BEL
+        "sram_vga_controller/cnt_10" BEL "sram_vga_controller/cnt_11" BEL
+        "sram_vga_controller/cnt_12" BEL "sram_vga_controller/cnt_13" BEL
+        "sram_vga_controller/cnt_14" BEL "sram_vga_controller/cnt_17" BEL
+        "sram_vga_controller/cnt_15" BEL "sram_vga_controller/cnt_16" BEL
+        "sram_vga_controller/cnt_18" BEL "sram_vga_controller/cnt_19" BEL
+        "sram_vga_controller/cnt_20" BEL "sram_vga_controller/cnt_21" BEL
+        "sram_vga_controller/cnt_22" BEL "sram_vga_controller/cnt_23" BEL
+        "sram_vga_controller/cnt_24" BEL "sram_vga_controller/cnt_25" BEL
+        "sram_vga_controller/cnt_26" BEL "sram_vga_controller/cnt_27" BEL
+        "sram_vga_controller/cnt_28" BEL "sram_vga_controller/cnt_29" BEL
+        "sram_vga_controller/cnt_30" BEL "sram_vga_controller/cnt_31" BEL
+        "sram_vga_controller/s_0" BEL "sram_vga_controller/s_1" BEL
+        "sram_vga_controller/s_2" BEL "sram_vga_controller/s_3" BEL
+        "sram_vga_controller/s_4" BEL "sram_vga_controller/s_5" BEL
+        "sram_vga_controller/s_6" BEL "sram_vga_controller/s_7" BEL
+        "sram_vga_controller/rgb_4" BEL "sram_vga_controller/rgb_5" BEL
+        "sram_vga_controller/rgb_6" BEL "sram_vga_controller/rgb_7" BEL
+        "sram_vga_controller/rgb_8" BEL "yuv_to_rgb_conversion/c/ps_11" BEL
+        "yuv_to_rgb_conversion/c/ps_10" BEL "yuv_to_rgb_conversion/c/ps_12"
+        BEL "yuv_to_rgb_conversion/c/ps_8" BEL "yuv_to_rgb_conversion/c/ps_7"
+        BEL "yuv_to_rgb_conversion/c/ps_9" BEL "yuv_to_rgb_conversion/c/ps_5"
+        BEL "yuv_to_rgb_conversion/c/ps_4" BEL "yuv_to_rgb_conversion/c/ps_6"
+        BEL "yuv_to_rgb_conversion/c/ps_3" BEL "yuv_to_rgb_conversion/c/ps_2"
+        BEL "yuv_to_rgb_conversion/c/ps_1" BEL "yuv_to_rgb_conversion/c/ps_0"
+        BEL "yuv_to_rgb_conversion/dp/read_counter/r_addr_0" BEL
+        "yuv_to_rgb_conversion/dp/read_counter/r_addr_1" BEL
+        "yuv_to_rgb_conversion/dp/read_counter/r_addr_2" BEL
+        "yuv_to_rgb_conversion/dp/read_counter/r_addr_3" BEL
+        "yuv_to_rgb_conversion/dp/read_counter/r_addr_4" BEL
+        "yuv_to_rgb_conversion/dp/read_counter/r_addr_5" BEL
+        "yuv_to_rgb_conversion/dp/read_counter/r_addr_6" BEL
+        "yuv_to_rgb_conversion/dp/read_counter/r_addr_7" BEL
+        "yuv_to_rgb_conversion/dp/read_counter/r_addr_8" BEL
+        "yuv_to_rgb_conversion/dp/read_counter/r_addr_9" BEL
+        "yuv_to_rgb_conversion/dp/read_counter/r_addr_10" BEL
+        "yuv_to_rgb_conversion/dp/read_counter/r_addr_11" BEL
+        "yuv_to_rgb_conversion/dp/read_counter/r_addr_12" BEL
+        "yuv_to_rgb_conversion/dp/read_counter/r_addr_13" BEL
+        "yuv_to_rgb_conversion/dp/read_counter/r_addr_14" BEL
+        "yuv_to_rgb_conversion/dp/read_counter/r_addr_15" BEL
+        "yuv_to_rgb_conversion/dp/read_counter/r_addr_16" BEL
+        "yuv_to_rgb_conversion/dp/read_counter/r_addr_17" BEL
+        "yuv_to_rgb_conversion/dp/write_counter/r_addr_0" BEL
+        "yuv_to_rgb_conversion/dp/write_counter/r_addr_1" BEL
+        "yuv_to_rgb_conversion/dp/write_counter/r_addr_2" BEL
+        "yuv_to_rgb_conversion/dp/write_counter/r_addr_3" BEL
+        "yuv_to_rgb_conversion/dp/write_counter/r_addr_4" BEL
+        "yuv_to_rgb_conversion/dp/write_counter/r_addr_5" BEL
+        "yuv_to_rgb_conversion/dp/write_counter/r_addr_6" BEL
+        "yuv_to_rgb_conversion/dp/write_counter/r_addr_7" BEL
+        "yuv_to_rgb_conversion/dp/write_counter/r_addr_8" BEL
+        "yuv_to_rgb_conversion/dp/write_counter/r_addr_9" BEL
+        "yuv_to_rgb_conversion/dp/write_counter/r_addr_10" BEL
+        "yuv_to_rgb_conversion/dp/write_counter/r_addr_11" BEL
+        "yuv_to_rgb_conversion/dp/write_counter/r_addr_12" BEL
+        "yuv_to_rgb_conversion/dp/write_counter/r_addr_13" BEL
+        "yuv_to_rgb_conversion/dp/write_counter/r_addr_14" BEL
+        "yuv_to_rgb_conversion/dp/write_counter/r_addr_15" BEL
+        "yuv_to_rgb_conversion/dp/write_counter/r_addr_16" BEL
+        "yuv_to_rgb_conversion/dp/write_counter/r_addr_17" BEL
+        "yuv_to_rgb_conversion/dp/write_counter/count_done" BEL
+        "yuv_to_rgb_conversion/dp/v_reg/data_out_0" BEL
+        "yuv_to_rgb_conversion/dp/v_reg/data_out_1" BEL
+        "yuv_to_rgb_conversion/dp/v_reg/data_out_2" BEL
+        "yuv_to_rgb_conversion/dp/v_reg/data_out_3" BEL
+        "yuv_to_rgb_conversion/dp/v_reg/data_out_4" BEL
+        "yuv_to_rgb_conversion/dp/v_reg/data_out_5" BEL
+        "yuv_to_rgb_conversion/dp/v_reg/data_out_6" BEL
+        "yuv_to_rgb_conversion/dp/v_reg/data_out_7" BEL
+        "yuv_to_rgb_conversion/dp/v_reg/data_out_8" BEL
+        "yuv_to_rgb_conversion/dp/v_reg/data_out_9" BEL
+        "yuv_to_rgb_conversion/dp/v_reg/data_out_10" BEL
+        "yuv_to_rgb_conversion/dp/v_reg/data_out_11" BEL
+        "yuv_to_rgb_conversion/dp/v_reg/data_out_12" BEL
+        "yuv_to_rgb_conversion/dp/v_reg/data_out_13" BEL
+        "yuv_to_rgb_conversion/dp/v_reg/data_out_14" BEL
+        "yuv_to_rgb_conversion/dp/v_reg/data_out_15" BEL
+        "yuv_to_rgb_conversion/dp/u_reg/data_out_0" BEL
+        "yuv_to_rgb_conversion/dp/u_reg/data_out_1" BEL
+        "yuv_to_rgb_conversion/dp/u_reg/data_out_2" BEL
+        "yuv_to_rgb_conversion/dp/u_reg/data_out_3" BEL
+        "yuv_to_rgb_conversion/dp/u_reg/data_out_4" BEL
+        "yuv_to_rgb_conversion/dp/u_reg/data_out_5" BEL
+        "yuv_to_rgb_conversion/dp/u_reg/data_out_6" BEL
+        "yuv_to_rgb_conversion/dp/u_reg/data_out_7" BEL
+        "yuv_to_rgb_conversion/dp/u_reg/data_out_8" BEL
+        "yuv_to_rgb_conversion/dp/u_reg/data_out_9" BEL
+        "yuv_to_rgb_conversion/dp/u_reg/data_out_10" BEL
+        "yuv_to_rgb_conversion/dp/u_reg/data_out_11" BEL
+        "yuv_to_rgb_conversion/dp/u_reg/data_out_12" BEL
+        "yuv_to_rgb_conversion/dp/u_reg/data_out_13" BEL
+        "yuv_to_rgb_conversion/dp/u_reg/data_out_14" BEL
+        "yuv_to_rgb_conversion/dp/u_reg/data_out_15" BEL
+        "yuv_to_rgb_conversion/dp/y_reg/data_out_0" BEL
+        "yuv_to_rgb_conversion/dp/y_reg/data_out_1" BEL
+        "yuv_to_rgb_conversion/dp/y_reg/data_out_2" BEL
+        "yuv_to_rgb_conversion/dp/y_reg/data_out_3" BEL
+        "yuv_to_rgb_conversion/dp/y_reg/data_out_4" BEL
+        "yuv_to_rgb_conversion/dp/y_reg/data_out_5" BEL
+        "yuv_to_rgb_conversion/dp/y_reg/data_out_6" BEL
+        "yuv_to_rgb_conversion/dp/y_reg/data_out_7" BEL
+        "yuv_to_rgb_conversion/dp/y_reg/data_out_8" BEL
+        "yuv_to_rgb_conversion/dp/y_reg/data_out_9" BEL
+        "yuv_to_rgb_conversion/dp/y_reg/data_out_10" BEL
+        "yuv_to_rgb_conversion/dp/y_reg/data_out_11" BEL
+        "yuv_to_rgb_conversion/dp/y_reg/data_out_12" BEL
+        "yuv_to_rgb_conversion/dp/y_reg/data_out_13" BEL
+        "yuv_to_rgb_conversion/dp/y_reg/data_out_14" BEL
+        "yuv_to_rgb_conversion/dp/y_reg/data_out_15" BEL
+        "yuv_to_rgb_conversion/dp/b_reg/data_out_0" BEL
+        "yuv_to_rgb_conversion/dp/b_reg/data_out_1" BEL
+        "yuv_to_rgb_conversion/dp/b_reg/data_out_2" BEL
+        "yuv_to_rgb_conversion/dp/b_reg/data_out_3" BEL
+        "yuv_to_rgb_conversion/dp/b_reg/data_out_4" BEL
+        "yuv_to_rgb_conversion/dp/b_reg/data_out_5" BEL
+        "yuv_to_rgb_conversion/dp/b_reg/data_out_6" BEL
+        "yuv_to_rgb_conversion/dp/b_reg/data_out_7" BEL
+        "yuv_to_rgb_conversion/dp/g_reg/data_out_0" BEL
+        "yuv_to_rgb_conversion/dp/g_reg/data_out_1" BEL
+        "yuv_to_rgb_conversion/dp/g_reg/data_out_2" BEL
+        "yuv_to_rgb_conversion/dp/g_reg/data_out_3" BEL
+        "yuv_to_rgb_conversion/dp/g_reg/data_out_4" BEL
+        "yuv_to_rgb_conversion/dp/g_reg/data_out_5" BEL
+        "yuv_to_rgb_conversion/dp/g_reg/data_out_6" BEL
+        "yuv_to_rgb_conversion/dp/g_reg/data_out_7" BEL
+        "yuv_to_rgb_conversion/dp/r_reg/data_out_0" BEL
+        "yuv_to_rgb_conversion/dp/r_reg/data_out_1" BEL
+        "yuv_to_rgb_conversion/dp/r_reg/data_out_2" BEL
+        "yuv_to_rgb_conversion/dp/r_reg/data_out_3" BEL
+        "yuv_to_rgb_conversion/dp/r_reg/data_out_4" BEL
+        "yuv_to_rgb_conversion/dp/r_reg/data_out_5" BEL
+        "yuv_to_rgb_conversion/dp/r_reg/data_out_6" BEL
+        "yuv_to_rgb_conversion/dp/r_reg/data_out_7" BEL
+        "clk_BUFGP/BUFG.GCLKMUX" BEL "clk_BUFGP/BUFG";
+TS_clk = PERIOD TIMEGRP "clk" 20 ns HIGH 50%;
+SCHEMATIC END;
+
