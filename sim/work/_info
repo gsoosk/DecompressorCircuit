@@ -1,0 +1,259 @@
+m255
+K3
+13
+cModel Technology
+Z0 d\\Mac\Home\Desktop\CAD\Projects\CA4\CA4_Phase2\DecompressorCircuit\sim
+vcounter
+Z1 !s10a 1540462056
+Z2 IkafbAEUzLCYB?o7I?=Uk`3
+Z3 VNKdKiBgoRa@^O=IAz=9[N0
+Z4 d\\Mac\Home\Desktop\CAD\Projects\CA4\CA4_Phase2\DecompressorCircuit\sim
+Z5 w1540462056
+Z6 8EmulatorModule/VGA_Emulator.v
+Z7 FEmulatorModule/VGA_Emulator.v
+Z8 L0 188
+Z9 OV;L;10.1d;51
+r1
+31
+Z10 !s108 1542641056.839000
+Z11 !s107 EmulatorModule/VGA_Emulator.v|
+Z12 !s90 -reportprogress|300|+acc|-incr|-source|+define+SIM|EmulatorModule/VGA_Emulator.v|
+Z13 o+acc -source -O0
+Z14 !s92 +acc -source +define+SIM -O0
+Z15 !s100 3lR:e1ik:L^N9ZlNBH59L2
+!i10b 1
+!s85 0
+!s101 -O0
+vcounter_18bit
+Z16 !s10a 1541519740
+Z17 IE:KcYSOLhWfLkicRQ1`9S3
+Z18 V?9J_5M1RUD;J>oBd2HBRe0
+R4
+Z19 w1541519740
+Z20 8../src/hdl/counter_18bit.v
+Z21 F../src/hdl/counter_18bit.v
+L0 1
+R9
+r1
+31
+R13
+R14
+Z22 !s100 Ko<kINYR<?EN39ONlX3e81
+Z23 !s108 1542641085.574000
+Z24 !s107 ../src/hdl/yuv_to_rgb_datapath.v|../src/hdl/yuv_to_rgb_conversion.v|../src/hdl/yuv_to_rgb_controller.v|../src/hdl/sram_vga_controller.v|../src/hdl/register_8_bit.v|../src/hdl/register_16_bit.v|../src/hdl/decompressor_top.v|../src/hdl/counter_18bit.v|
+Z25 !s90 -reportprogress|300|+acc|-incr|-source|+define+SIM|../src/hdl/counter_18bit.v|../src/hdl/decompressor_top.v|../src/hdl/register_16_bit.v|../src/hdl/register_8_bit.v|../src/hdl/sram_vga_controller.v|../src/hdl/yuv_to_rgb_controller.v|../src/hdl/yuv_to_rgb_conversion.v|../src/hdl/yuv_to_rgb_datapath.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vdecompressor_top
+Z26 !s10a 1541795188
+Z27 I5;LzgBA@0;1on?>EH7[HB1
+Z28 VDIMg@62@?JC^><8?dE2lb1
+R4
+Z29 w1541795188
+Z30 8../src/hdl/decompressor_top.v
+Z31 F../src/hdl/decompressor_top.v
+L0 2
+R9
+r1
+31
+Z32 !s108 1542640810.730000
+Z33 !s107 ../src/hdl/yuv_to_rgb_datapath.v|../src/hdl/yuv_to_rgb_conversion.v|../src/hdl/yuv_to_rgb_controller.v|../src/hdl/sram_vga_controller.v|../src/hdl/register_8_bit.v|../src/hdl/register_16_bit.v|../src/hdl/decompressor_top.v|
+Z34 !s90 -reportprogress|300|+acc|-incr|-source|+define+SIM|../src/hdl/decompressor_top.v|../src/hdl/register_16_bit.v|../src/hdl/register_8_bit.v|../src/hdl/sram_vga_controller.v|../src/hdl/yuv_to_rgb_controller.v|../src/hdl/yuv_to_rgb_conversion.v|../src/hdl/yuv_to_rgb_datapath.v|
+R13
+R14
+Z35 !s100 5^9fThN_S1b9`TBL?YEUc3
+!i10b 1
+!s85 0
+!s101 -O0
+vregister_16_bit
+Z36 !s10a 1540905508
+Z37 I[;m0WUnbeHVA^07HT06R`0
+Z38 VY2dT]BY9^ClkmYWfc^eX62
+R4
+Z39 w1540905508
+Z40 8../src/hdl/register_16_bit.v
+Z41 F../src/hdl/register_16_bit.v
+L0 1
+R9
+r1
+31
+R32
+R33
+R34
+R13
+R14
+Z42 !s100 53Kml;Ja_o_W6ZDEzePS73
+!i10b 1
+!s85 0
+!s101 -O0
+vregister_8_bit
+Z43 !s10a 1542636852
+Z44 IeT`<`6>;@fXRjG9;_5aC51
+Z45 VR15LOUn_SAC:eLKDgoGL[0
+R4
+Z46 w1542636852
+Z47 8../src/hdl/register_8_bit.v
+Z48 F../src/hdl/register_8_bit.v
+L0 1
+R9
+r1
+31
+R32
+R33
+R34
+R13
+R14
+Z49 !s100 ``lF2UP^I^;W5Ho0i6LSZ2
+!i10b 1
+!s85 0
+!s101 -O0
+vSRAM_Emulator
+Z50 !s10a 1539985592
+Z51 IH7Ha5Wi1Oja[QJUlMBCC40
+Z52 V5H2z21_hm4A]4??]:^g1P2
+R4
+Z53 w1539985592
+Z54 8EmulatorModule/SRAM_Emulator.v
+Z55 FEmulatorModule/SRAM_Emulator.v
+L0 2
+R9
+r1
+31
+R13
+R14
+Z56 n@s@r@a@m_@emulator
+Z57 !s100 I9gUUcLQldEIYfj=2Mk]V3
+Z58 !s108 1542641056.667000
+Z59 !s107 EmulatorModule/SRAM_Emulator.v|
+Z60 !s90 -reportprogress|300|+acc|-incr|-source|+define+SIM|EmulatorModule/SRAM_Emulator.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vsram_vga_controller
+Z61 !s10a 1541617754
+Z62 I79Z7kz=ZFoHgWh?5US7W61
+Z63 V>md6JoV`iTIIg23`@W2IL0
+R4
+Z64 w1541617754
+Z65 8../src/hdl/sram_vga_controller.v
+Z66 F../src/hdl/sram_vga_controller.v
+L0 2
+R9
+r1
+31
+R32
+R33
+R34
+R13
+R14
+Z67 !s100 AA@GK26JTJ4FF3?=S_j`Z3
+!i10b 1
+!s85 0
+!s101 -O0
+vtb_top
+Z68 !s10a 1542643711
+Z69 IQ<NCKbMgheIG@Yz?7A[N83
+Z70 Va9Ub7L25^fJZ;GnE;;jk10
+R4
+Z71 w1542643711
+Z72 8./tb/tb_top.v
+Z73 F./tb/tb_top.v
+Z74 F../src/inc/param.v
+L0 2
+R9
+r1
+31
+Z75 !s90 -reportprogress|300|+acc|-incr|-source|+incdir+../src/inc|+define+SIM|./tb/tb_top.v|
+R13
+Z76 !s92 +acc -source +incdir+../src/inc +define+SIM -O0
+Z77 !s100 3^LTHGO[j4OnmT[mYO>L63
+Z78 !s108 1542643715.965000
+Z79 !s107 ../src/inc/param.v|./tb/tb_top.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vVGA_Emulator
+R1
+Z80 IPD`mi@@B`G6DGO=K:zBlf0
+Z81 Vfh=0`gBJm@k737V0Ein>D2
+R4
+R5
+R6
+R7
+L0 2
+R9
+r1
+31
+R10
+R11
+R12
+R13
+R14
+Z82 n@v@g@a_@emulator
+Z83 !s100 GTdUYl04Xl<n@d>3XUCfF1
+!i10b 1
+!s85 0
+!s101 -O0
+vyuv_to_rgb_controller
+Z84 !s10a 1542644382
+Z85 IGPSaY8j<lMN=bBliDM:zm3
+Z86 V0aY<GoBj?im:G:B258UB?3
+R4
+Z87 w1542644382
+Z88 8../src/hdl/yuv_to_rgb_controller.v
+Z89 F../src/hdl/yuv_to_rgb_controller.v
+L0 1
+R9
+r1
+31
+R25
+R13
+R14
+Z90 !s100 O>O8L82U8ARJ3gj7k:JjF1
+Z91 !s108 1542644388.199000
+R24
+!i10b 1
+!s85 0
+!s101 -O0
+vyuv_to_rgb_conversion
+Z92 !s10a 1542641239
+Z93 IID@M:=9NTPk@`Zj?dSLdi2
+Z94 V3o@a5WP`GMhkNLgRUm4Lk0
+R4
+Z95 w1542641239
+Z96 8../src/hdl/yuv_to_rgb_conversion.v
+Z97 F../src/hdl/yuv_to_rgb_conversion.v
+L0 2
+R9
+r1
+31
+R25
+R13
+R14
+Z98 !s100 4VhG]@cKVffh^;ojFdNbD0
+Z99 !s108 1542641245.292000
+R24
+!i10b 1
+!s85 0
+!s101 -O0
+vyuv_to_rgb_datapath
+Z100 IMN14dGjkM;Togz[DlKzlG2
+Z101 VNaaF[_Ao[1kK8IHgbQh[T1
+R4
+Z102 w1542659805
+Z103 8../src/hdl/yuv_to_rgb_datapath.v
+Z104 F../src/hdl/yuv_to_rgb_datapath.v
+L0 1
+R9
+r1
+31
+R25
+R13
+R14
+Z105 !s100 hUR7WF^_b]UPE:;o8lAhW3
+Z106 !s108 1542659819.173000
+R24
+!i10b 1
+!s85 0
+!s101 -O0
